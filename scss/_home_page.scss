@@ -1,0 +1,128 @@
+// спецификации для страницы
+// заголовки //
+h1 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+h2 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+h3 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #201600;
+}
+// основная кнопка //
+@mixin main_btn {
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: $lite_green;
+  box-shadow: 0px 7px 11px rgba(75, 75, 75, 0.5);
+  border-radius: 34.5px;
+  padding: 25px 39px;
+  transition: 0.3s;
+  &:hover {
+    background: #FFFFFF;
+    color: $lite_green;
+    text-decoration: none;
+  }
+}
+// цвета //
+$black: #201600;
+$lite_green: #ABCB56;
+$middle_green: #048E47;
+$dark_green: #04582D;
+$lite_grey: #F6F6F6;
+$middle_grey: #E1E1E1;
+
+// ----- HEADER ----- //
+.hero_screen {
+  background: $black;
+  padding: 0px 0px 142px 0px;
+  &_title {
+    padding: 110px 0px 40px 0px;
+    text-align: center;
+  }
+  &_main_section {
+    display: flex;
+    width: 85%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  &_logo {
+    display: inline-block;
+    width: 15%;
+  }
+  &_tel {
+    text-align: right;
+    margin: 0px 15px;
+    &_text {
+      font-family: "Futura";
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FFFFFF;
+      margin: 0;
+    }
+    &_link {
+      font-family: "Futura";
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 29px;
+      color: $lite_green;
+      transition: 0.3s;
+      &:hover {
+        text-decoration: none;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+.top_block {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.desktop-nav {
+  display: block;
+  li {
+    display: inline-block;
+    margin: 0px 35px;
+  }
+}
+.nav-item {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  transition: all 0.3s;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+    color: $lite_green;
+    transform: scale(1.2);
+  }
+}
+.main_btn {
+  @include main_btn();
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+
