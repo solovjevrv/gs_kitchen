@@ -33,4 +33,150 @@
   font-style: normal;
   font-weight: bold;
 }
+
+h1 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #201600;
+}
+
+.hero_screen {
+  background: #201600;
+  padding: 0px 0px 142px 0px;
+}
+
+.hero_screen_title {
+  padding: 110px 0px 40px 0px;
+  text-align: center;
+}
+
+.hero_screen_main_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 85%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.hero_screen_logo {
+  display: inline-block;
+  width: 15%;
+}
+
+.hero_screen_tel {
+  text-align: right;
+  margin: 0px 15px;
+}
+
+.hero_screen_tel_text {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.hero_screen_tel_link {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+  color: #ABCB56;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.hero_screen_tel_link:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.top_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.desktop-nav {
+  display: block;
+}
+
+.desktop-nav li {
+  display: inline-block;
+  margin: 0px 35px;
+}
+
+.nav-item {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.nav-item:hover {
+  text-decoration: none;
+  color: #ABCB56;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.main_btn {
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #ABCB56;
+  -webkit-box-shadow: 0px 7px 11px rgba(75, 75, 75, 0.5);
+          box-shadow: 0px 7px 11px rgba(75, 75, 75, 0.5);
+  border-radius: 34.5px;
+  padding: 25px 39px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  display: inline-block;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main_btn:hover {
+  background: #FFFFFF;
+  color: #ABCB56;
+  text-decoration: none;
+}
 /*# sourceMappingURL=main.css.map */
