@@ -41,6 +41,12 @@ h3 {
     text-decoration: none;
   }
 }
+// выравнивание по горизонтали и ветрикали
+@mixin aligh-center {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) !important
+}
 // цвета //
 $black: #201600;
 $lite_green: #ABCB56;
@@ -51,10 +57,11 @@ $middle_grey: #E1E1E1;
 
 // ----- HEADER ----- //
 .hero_screen {
-  background: $black;
-  padding: 0px 0px 142px 0px;
+  background: url(../img/hero_screen_bg.png) no-repeat center center;
+  background-size: cover;
+  padding: 0px 0px 200px 0px;
   &_title {
-    padding: 110px 0px 40px 0px;
+    padding: 130px 0px 40px 0px;
     text-align: center;
   }
   &_main_section {
@@ -97,14 +104,14 @@ $middle_grey: #E1E1E1;
   justify-content: right;
   align-items: center;
 }
-.desktop-nav {
+.desktop_nav {
   display: block;
   li {
     display: inline-block;
-    margin: 0px 35px;
+    margin: 0px 25px;
   }
 }
-.nav-item {
+.nav_item {
   font-family: "Futura";
   font-weight: bold;
   font-size: 16px;
@@ -123,6 +130,56 @@ $middle_grey: #E1E1E1;
   display: inline-block;
   margin-left: 50%;
   transform: translateX(-50%);
+}
+.mobile_nav {
+  width: 40px;
+  height: 40px;
+  // background: #FFFFFF;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  &_item {
+    width: 30px;
+    height: 4px;
+    background: #ABCB56;
+    border-radius: 2px;
+    position: absolute;
+    @include aligh-center();
+    &::after {
+      content: "";
+      width: 30px;
+      height: 4px;
+      background: #ABCB56;
+      border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.3s;   
+    }
+    &::before {
+      content: "";
+      width: 30px;
+      height: 4px;
+      background: #ABCB56;
+      border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      margin-top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.3s;  
+    }
+  }
+}
+.mobile_nav_active .mobile_nav_item::after {
+  margin-left: 10px;
+}
+.mobile_nav_active .mobile_nav_item::before {
+  margin-left: -10px;
 }
 
 
