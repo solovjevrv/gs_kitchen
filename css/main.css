@@ -154,7 +154,7 @@ h3 {
           transform: scale(1.2);
 }
 
-.main_btn {
+.hero_screen_button a {
   font-family: "Circle_Rounded";
   font-weight: bold;
   font-size: 16px;
@@ -169,13 +169,14 @@ h3 {
   padding: 25px 39px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 3;
   display: inline-block;
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-.main_btn:hover {
+.hero_screen_button a:hover {
   background: #FFFFFF;
   color: #ABCB56;
   text-decoration: none;
@@ -187,6 +188,7 @@ h3 {
   position: relative;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 3;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -244,6 +246,71 @@ h3 {
   margin-left: -10px;
 }
 
+.content_block {
+  background: #04582D;
+  width: 100%;
+  background: #04582D;
+  padding: 60px 0px;
+}
+
+.content_block_description p {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+  padding: 30px 0px;
+}
+
+.slider_buttons {
+  width: 30px;
+}
+
+.slider_number {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 27px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+}
+
+.content_block_btn {
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #ABCB56;
+  -webkit-box-shadow: 0px 7px 11px rgba(75, 75, 75, 0.5);
+          box-shadow: 0px 7px 11px rgba(75, 75, 75, 0.5);
+  border-radius: 34.5px;
+  padding: 25px 39px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 3;
+  display: block;
+  width: 200px;
+  margin: 0 0 0 auto;
+}
+
+.content_block_btn:hover {
+  background: #FFFFFF;
+  color: #ABCB56;
+  text-decoration: none;
+}
+
+.content_block .row:nth-child(2) .content_block_description {
+  text-align: left;
+}
+
+.slider-progress img {
+  width: 100%;
+}
+
 @media screen and (min-width: 991px) {
   .mobile_nav {
     display: none;
@@ -258,7 +325,8 @@ h3 {
     height: 100%;
     top: 0%;
     right: 0%;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 3;
   }
   .nav {
     -webkit-box-orient: vertical;
@@ -269,6 +337,7 @@ h3 {
         -ms-flex-align: end;
             align-items: flex-end;
     position: absolute;
+    width: 100%;
     top: 20%;
     right: 10%;
   }
