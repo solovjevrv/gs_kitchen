@@ -1,0 +1,229 @@
+// спецификации для страницы
+// заголовки //
+h1 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+h2 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+h3 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #201600;
+}
+// основная кнопка //
+@mixin main_btn {
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: $lite_green;
+  box-shadow: 0px 7px 11px rgba(75, 75, 75, 0.5);
+  border-radius: 34.5px;
+  padding: 25px 39px;
+  transition: 0.3s;
+  z-index: 3;
+  &:hover {
+    background: #FFFFFF;
+    color: $lite_green;
+    text-decoration: none;
+  }
+}
+// выравнивание по горизонтали и ветрикали
+@mixin aligh-center {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) !important
+}
+// цвета //
+$black: #201600;
+$lite_green: #ABCB56;
+$middle_green: #048E47;
+$dark_green: #04582D;
+$lite_grey: #F6F6F6;
+$middle_grey: #E1E1E1;
+
+// ----- HEADER ----- //
+.hero_screen {
+  background: url(../img/hero_screen_bg.png) no-repeat center center;
+  background-size: cover;
+  padding: 0px 0px 200px 0px;
+  &_title {
+    padding: 130px 0px 40px 0px;
+    text-align: center;
+  }
+  &_main_section {
+    display: flex;
+    width: 85%;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  &_logo {
+    display: inline-block;
+    width: 15%;
+  }
+  &_tel {
+    text-align: right;
+    margin: 0px 15px;
+    &_text {
+      font-family: "Futura";
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 15px;
+      color: #FFFFFF;
+      margin: 0;
+    }
+    &_link {
+      font-family: "Futura";
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 29px;
+      color: $lite_green;
+      transition: 0.3s;
+      &:hover {
+        text-decoration: none;
+        color: #FFFFFF;
+      }
+    }
+  }
+}
+.top_block {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.desktop_nav {
+  display: block;
+  li {
+    display: inline-block;
+    margin: 0px 25px;
+  }
+}
+.nav_item {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  transition: all 0.3s;
+  display: inline-block;
+  &:hover {
+    text-decoration: none;
+    color: $lite_green;
+    transform: scale(1.2);
+  }
+}
+.hero_screen_button a {
+  @include main_btn();
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.mobile_nav {
+  width: 40px;
+  height: 40px;
+  // background: #FFFFFF;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+  &_item {
+    width: 30px;
+    height: 4px;
+    background: #ABCB56;
+    border-radius: 2px;
+    position: absolute;
+    @include aligh-center();
+    &::after {
+      content: "";
+      width: 30px;
+      height: 4px;
+      background: #ABCB56;
+      border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      margin-top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.3s;   
+    }
+    &::before {
+      content: "";
+      width: 30px;
+      height: 4px;
+      background: #ABCB56;
+      border-radius: 2px;
+      position: absolute;
+      top: 50%;
+      margin-top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: 0.3s;  
+    }
+  }
+}
+.mobile_nav_active .mobile_nav_item::after {
+  margin-left: 10px;
+}
+.mobile_nav_active .mobile_nav_item::before {
+  margin-left: -10px;
+}
+
+// контент блок ( что такое искусственный камень + кто мы такие)
+
+.content_block {
+  background: $dark_green;
+  width: 100%;
+  background: $dark_green;
+  padding: 60px 0px;
+  &_description p {
+    font-family: "Circle_Rounded";
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    padding: 30px 0px;
+  }
+}
+.slider_buttons {
+  width: 30px;
+}
+.slider_number {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 27px;
+  color: #FFFFFF;
+  text-align: center;
+  margin: 0;
+}
+
+.content_block_btn {
+  @include main_btn();
+  display: block;
+  width: 200px;
+  margin: 0 0 0 auto;
+}
+.content_block .row:nth-child(2) .content_block_description {
+ text-align: left;
+}
+.slider-progress img {
+  width: 100%;
+}
+
+
