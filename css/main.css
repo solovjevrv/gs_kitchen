@@ -344,6 +344,11 @@
   }
 }
 
+.no-margin-lr {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
 .calculator {
   background: #F6F6F6;
   min-height: 700px;
@@ -354,7 +359,7 @@
 }
 
 .calculator .row {
-  margin: 10px 0px 20px 0px;
+  margin: 10px -15px 20px -15px;
 }
 
 .calculator .result_text {
@@ -375,11 +380,34 @@
   text-align: center;
 }
 
+.form-control:focus {
+  border: 1px solid #ced4da;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
+.calc-raz::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.calc-raz::-ms-input-placeholder {
+  text-align: center;
+}
+
+.calc-raz:-ms-input-placeholder {
+  text-align: center;
+}
+
+.calc-raz::placeholder {
+  text-align: center;
+}
+
 /*Input-box*/
 .custom-select {
   -webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
           box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
   background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12'%3e%3cpath fill='%20160080' d='M7 11L1 1L13 1L7 11Z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
+  background-color: #fff;
   border-radius: 2px;
   border: 1px solid #ced4da;
 }
