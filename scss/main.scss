@@ -1,1 +1,33 @@
-@import "fonts", "home_page", "responsive"
+@import "fonts", "home_page", "responsive", "calculator";
+
+// заголовки //
+h1 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #201600;
+}
+
+h5 {
+  font-family: "CirceRounded";
+  font-size: 18px;
+  line-height: 25px;
+  color: #201600;
+}
