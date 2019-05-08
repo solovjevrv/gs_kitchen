@@ -34,10 +34,6 @@
   font-weight: bold;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 h1 {
   font-family: "Futura";
   font-weight: bold;
@@ -414,17 +410,6 @@ h3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-@media screen and (min-width: 767px) {
-  .bg_1 {
-    top: -52%;
-    right: -30%;
-  }
-  .bg_2 {
-    bottom: -55%;
-    left: -30%;
   }
 }
 /*# sourceMappingURL=main.css.map */
