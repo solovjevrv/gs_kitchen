@@ -10,10 +10,10 @@ var mySwiper = new Swiper ('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  slidesPerGroup: 1,
+  slidesPerGroup: 3,
   slidesPerColumnFill: 'row',
   centeredSlides: true,
-  slidesPerView: 3,
+  slidesPerView: 2,
   autoplay: {delay: 5000},
 
 

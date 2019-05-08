@@ -34,6 +34,10 @@
   font-weight: bold;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h1 {
   font-family: "Futura";
   font-weight: bold;
@@ -61,7 +65,9 @@ h3 {
 .hero_screen {
   background: url(../img/hero_screen_bg.png) no-repeat center center;
   background-size: cover;
-  padding: 0px 0px 200px 0px;
+  z-index: 5;
+  position: relative;
+  height: 100vh;
 }
 
 .hero_screen_title {
@@ -249,8 +255,9 @@ h3 {
 .content_block {
   background: #04582D;
   width: 100%;
-  background: #04582D;
   padding: 60px 0px;
+  position: relative;
+  overflow: hidden;
 }
 
 .content_block_description p {
@@ -260,6 +267,36 @@ h3 {
   line-height: 23px;
   color: #FFFFFF;
   padding: 30px 0px;
+}
+
+.content_block .row:nth-child(2n) {
+  margin-top: 20vw;
+}
+
+.bg_1 {
+  background: #048E47;
+  border-radius: 17%;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  position: absolute;
+  z-index: 0;
+  top: -55%;
+  right: -35%;
+}
+
+.bg_2 {
+  background: #58AB4C;
+  border-radius: 324px;
+  height: 100%;
+  width: 100%;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  position: absolute;
+  z-index: 0;
+  bottom: -57%;
+  left: -40%;
 }
 
 .slider_buttons {
@@ -307,13 +344,25 @@ h3 {
   text-align: left;
 }
 
+.slider-progress {
+  z-index: 2;
+}
+
 .slider-progress img {
-  width: 100%;
+  width: 70%;
 }
 
 @media screen and (min-width: 991px) {
   .mobile_nav {
     display: none;
+  }
+  .bg_1 {
+    top: -52%;
+    right: -30%;
+  }
+  .bg_2 {
+    bottom: -55%;
+    left: -30%;
   }
 }
 
@@ -326,7 +375,7 @@ h3 {
     top: 0%;
     right: 0%;
     background: rgba(0, 0, 0, 0.9);
-    z-index: 3;
+    z-index: 10;
   }
   .nav {
     -webkit-box-orient: vertical;
@@ -365,6 +414,17 @@ h3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .bg_1 {
+    top: -52%;
+    right: -30%;
+  }
+  .bg_2 {
+    bottom: -55%;
+    left: -30%;
   }
 }
 /*# sourceMappingURL=main.css.map */

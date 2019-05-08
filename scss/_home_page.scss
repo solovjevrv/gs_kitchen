@@ -1,4 +1,7 @@
 // спецификации для страницы
+body {
+  overflow-x: hidden;
+}
 // заголовки //
 h1 {
   font-family: "Futura";
@@ -60,7 +63,10 @@ $middle_grey: #E1E1E1;
 .hero_screen {
   background: url(../img/hero_screen_bg.png) no-repeat center center;
   background-size: cover;
-  padding: 0px 0px 200px 0px;
+  z-index: 5;
+  position: relative;
+  // padding: 0px 0px 200px 0px;
+  height: 100vh;
   &_title {
     padding: 130px 0px 40px 0px;
     text-align: center;
@@ -189,8 +195,9 @@ $middle_grey: #E1E1E1;
 .content_block {
   background: $dark_green;
   width: 100%;
-  background: $dark_green;
   padding: 60px 0px;
+  position: relative;
+  overflow: hidden;
   &_description p {
     font-family: "Circle_Rounded";
     font-weight: normal;
@@ -199,6 +206,31 @@ $middle_grey: #E1E1E1;
     color: #FFFFFF;
     padding: 30px 0px;
   }
+}
+.content_block .row:nth-child(2n) {
+  margin-top: 20vw;
+}
+.bg_1 {
+ background: $middle_green;
+ border-radius: 17%;
+ height: 100%;
+ width: 100%;
+ transform: rotate(-15deg);
+ position: absolute;
+ z-index: 0;
+ top: -55%;
+ right: -35%;
+}
+.bg_2 {
+  background: #58AB4C;
+  border-radius: 324px;
+  height: 100%;
+  width: 100%;
+  transform: rotate(-15deg);
+  position: absolute;
+  z-index: 0;
+  bottom: -57%;
+  left: -40%;
 }
 .slider_buttons {
   width: 30px;
@@ -222,8 +254,11 @@ $middle_grey: #E1E1E1;
 .content_block .row:nth-child(2) .content_block_description {
  text-align: left;
 }
+.slider-progress {
+  z-index: 2;
+}
 .slider-progress img {
-  width: 100%;
+  width: 70%;
 }
 
 
