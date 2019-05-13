@@ -210,6 +210,7 @@ $middle_grey: #E1E1E1;
 .content_block {
   background: $dark_green;
   width: 100%;
+  background: $dark_green;
   padding: 60px 0px;
   &_description p {
     font-family: "Circle_Rounded";
@@ -245,5 +246,5 @@ $middle_grey: #E1E1E1;
   text-align: left;
 }
 .slider-progress img {
-  width: 70%;
+  width: 100%;
 }
