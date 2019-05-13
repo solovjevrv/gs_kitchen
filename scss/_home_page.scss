@@ -1,26 +1,4 @@
 // спецификации для страницы
-// заголовки //
-h1 {
-  font-family: "Futura";
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 64px;
-  color: #FFFFFF;
-}
-h2 {
-  font-family: "Futura";
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 64px;
-  color: #FFFFFF;
-}
-h3 {
-  font-family: "Futura";
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 64px;
-  color: #201600;
-}
 
 // основная кнопка //
 @mixin main_btn {
@@ -51,14 +29,6 @@ h3 {
   left: 50%;
   transform: translateX(-50%) translateY(-50%) !important
 }
-
-// цвета //
-$black: #201600;
-$lite_green: #ABCB56;
-$middle_green: #048E47;
-$dark_green: #04582D;
-$lite_grey: #F6F6F6;
-$middle_grey: #E1E1E1;
 
 // ----- HEADER ----- //
 

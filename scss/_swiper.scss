@@ -1,4 +1,22 @@
-.swiper-slide-active {
-  width: 300px!important;
-  height: 425px;
+.swiper {
+  &-container {
+    padding-bottom: 50px;
+  }
+
+  &-pagination {
+    &-bullet {
+      background: $lite_green;
+      opacity: 0.37;
+      width: 10px;
+      height: 10px;
+      margin-bottom: 1px!important;
+
+      &-active {
+        opacity: 1;
+        width: 14px;
+      height: 14px;
+      margin-bottom: 0px!important;
+      }
+    }
+  }
 }

@@ -9,16 +9,17 @@ $(document).ready(function () {
     effect: 'coverflow',
     direction: 'horizontal',
     loop: true,
-    slidesPerGroup: 1,
+    spaceBetween: 0,
+
     slidesPerColumnFill: 'row',
     centeredSlides: true,
-    slidesPerView: 3,
+    slidesPerView: 2,
     autoplay: {
-      delay: 5000
+      delay: 50000
     },
     coverflowEffect: {
       rotate: 0,
-      stretch: -10,
+      stretch: 120,
       depth: 60,
       modifier: 1,
       slideShadows: true,

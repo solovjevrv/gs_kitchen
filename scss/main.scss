@@ -1,4 +1,10 @@
-@import "fonts", "home_page", "responsive", "calculator", "swiper";
+// цвета //
+$black: #201600;
+$lite_green: #ABCB56;
+$middle_green: #048E47;
+$dark_green: #04582D;
+$lite_grey: #F6F6F6;
+$middle_grey: #E1E1E1;
 
 // заголовки //
 h1 {
@@ -31,3 +37,5 @@ h5 {
   line-height: 25px;
   color: #201600;
 }
+
+@import "fonts", "home_page", "responsive", "calculator", "swiper";

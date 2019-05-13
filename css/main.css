@@ -1,4 +1,35 @@
 @charset "UTF-8";
+h1 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #201600;
+}
+
+h5 {
+  font-family: "CirceRounded";
+  font-size: 18px;
+  line-height: 25px;
+  color: #201600;
+}
+
 @font-face {
   font-family: "Futura";
   src: url(../fonts/futura_regular.ttf) format("truetype");
@@ -32,30 +63,6 @@
   src: url(../fonts/lucida_grande_bold.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
-}
-
-h1 {
-  font-family: "Futura";
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 64px;
-  color: #FFFFFF;
-}
-
-h2 {
-  font-family: "Futura";
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 64px;
-  color: #FFFFFF;
-}
-
-h3 {
-  font-family: "Futura";
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 64px;
-  color: #201600;
 }
 
 .hero_screen {
@@ -998,39 +1005,22 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   animation: dothatopcheck 0.4s ease 0s forwards;
 }
 
-.swiper-slide-active {
-  width: 300px !important;
-  height: 425px;
+.swiper-container {
+  padding-bottom: 50px;
 }
 
-h1 {
-  font-family: "Futura";
-  font-weight: bold;
-  font-size: 54px;
-  line-height: 64px;
-  color: #FFFFFF;
+.swiper-pagination-bullet {
+  background: #ABCB56;
+  opacity: 0.37;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 1px !important;
 }
 
-h2 {
-  font-family: "Futura";
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 64px;
-  color: #FFFFFF;
-}
-
-h3 {
-  font-family: "Futura";
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 64px;
-  color: #201600;
-}
-
-h5 {
-  font-family: "CirceRounded";
-  font-size: 18px;
-  line-height: 25px;
-  color: #201600;
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 14px;
+  height: 14px;
+  margin-bottom: 0px !important;
 }
 /*# sourceMappingURL=main.css.map */
