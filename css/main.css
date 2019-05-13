@@ -449,6 +449,7 @@ h3 {
 }
 
 .our_works_gallery {
+  margin-top: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -460,6 +461,127 @@ h3 {
 
 .gallery_item {
   width: 100%;
+}
+
+.location_title {
+  margin: 50px 0px;
+}
+
+.yandex_map {
+  position: relative;
+}
+
+.yandex_map iframe {
+  height: 80vh;
+}
+
+.contact_form {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact_form_title {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  color: #201600;
+}
+
+.contact_form_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.contact_form_link {
+  display: block;
+  color: #201600;
+  margin: 30px 0px;
+}
+
+.contact_form_right {
+  background: #ABCB56;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.contact_form_right input, .contact_form_right textarea {
+  margin: 30px 0px;
+}
+
+.homepage_input {
+  border: none;
+  border-bottom: 3px solid #FFFFFF;
+  background: none;
+  padding: 10px;
+  outline: none;
+}
+
+.homepage_input::-webkit-input-placeholder {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.homepage_input:-ms-input-placeholder {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.homepage_input::-ms-input-placeholder {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.homepage_input::placeholder {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
 }
 
 @media screen and (min-width: 991px) {
