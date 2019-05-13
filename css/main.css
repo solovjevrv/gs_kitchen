@@ -34,10 +34,36 @@
   font-weight: bold;
 }
 
+h1 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 54px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #FFFFFF;
+}
+
+h3 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 64px;
+  color: #201600;
+}
+
 .hero_screen {
   background: url(../img/hero_screen_bg.png) no-repeat center center;
   background-size: cover;
   padding: 0px 0px 200px 0px;
+  height: 100vh;
+  z-index: 2;
 }
 
 .hero_screen_title {
@@ -222,11 +248,18 @@
   margin-left: -10px;
 }
 
+.content_block .row:nth-child(2) {
+  margin-top: 150px;
+}
+
 .content_block {
   background: #04582D;
   width: 100%;
   background: #04582D;
   padding: 60px 0px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .content_block_description p {
@@ -236,6 +269,34 @@
   line-height: 23px;
   color: #FFFFFF;
   padding: 30px 0px;
+}
+
+.content_block_bg_1 {
+  width: 100vw;
+  height: 100vw;
+  background: #048E47;
+  position: absolute;
+  top: -80%;
+  right: -35%;
+  border-radius: 17%;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.content_block_bg_2 {
+  width: 100vw;
+  height: 100vw;
+  background: #58AB4C;
+  position: absolute;
+  bottom: -80%;
+  left: -40%;
+  border-radius: 17%;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+  overflow: hidden;
+  z-index: 0;
 }
 
 .slider_buttons {
@@ -285,6 +346,242 @@
 
 .slider-progress img {
   width: 100%;
+}
+
+.features {
+  padding: 100px 0px;
+}
+
+.features_title {
+  margin-bottom: 50px;
+}
+
+.features_over {
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 64px;
+  color: #ABCB56;
+  display: block;
+  position: absolute;
+  z-index: 2;
+  margin-left: 10px;
+}
+
+.features_main_text {
+  font-family: "Futura";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 135px;
+  line-height: 154px;
+  color: #E1E1E1;
+  display: block;
+  position: absolute;
+}
+
+.features_signature {
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  color: #ABCB56;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.features_left_block, .features_center_block, .features_right_block {
+  position: relative;
+  min-height: 200px;
+}
+
+.features_left_block .features_over {
+  margin-left: 20px;
+}
+
+.our_works {
+  padding: 100px 0px;
+}
+
+.our_works_description p {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #201600;
+}
+
+.our_works_button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.our_works_btn {
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #ABCB56;
+  -webkit-box-shadow: 0px 7px 11px rgba(75, 75, 75, 0.5);
+          box-shadow: 0px 7px 11px rgba(75, 75, 75, 0.5);
+  border-radius: 34.5px;
+  padding: 25px 39px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 3;
+  padding: 25px 69px;
+  display: inline-block;
+  margin: 50px auto 0 auto;
+}
+
+.our_works_btn:hover {
+  background: #FFFFFF;
+  color: #ABCB56;
+  text-decoration: none;
+}
+
+.our_works_gallery {
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  grid-gap: 0px;
+}
+
+.gallery_item {
+  width: 100%;
+}
+
+.location_title {
+  margin: 50px 0px;
+}
+
+.yandex_map {
+  position: relative;
+}
+
+.yandex_map iframe {
+  height: 80vh;
+}
+
+.contact_form {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.contact_form_title {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  color: #201600;
+}
+
+.contact_form_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.contact_form_link {
+  display: block;
+  color: #201600;
+  margin: 30px 0px;
+}
+
+.contact_form_right {
+  background: #ABCB56;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+.contact_form_right input, .contact_form_right textarea {
+  margin: 30px 0px;
+}
+
+.homepage_input {
+  border: none;
+  border-bottom: 3px solid #FFFFFF;
+  background: none;
+  padding: 10px;
+  outline: none;
+}
+
+.homepage_input::-webkit-input-placeholder {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.homepage_input:-ms-input-placeholder {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.homepage_input::-ms-input-placeholder {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+.homepage_input::placeholder {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
 }
 
 @media screen and (min-width: 991px) {
@@ -352,6 +649,8 @@
 .calculator {
   background: #F6F6F6;
   min-height: 700px;
+  position: relative;
+  z-index: 2;
 }
 
 .calculator h3 {
