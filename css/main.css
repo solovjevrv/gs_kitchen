@@ -657,11 +657,6 @@ h5 {
   }
 }
 
-.no-margin-lr {
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-
 .calculator {
   background: #F6F6F6;
   min-height: 700px;
@@ -832,14 +827,12 @@ h5 {
   opacity: 0.4;
 }
 
-.rangeslider--horizontal
-.rangeslider__fill {
+.rangeslider--horizontal .rangeslider__fill {
   top: 0;
   height: 100%;
 }
 
-.rangeslider--vertical
-.rangeslider__fill {
+.rangeslider--vertical .rangeslider__fill {
   bottom: 0;
   width: 100%;
 }
@@ -962,7 +955,8 @@ input[type=checkbox].checkboxer {
   height: 24px;
   width: 24px;
   background-color: transparent;
-  border: 1px solid #225378;
+  border: 2px solid #ABCB56;
+  border-radius: 5px;
   position: relative;
   display: inline-block;
   -webkit-box-sizing: border-box;
@@ -990,7 +984,7 @@ input[type=checkbox].checkboxer {
 }
 
 .check-box::before {
-  top: 21px;
+  top: 19px;
   left: 11px;
   -webkit-box-shadow: 0 0 0 1px #E8F2F6;
           box-shadow: 0 0 0 1px #E8F2F6;
@@ -999,7 +993,7 @@ input[type=checkbox].checkboxer {
 }
 
 .check-box::after {
-  top: 10px;
+  top: 8px;
   left: 0px;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
