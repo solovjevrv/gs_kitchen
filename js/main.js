@@ -4,34 +4,34 @@ $(document).ready(function () {
     $(".desktop_nav").fadeToggle(500);
   });
 
-// инициализация swiper
-var mySwiper = new Swiper ('.swiper-container', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-  slidesPerGroup: 1,
-  slidesPerColumnFill: 'row',
-  centeredSlides: true,
-  slidesPerView: 3,
-  autoplay: {delay: 5000},
+  // инициализация swiper
+  let mySwiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    direction: 'horizontal',
+    loop: true,
+    spaceBetween: 0,
 
+    slidesPerColumnFill: 'row',
+    centeredSlides: true,
+    slidesPerView: 2,
+    autoplay: {
+      delay: 50000
+    },
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 120,
+      depth: 60,
+      modifier: 1,
+      slideShadows: true,
+    },
 
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
+      clickable: true,
     },
 
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
   })
 
 });

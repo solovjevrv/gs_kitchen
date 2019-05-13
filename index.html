@@ -57,22 +57,22 @@
   </header>
   <main>
     <div class="content_block">
+      <div class="content_block_bg_1"></div>
+      <div class="content_block_bg_2"></div>
       <div class="container">
-        <div class="bg_1"></div>
-        <div class="bg_2"></div>
         <div class="row justify-content-end align-items-center">
-          <div class="offset-lg-5 col-lg-1 offset-md-0 col-md-1 offset-sm-0 col-sm-1">
+          <div class="col-md-1">
             <div class="slider_buttons">
               <div class="arrow_up">
                 <img src="img/arrow_up.svg" alt="Вверх">
               </div>
               <div class="slider_number">01</div>
               <div class="arrow_down">
-                <img src="img/arrow_down.svg" alt="Вниз">
+                <img src="img/arrow_down.svg" alt="Вверх">
               </div>
             </div>
           </div>
-          <div class="col-lg-6 col-md-11 col-sm-11">
+          <div class="col-md-6">
             <div class="content_block_product">
               <h2 class="content_block_title">Что такое искусственный камень?</h2>
               <div class="content_block_description">
@@ -116,7 +116,7 @@
               </div>
             </div>
           </div>
-          <div class=" col-md-6">
+          <div class="col-md-6">
             <div class="slider-progress">
               <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -135,117 +135,170 @@
                   <div class="swiper-slide">
                     <img src="img/certificate-5.jpg" alt="">
                   </div>
-                  <div class="swiper-pagination"></div>
-                  <div class="swiper-scrollbar"></div>
+                  
                 </div>
+                <div class="swiper-pagination"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
-
-      <div class="container-fluid calculator">
-        <div class="container">
-          <h3>Рассчитайте стоимость столешницы</h3>
-          <div class=row>
-            <div class="col-md-6">
-              <h5>Тип столешницы</h5>
-              <div class="dropdown">
-                <select id="typeSadok" class="custom-select">
-                  <option value="type-1">Прямоугольная</option>
-                  <option value="type-2">Тип 2</option>
-                  <option value="type-3">Тип 3</option>
-                  <option value="type-4">Тип 4</option>
-                </select>
-              </div>
-              <div class=row>
-                <div class="col-md-12">
-                  <h5>Размеры (см)</h5>
-                  <div class="row">
-                    <div class="col-md-4">
-                      <input type="number" class="form-control calc-raz" id="calc-long" placeholder="Длина">
-                    </div>
-                    <div class="col-md-4">
-                      <input type="number" class="form-control calc-raz" id="calc-width" placeholder="Ширина">
-                    </div>
-                    <div class="col-md-4">
-                      <input type="number" class="form-control calc-raz" id="calc-height" placeholder="Высота">
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="row no-margin-lr">
-                <h5>Мойка</h5>
-                <input class="switcher" type="checkbox" id="switch-moika" />
-                <label for="switch-moika" class="switcher-box">Toggle</label>
-              </div>
-              <div class="row no-margin-lr">
-                <div class="col-md-6">
-                  <div class=row>
-                    <h5>Накладная</h5>
-                    <input class="checkboxer" type="checkbox" id="checkbox-naklad" />
-                    <label for="checkbox-naklad" class="check-box"></label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class=row>
-                    <h5>Встроенная</h5>
-                    <input class="checkboxer" type="checkbox" id="checkbox-vstr" />
-                    <label for="checkbox-vstr" class="check-box"></label>
-                  </div>
-                </div>
-              </div>
-              <div class="row no-margin-lr">
-                <h5>Плинтус</h5>
-                <input class="switcher" type="checkbox" id="switch-plintus" />
-                <label for="switch-plintus" class="switcher-box">Toggle</label>
-              </div>
-             
-              <div class="row no-margin-lr">
-                <div class="col-md-6">
-                  <div class=row>
-                    <h5>Высокий</h5>
-                    <input class="checkboxer" type="checkbox" id="checkbox-high" />
-                    <label for="checkbox-high" class="check-box"></label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class=row>
-                    <h5>Низкий</h5>
-                    <input class="checkboxer" type="checkbox" id="checkbox-low" />
-                    <label for="checkbox-low" class="check-box"></label>
-                  </div>
-                </div>
-              </div>
-              <div class="row no-margin-lr">
-                <h5>Длина плинтуса (погон.м)</h5>
-                <input id="height" type="range" min="1" max="10" step="0.1" value="2" data-orientation="horizontal">
-              </div>
-            </div>
-          </div>
-          <span class="result_text">Примерная стоимость вашего заказа</span>
-          <span class="result_calc">25 900 руб.</span>
-        </div>
-      </div>
-
-
-
     </div>
+
+    <!-- ---FEATURES--- -->
+
     <div class="features">
       <div class="container">
+        <div class="features_title">
+          <h3>Преимущества</h3>
+        </div>
         <div class="row">
-          <div class="features_title">
-            
+          <div class="col-md-4">
+            <div class="features_left_block">
+              <span class="features_over">более</span>
+              <span class="features_main_text">100</span>
+              <span class="features_signature">реализованных <br> проектов</span>
+            </div>
           </div>
-          <div class="col-md-4"></div>
-          <div class="col-md-4"></div>
-          <div class="col-md-4"></div>
+          <div class="offset-md-1 col-md-3">
+            <div class="features_center_block">
+              <span class="features_over">более</span>
+              <span class="features_main_text">5</span>
+              <span class="features_signature">лет успешной <br> работы</span>
+            </div>
+          </div>
+          <div class="offset-md-1 col-md-3">
+            <div class="features_right_block">
+              <span class="features_over">более</span>
+              <span class="features_main_text">2</span>
+              <span class="features_signature">тонн материала <br> использовано</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+
+
+    <!-- ---CALCULATOR--- -->
+
+    <div class="container-fluid calculator">
+      <div class="container">
+        <h3>Рассчитайте стоимость столешницы</h3>
+        <div class=row>
+          <div class="col-md-6">
+            <h5>Тип столешницы</h5>
+            <div class="dropdown">
+              <select id="typeSadok" class="custom-select">
+                <option value="type-1">Прямоугольная</option>
+                <option value="type-2">Тип 2</option>
+                <option value="type-3">Тип 3</option>
+                <option value="type-4">Тип 4</option>
+              </select>
+            </div>
+            <div class=row>
+              <div class="col-md-12">
+                <h5>Размеры (см)</h5>
+                <div class="row">
+                  <div class="col-md-4">
+                    <input type="number" class="form-control calc-raz" id="calc-long" placeholder="Длина">
+                  </div>
+                  <div class="col-md-4">
+                    <input type="number" class="form-control calc-raz" id="calc-width" placeholder="Ширина">
+                  </div>
+                  <div class="col-md-4">
+                    <input type="number" class="form-control calc-raz" id="calc-height" placeholder="Высота">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="row no-margin-lr">
+              <h5>Мойка</h5>
+              <input class="switcher" type="checkbox" id="switch-moika" />
+              <label for="switch-moika" class="switcher-box">Toggle</label>
+            </div>
+            <div class="row no-margin-lr">
+              <div class="col-md-6">
+                <div class=row>
+                  <h5>Накладная</h5>
+                  <input class="checkboxer" type="checkbox" id="checkbox-naklad" />
+                  <label for="checkbox-naklad" class="check-box"></label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class=row>
+                  <h5>Встроенная</h5>
+                  <input class="checkboxer" type="checkbox" id="checkbox-vstr" />
+                  <label for="checkbox-vstr" class="check-box"></label>
+                </div>
+              </div>
+            </div>
+            <div class="row no-margin-lr">
+              <h5>Плинтус</h5>
+              <input class="switcher" type="checkbox" id="switch-plintus" />
+              <label for="switch-plintus" class="switcher-box">Toggle</label>
+            </div>
+
+            <div class="row no-margin-lr">
+              <div class="col-md-6">
+                <div class=row>
+                  <h5>Высокий</h5>
+                  <input class="checkboxer" type="checkbox" id="checkbox-high" />
+                  <label for="checkbox-high" class="check-box"></label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class=row>
+                  <h5>Низкий</h5>
+                  <input class="checkboxer" type="checkbox" id="checkbox-low" />
+                  <label for="checkbox-low" class="check-box"></label>
+                </div>
+              </div>
+            </div>
+            <div class="row no-margin-lr">
+              <h5>Длина плинтуса (погон.м)</h5>
+              <input id="height" type="range" min="1" max="10" step="0.1" value="2" data-orientation="horizontal">
+            </div>
+          </div>
+        </div>
+        <span class="result_text">Примерная стоимость вашего заказа</span>
+        <span class="result_calc">25 900 руб.</span>
+      </div>
+    </div>
+
+    <!-- ---OUR WORKS--- -->
+    <div class="our_works">
+      <div class="container">
+        <div class="row">
+          <div class="our_works_title">
+            <h3>Наши работы</h3>
+          </div>
+          <div class="row">
+            <div class="our_works_description col-md-6">
+              <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi,
+                quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies
+                metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="our_works_gallery">
+        <img src="img/gallery/1.png" alt="Работа 1" class="gallery_item">
+        <img src="img/gallery/2.png" alt="Работа 2" class="gallery_item">
+        <img src="img/gallery/3.png" alt="Работа 3" class="gallery_item">
+        <img src="img/gallery/4.png" alt="Работа 4" class="gallery_item">
+        <img src="img/gallery/5.png" alt="Работа 5" class="gallery_item">
+        <img src="img/gallery/6.png" alt="Работа 6" class="gallery_item">
+        <img src="img/gallery/7.png" alt="Работа 7" class="gallery_item">
+        <img src="img/gallery/8.png" alt="Работа 8" class="gallery_item">
+      </div>
+      <div class="our_works_button">
+        <a href="#" class="our_works_btn">Все работы</a>
+      </div>
+    </div>
+
   </main>
 
 
