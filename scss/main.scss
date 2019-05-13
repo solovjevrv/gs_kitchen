@@ -38,4 +38,16 @@ h5 {
   color: #201600;
 }
 
+//Дополнение бутстрапа
+.no-padding {
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+.margin-bottom-35 {
+  margin-bottom: 35px;
+}
+
 @import "fonts", "home_page", "responsive", "calculator", "swiper";

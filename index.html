@@ -135,7 +135,7 @@
                   <div class="swiper-slide">
                     <img src="img/certificate-5.jpg" alt="">
                   </div>
-                  
+
                 </div>
                 <div class="swiper-pagination"></div>
               </div>
@@ -156,21 +156,21 @@
           <div class="col-md-4">
             <div class="features_left_block">
               <span class="features_over">более</span>
-              <span class="features_main_text">100</span>
+              <span id="number-project" class="features_main_text">0</span>
               <span class="features_signature">реализованных <br> проектов</span>
             </div>
           </div>
           <div class="offset-md-1 col-md-3">
             <div class="features_center_block">
               <span class="features_over">более</span>
-              <span class="features_main_text">5</span>
+              <span id="number-year" class="features_main_text">0</span>
               <span class="features_signature">лет успешной <br> работы</span>
             </div>
           </div>
           <div class="offset-md-1 col-md-3">
             <div class="features_right_block">
               <span class="features_over">более</span>
-              <span class="features_main_text">2</span>
+              <span id="number-ton" class="features_main_text">0</span>
               <span class="features_signature">тонн материала <br> использовано</span>
             </div>
           </div>
@@ -213,52 +213,66 @@
                 </div>
               </div>
             </div>
-            <div class="row no-margin-lr">
-              <h5>Мойка</h5>
-              <input class="switcher" type="checkbox" id="switch-moika" />
-              <label for="switch-moika" class="switcher-box">Toggle</label>
-            </div>
-            <div class="row no-margin-lr">
-              <div class="col-md-6">
-                <div class=row>
-                  <h5>Накладная</h5>
-                  <input class="checkboxer" type="checkbox" id="checkbox-naklad" />
-                  <label for="checkbox-naklad" class="check-box"></label>
-                </div>
+            <div class="row">
+              <div class="col-md-2">
+                <h5>Мойка</h5>
               </div>
-              <div class="col-md-6">
-                <div class=row>
-                  <h5>Встроенная</h5>
-                  <input class="checkboxer" type="checkbox" id="checkbox-vstr" />
-                  <label for="checkbox-vstr" class="check-box"></label>
-                </div>
+              <div class="col-md-2">
+                <input class="switcher" type="checkbox" id="switch-moika" />
+                <label for="switch-moika" class="switcher-box">Toggle</label>
               </div>
-            </div>
-            <div class="row no-margin-lr">
-              <h5>Плинтус</h5>
-              <input class="switcher" type="checkbox" id="switch-plintus" />
-              <label for="switch-plintus" class="switcher-box">Toggle</label>
             </div>
 
-            <div class="row no-margin-lr">
-              <div class="col-md-6">
-                <div class=row>
-                  <h5>Высокий</h5>
-                  <input class="checkboxer" type="checkbox" id="checkbox-high" />
-                  <label for="checkbox-high" class="check-box"></label>
-                </div>
+            <div class="row">
+              <div class="col-md-2">
+                <h5>Накладная</h5>
               </div>
-              <div class="col-md-6">
-                <div class=row>
-                  <h5>Низкий</h5>
-                  <input class="checkboxer" type="checkbox" id="checkbox-low" />
-                  <label for="checkbox-low" class="check-box"></label>
-                </div>
+              <div class="col-md-2">
+                <input class="checkboxer" type="checkbox" id="checkbox-naklad" />
+                <label for="checkbox-naklad" class="check-box"></label>
+              </div>
+              <div class="col-md-2">
+                <h5>Встроенная</h5>
+              </div>
+              <div class="col-md-2">
+                <input class="checkboxer" type="checkbox" id="checkbox-vstr" />
+                <label for="checkbox-vstr" class="check-box"></label>
               </div>
             </div>
-            <div class="row no-margin-lr">
-              <h5>Длина плинтуса (погон.м)</h5>
-              <input id="height" type="range" min="1" max="10" step="0.1" value="2" data-orientation="horizontal">
+
+            <div class="row">
+              <div class="col-md-2">
+                <h5>Плинтус</h5>
+              </div>
+              <div class="col-md-2">
+                <input class="switcher" type="checkbox" id="switch-plintus" />
+                <label for="switch-plintus" class="switcher-box">Toggle</label>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-2">
+                <h5>Высокий</h5>
+              </div>
+              <div class="col-md-2">
+                <input class="checkboxer" type="checkbox" id="checkbox-high" />
+                <label for="checkbox-high" class="check-box"></label>
+              </div>
+              <div class="col-md-2">
+                <h5>Низкий</h5>
+              </div>
+              <div class="col-md-2">
+                <input class="checkboxer" type="checkbox" id="checkbox-low" />
+                <label for="checkbox-low" class="check-box"></label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h5 class="margin-bottom-35">Длина плинтуса (погон.м)</h5>
+              </div>
+              <div class="col-md-12">
+                <input id="height" type="range" min="1" max="10" step="0.1" value="2.5" data-orientation="horizontal">
+              </div>
             </div>
           </div>
         </div>
@@ -303,37 +317,16 @@
 
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/rangeslider.min.js"></script>
+  <script src="js/calculator.js"></script>
   <script src="js/main.js"></script>
 
-  <script>
+  <!-- <script>
     $(document).ready(function () {
-      $('input[type="range"]').rangeslider({
-        polyfill: false,
-        rangeClass: 'rangeslider',
-        disabledClass: 'rangeslider--disabled',
-        horizontalClass: 'rangeslider--horizontal',
-        verticalClass: 'rangeslider--vertical',
-        fillClass: 'rangeslider__fill',
-        handleClass: 'rangeslider__handle',
-
-        onInit: function () {
-          $rangeEl = this.$range;
-          // add value label to handle
-          var $handle = $rangeEl.find('.rangeslider__handle');
-          var handleValue = '<div class="rangeslider__handle__value">' + this.value + '</div>';
-          $handle.append(handleValue);
-        },
-
-        // Callback function
-        onSlide: function (position, value) {
-          var $handle = this.$range.find('.rangeslider__handle__value');
-          $handle.text(this.value);
-        }
-      });
     });
-  </script>
+  </script> -->
 </body>
 
 </html>
