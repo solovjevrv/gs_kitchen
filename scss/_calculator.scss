@@ -6,6 +6,8 @@
 .calculator {
   background: $lite_grey;
   min-height: 700px;
+  position: relative;
+  z-index: 2;
 
   h3 {
     text-align: center;

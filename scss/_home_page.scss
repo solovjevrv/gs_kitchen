@@ -21,6 +21,7 @@ h3 {
   line-height: 64px;
   color: #201600;
 }
+
 // основная кнопка //
 @mixin main_btn {
   font-family: "Circle_Rounded";
@@ -64,6 +65,8 @@ $middle_grey: #E1E1E1;
   background: url(../img/hero_screen_bg.png) no-repeat center center;
   background-size: cover;
   padding: 0px 0px 200px 0px;
+  height: 100vh;
+  z-index: 2;
   &_title {
     padding: 130px 0px 40px 0px;
     text-align: center;
@@ -206,12 +209,17 @@ $middle_grey: #E1E1E1;
 }
 
 // контент блок ( что такое искусственный камень + кто мы такие)
-
+.content_block .row:nth-child(2) {
+  margin-top: 150px;
+}
 .content_block {
   background: $dark_green;
   width: 100%;
   background: $dark_green;
   padding: 60px 0px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
   &_description p {
     font-family: "Circle_Rounded";
     font-weight: normal;
@@ -219,6 +227,30 @@ $middle_grey: #E1E1E1;
     line-height: 23px;
     color: #FFFFFF;
     padding: 30px 0px;
+  }
+  &_bg_1 {
+    width: 100vw;
+    height: 100vw;
+    background: $middle_green;
+    position: absolute;
+    top: -80%;
+    right: -35%;
+    border-radius: 17%;
+    transform: rotate(-15deg);
+    overflow: hidden;
+    z-index: 0;
+  }
+  &_bg_2 {
+    width: 100vw;
+    height: 100vw;
+    background: #58AB4C;
+    position: absolute;
+    bottom: -80%;
+    left: -40%;
+    border-radius: 17%;
+    transform: rotate(-15deg);
+    overflow: hidden;
+    z-index: 0;
   }
 }
 .slider_buttons {
@@ -247,4 +279,51 @@ $middle_grey: #E1E1E1;
 }
 .slider-progress img {
   width: 100%;
+}
+
+//---FEATURES---/
+.features {
+  padding: 100px 0px;
+  &_title {
+    margin-bottom: 50px;
+  }
+  &_over {
+    font-family: "Circle_Rounded";
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 64px;
+    color: $lite_green;
+    display: block;
+    position: absolute;
+    z-index: 2;
+    margin-left: 10px;
+  }
+  &_main_text {
+    font-family: "Futura";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 135px;
+    line-height: 154px;
+    color: $middle_grey;
+    display: block;
+    position: absolute;
+  }
+  &_signature {
+    font-family: "Circle_Rounded";
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    color: $lite_green;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.features_left_block, .features_center_block, .features_right_block {
+  position: relative;
+  min-height: 200px;
+}
+.features_left_block .features_over {
+  margin-left: 20px;
 }
