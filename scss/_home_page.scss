@@ -61,6 +61,7 @@ $lite_grey: #F6F6F6;
 $middle_grey: #E1E1E1;
 
 // ----- HEADER ----- //
+
 .hero_screen {
   background: url(../img/hero_screen_bg.png) no-repeat center center;
   background-size: cover;
@@ -208,7 +209,8 @@ $middle_grey: #E1E1E1;
   margin-left: -10px;
 }
 
-// контент блок ( что такое искусственный камень + кто мы такие)
+//---CONTENT BLOCK---/
+
 .content_block .row:nth-child(2) {
   margin-top: 150px;
 }
@@ -282,6 +284,7 @@ $middle_grey: #E1E1E1;
 }
 
 //---FEATURES---/
+
 .features {
   padding: 100px 0px;
   &_title {
@@ -327,3 +330,35 @@ $middle_grey: #E1E1E1;
 .features_left_block .features_over {
   margin-left: 20px;
 }
+
+//---OUR WORKS---/
+.our_works {
+  padding: 100px 0px;
+  &_description p {
+    font-family: "Circle_Rounded";
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #201600;
+  }
+  &_button {
+    display: flex;
+    justify-content: center;
+  }
+  &_btn {
+    @include main_btn();
+    padding: 25px 69px;
+    display: inline-block;
+    margin: 50px auto 0 auto;
+  }
+  &_gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0px;
+  }
+}
+.gallery_item {
+  width: 100%;
+}
+
