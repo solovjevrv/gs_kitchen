@@ -998,6 +998,11 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   animation: dothatopcheck 0.4s ease 0s forwards;
 }
 
+.swiper-slide-active {
+  width: 300px !important;
+  height: 425px;
+}
+
 h1 {
   font-family: "Futura";
   font-weight: bold;
