@@ -4,7 +4,7 @@ h1 {
   font-weight: bold;
   font-size: 54px;
   line-height: 64px;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 h2 {
@@ -12,7 +12,7 @@ h2 {
   font-weight: bold;
   font-size: 40px;
   line-height: 64px;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 h3 {
@@ -23,16 +23,59 @@ h3 {
   color: #201600;
 }
 
+h4 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFF;
+}
+
 h5 {
-  font-family: "CirceRounded";
+  font-family: "Circle_Rounded";
   font-size: 18px;
   line-height: 25px;
   color: #201600;
 }
 
+h6 {
+  font-family: "Circle_Rounded";
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFF;
+}
+
 .no-padding [class*="col-"] {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.margin-no {
+  margin: 0;
+}
+
+.margin-top-15 {
+  margin-top: 15px;
+}
+
+.margin-right-15 {
+  margin-right: 15px;
+}
+
+.margin-bottom-auto {
+  margin-bottom: auto;
+}
+
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+
+.margin-bottom-25 {
+  margin-bottom: 25px;
+}
+
+.margin-bottom-30 {
+  margin-bottom: 25px;
 }
 
 .margin-bottom-35 {
@@ -41,14 +84,16 @@ h5 {
 
 @font-face {
   font-family: "Futura";
-  src: url(../fonts/futura_regular.ttf) format("truetype");
+  src: url(../fonts/FuturaMediumC.woff) format("truetype");
+  src: url(../fonts/FuturaMediumC.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Futura";
-  src: url(../fonts/futura-bold.ttf) format("truetype");
+  src: url(../fonts/FuturaDemiC.wolf) format("truetype");
+  src: url(../fonts/FuturaDemiC.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
 }
@@ -1132,5 +1177,49 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 .text-slider__item.swiper-slide-active .content_block_product > *:nth-child(15) {
   -webkit-transition-delay: 1.7s;
           transition-delay: 1.7s;
+}
+
+.footer {
+  background: #201600;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.footer_text {
+  font-family: "Circle_Rounded";
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+
+.footer_phone {
+  font-family: "Futura";
+  font-size: 16px;
+  line-height: 21px;
+  color: #ABCB56;
+}
+
+.footer_phone:hover {
+  color: #FFF;
+}
+
+.footer_icon {
+  margin-bottom: auto;
+  margin-right: 10px;
+}
+
+.footer_linkicon:hover {
+  background: #FFF;
+  border-radius: 24px;
+}
+
+.footer_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */

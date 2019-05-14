@@ -5,6 +5,7 @@ $middle_green: #048E47;
 $dark_green: #04582D;
 $lite_grey: #F6F6F6;
 $middle_grey: #E1E1E1;
+$white: #FFF;
 
 // заголовки //
 h1 {
@@ -12,7 +13,7 @@ h1 {
   font-weight: bold;
   font-size: 54px;
   line-height: 64px;
-  color: #FFFFFF;
+  color: $white;
 }
 
 h2 {
@@ -20,7 +21,7 @@ h2 {
   font-weight: bold;
   font-size: 40px;
   line-height: 64px;
-  color: #FFFFFF;
+  color: $white;
 }
 
 h3 {
@@ -28,14 +29,29 @@ h3 {
   font-weight: bold;
   font-size: 40px;
   line-height: 64px;
-  color: #201600;
+  color: $black;
+}
+
+h4 {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: $white;
 }
 
 h5 {
-  font-family: "CirceRounded";
+  font-family: "Circle_Rounded";
   font-size: 18px;
   line-height: 25px;
-  color: #201600;
+  color: $black;
+}
+
+h6 {
+  font-family: "Circle_Rounded";
+  font-size: 14px;
+  line-height: 18px;
+  color: $white;
 }
 
 //Дополнение бутстрапа
@@ -46,8 +62,44 @@ h5 {
   }
 }
 
-.margin-bottom-35 {
-  margin-bottom: 35px;
+.margin {
+  &-no {
+    margin: 0;
+  }
+
+  &-top {
+    &-15 {
+      margin-top: 15px;
+    }
+  }
+
+  &-right {
+    &-15 {
+      margin-right: 15px;
+    }
+  }
+
+  &-bottom {
+    &-auto {
+      margin-bottom: auto;
+    }
+
+    &-20 {
+      margin-bottom: 20px;
+    }
+
+    &-25 {
+      margin-bottom: 25px;
+    }
+
+    &-30 {
+      margin-bottom: 25px;
+    }
+
+    &-35 {
+      margin-bottom: 35px;
+    }
+  }
 }
 
-@import "fonts", "home_page", "responsive", "calculator", "swiper";
+@import "fonts", "home_page", "responsive", "calculator", "swiper", "footer";
