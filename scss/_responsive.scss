@@ -1,0 +1,44 @@
+@media screen and (min-width: 991px) {
+  .mobile_nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .desktop_nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    background: rgba($color: #000000, $alpha: 0.9);
+    z-index: 3;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    width: 100%;
+    top: 20%;
+    right: 10%;
+    &_item {
+      margin: 20px;
+      padding: 5px 0px;
+    }
+  }
+
+  .hero_screen .row {
+    justify-content: space-around;
+  }
+  .hero_screen_main_section {
+    width: 50%;
+    justify-content: space-around;
+  }
+  .hero_screen_logo {
+    width: 50%;
+  }
+  .top_block {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
