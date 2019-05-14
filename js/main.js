@@ -57,18 +57,22 @@ $(document).ready(function () {
   });
 
   // инициализация swiper на текст
-  new Swiper('.swiper-container-for-text', {
-    spaceBetween: 30,
+  let slideText = new Swiper('.swiper-container-for-text', {
+    spaceBetween: 300,
     effect: 'fade',
     loop: true,
     mousewheel: {
       invert: false,
     },
-    // autoHeight: true,
+    // pagination: {
+    //   el: '.text-slider__pagination',
+    //   clickable: true,
+    // }
     pagination: {
-      el: '.blog-slider__pagination',
+      el: '.swiper-pagination',
+      type: 'bullets',
       clickable: true,
-    }
+    },
   });
 
 
