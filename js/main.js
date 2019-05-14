@@ -29,7 +29,7 @@ $(document).ready(function () {
     }
   });
 
-  // инициализация swiper
+  // инициализация swiper на сертификаты
   new Swiper('.swiper-container', {
     effect: 'coverflow',
     direction: 'horizontal',
@@ -56,36 +56,25 @@ $(document).ready(function () {
     },
   });
 
-  // $('#number-project').animateNumber({
-  //   number: 100
-  // });
-  // $('#number-year').animateNumber({
-  //   number: 5
-  // });
-  // $('#number-ton').animateNumber({
-  //   number: 2
-  // });
+  // инициализация swiper на текст
+  new Swiper('.swiper-container-for-text', {
+    spaceBetween: 30,
+    effect: 'fade',
+    loop: true,
+    mousewheel: {
+      invert: false,
+    },
+    // autoHeight: true,
+    pagination: {
+      el: '.blog-slider__pagination',
+      clickable: true,
+    }
+  });
 
 
 });
 
-// let check = true;
-// $(window).scroll(function () {
-//   let wScroll = $(this).scrollTop();
-//   if (wScroll > $('.features').offset().top - ($(window).height() / 1.2) && check) {
-//     $('#number-project').animateNumber({
-//       number: 100
-//     });
-//     $('#number-year').animateNumber({
-//       number: 5
-//     });
-//     $('#number-ton').animateNumber({
-//       number: 2
-//     });
-//     check = false;
-//   }
-// });
-
+// включаем счётчик цифр по прокрутке.
 let show = true;
 let countbox = ".features";
 $(window).on("scroll load resize", function () {
