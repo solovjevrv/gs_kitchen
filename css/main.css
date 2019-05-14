@@ -1199,14 +1199,27 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   color: #ABCB56;
 }
 
+.footer_phone:hover {
+  color: #FFF;
+}
+
 .footer_icon {
   margin-bottom: auto;
-  margin-right: 15px;
+  margin-right: 10px;
+}
+
+.footer_linkicon:hover {
+  background: #FFF;
+  border-radius: 24px;
 }
 
 .footer_block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.footer a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */

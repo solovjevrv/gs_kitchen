@@ -15,14 +15,27 @@
     font-size: 16px;
     line-height: 21px;
     color: $lite_green;
+
+    &:hover {
+      color: $white;
+    }
   }
 
   &_icon {
     margin-bottom: auto;
-    margin-right: 15px;
+    margin-right: 10px;
+  }
+
+  &_linkicon:hover {
+    background: $white;
+    border-radius: 24px;
   }
 
   &_block {
     display: flex;
+  }
+
+  a {
+    text-decoration: none;
   }
 }
