@@ -68,11 +68,20 @@ $(document).ready(function () {
     //   el: '.text-slider__pagination',
     //   clickable: true,
     // }
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   type: 'bullets',
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: '.arrow_down',
+      prevEl: '.arrow_up',
     },
+  });
+
+  slideText.on('slideChange', function() {
+    $('.slider_number').text('0' + (this.realIndex + 1));
+
   });
 
 

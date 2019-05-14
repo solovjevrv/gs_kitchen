@@ -1037,6 +1037,14 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   margin-bottom: 0px !important;
 }
 
+.arrow_down {
+  cursor: pointer;
+}
+
+.arrow_up {
+  cursor: pointer;
+}
+
 .content_block_product > * {
   opacity: 0;
   -webkit-transform: translateY(25px);
