@@ -332,6 +332,10 @@
 .gallery_item {
   width: 100%;
 }
+.our_works_gallery a:hover {
+  transform: scale(1.05);
+  transition: all 0.5s
+}
 
 //---MAP & CONTACTS---/
 .location_title {

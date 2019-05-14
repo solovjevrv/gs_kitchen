@@ -524,6 +524,13 @@ h6 {
   width: 100%;
 }
 
+.our_works_gallery a:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
 .location_title {
   margin: 50px 0px;
 }
