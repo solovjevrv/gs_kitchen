@@ -38,6 +38,9 @@
   padding: 0px 0px 200px 0px;
   height: 100vh;
   z-index: 2;
+  &_wrapper {
+    display: flex;
+  }
   &_title {
     padding: 130px 0px 40px 0px;
     text-align: center;
