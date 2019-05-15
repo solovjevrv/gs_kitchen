@@ -23,7 +23,16 @@
   }
 }
 
+@media screen and (max-width: 991px) and (min-width: 767px) {
+
+  .footer_linkicon {
+    width: 35px;
+  }
+
+}
+
 @media screen and (max-width: 991px) {
+
   .desktop_nav {
     display: none;
     position: absolute;

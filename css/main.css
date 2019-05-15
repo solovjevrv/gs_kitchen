@@ -804,6 +804,12 @@ h6 {
   }
 }
 
+@media screen and (max-width: 991px) and (min-width: 767px) {
+  .footer_linkicon {
+    width: 35px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .desktop_nav {
     display: none;
@@ -1403,7 +1409,6 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 .footer {
   background: #201600;
   padding-top: 35px;
-  padding-bottom: 35px;
 }
 
 .footer_text {
@@ -1432,6 +1437,10 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 .footer_linkicon:hover {
   background: #FFF;
   border-radius: 24px;
+}
+
+.footer_block-main {
+  margin-bottom: 35px;
 }
 
 .footer_block {
