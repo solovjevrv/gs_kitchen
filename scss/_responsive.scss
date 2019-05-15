@@ -1,8 +1,28 @@
+@media screen and (max-width: 1200px) {
+  .contact_form {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: none;
+
+    &_left {
+      min-width: 50%;
+    }
+
+    &_right {
+      min-width: 50%;
+    }
+  }
+
+}
+
+
 @media screen and (min-width: 991px) {
   .mobile_nav {
     display: none;
   }
 }
+
 @media screen and (max-width: 991px) {
   .desktop_nav {
     display: none;
@@ -14,6 +34,7 @@
     background: rgba($color: #000000, $alpha: 0.9);
     z-index: 3;
   }
+
   .nav {
     flex-direction: column;
     align-items: flex-end;
@@ -21,24 +42,92 @@
     width: 100%;
     top: 20%;
     right: 10%;
+
     &_item {
       margin: 20px;
       padding: 5px 0px;
     }
   }
 
-  .hero_screen .row {
+  .hero_screen .hero_screen_wrapper {
     justify-content: space-around;
+    align-items: center;
   }
+
   .hero_screen_main_section {
-    width: 50%;
+    // width: 50%;
+    width: unset;
     justify-content: space-around;
   }
+
   .hero_screen_logo {
-    width: 50%;
+    width: unset;
+    // width: 50%;
   }
+
   .top_block {
     flex-direction: column;
     justify-content: center;
+  }
+
+  .content_block_bg_1,
+  .content_block_bg_2 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero_screen .hero_screen_wrapper {
+    justify-content: space-between;
+  }
+
+  .hero_screen_main_section {
+    // width: 50%;
+    justify-content: space-around;
+  }
+
+  .hero_screen_logo {
+    // width: 50%;
+  }
+  .features .features_signature {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .our_works_gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  .contact_form {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: none;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    &_left {
+      width: 100%;
+    }
+
+    &_right {
+      width: 100%;
+    }
+  }
+
+  .yandex_map iframe {
+    height: 50vh;
+  }
+  .contact_form_title {
+    width: 70%;
+  }
+  .contact_form_right input, .contact_form_right textarea {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .hero_screen_main_section .top_block {
+    display: none;
   }
 }

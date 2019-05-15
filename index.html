@@ -16,12 +16,17 @@
 
   <div prefix="og: http://ogp.me/ns#">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="">
-    <meta property="og:description" content="" />
-    <meta property="og:site_name" content="">
-    <meta property="og:url" content="">
-    <meta property="og:image" content=""> <!-- Полный линк до картинки -->
+    <meta property="og:title" content="Супер кухни">
+    <meta property="og:description" content="Супер кухни, лучше нет!" />
+    <meta property="og:site_name" content="GS Kitchen - лучшие кухни">
+    <link rel="image_src" href="http://gskitchen.dynu.com/img/vk-min.jpg" />
+    <meta property="og:url" content="http://gskitchen.dynu.com/">
+    <meta property="og:image" content="http://gskitchen.dynu.com/img/vk-min.jpg"> <!-- Полный линк до картинки -->
+    <meta property="og:image:width" content="1200" /> <!-- Поправить либо картинку, либо размер -->
+    <meta property="og:image:height" content="628" /> <!-- Поправить либо картинку, либо размер -->
   </div>
+
+  <meta name="keywords" content="кухни, кухни в Рязани, кухнив Москве, кухни под заказ">
 
   <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/icons/meta-icons/logo-fav-60x60.png">
   <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/icons/meta-icons/logo-fav-120x120.png">
@@ -42,7 +47,7 @@
   <header>
     <div class="hero_screen">
       <div class="container">
-        <div class="row">
+        <div class="hero_screen_wrapper">
           <div class="hero_screen_logo">
             <img src="img/hero_screen_logo.svg" alt="Логотип">
           </div>
@@ -66,9 +71,10 @@
                 <li><a href="#" class="nav_item">Контакты</a></li>
               </ul>
             </div>
-            <div class="mobile_nav">
-              <span class="mobile_nav_item"></span>
-            </div>
+
+          </div>
+          <div class="mobile_nav">
+            <span class="mobile_nav_item"></span>
           </div>
         </div>
       </div>
@@ -339,8 +345,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <img src="img/board.svg" alt="board">
+          <div class="col-md-6 align-self-center ">
+            <img class="img-fluid" src="img/board.svg" alt="board">
           </div>
         </div>
         <span class="result_text">Примерная стоимость вашего заказа</span>
@@ -351,33 +357,85 @@
     <!-- ---OUR WORKS--- -->
     <div class="our_works">
       <div class="container">
-        <div class="row">
-          <div class="our_works_title">
-            <h3>Наши работы</h3>
-          </div>
-          <div class="row">
-            <div class="our_works_description col-md-6">
-              <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi,
-                quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies
-                metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.
-              </p>
-            </div>
+        <div class="our_works_title">
+          <h3>Наши работы</h3>
+          <div class="our_works_description col-md-6">
+            <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi,
+              quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacus eget blandit. Mauris vitae ultricies
+              metus, at condimentum nulla. Donec quis ornare lacus. Etiam gravida mollis tortor quis porttitor.
+            </p>
           </div>
         </div>
       </div>
       <div class="our_works_gallery">
-        <img src="img/gallery/1.png" alt="Работа 1" class="gallery_item">
-        <img src="img/gallery/2.png" alt="Работа 2" class="gallery_item">
-        <img src="img/gallery/3.png" alt="Работа 3" class="gallery_item">
-        <img src="img/gallery/4.png" alt="Работа 4" class="gallery_item">
-        <img src="img/gallery/5.png" alt="Работа 5" class="gallery_item">
-        <img src="img/gallery/6.png" alt="Работа 6" class="gallery_item">
-        <img src="img/gallery/7.png" alt="Работа 7" class="gallery_item">
-        <img src="img/gallery/8.png" alt="Работа 8" class="gallery_item">
+        <a href="#"><img src="img/gallery/1.png" alt="Работа 1" class="gallery_item"></a>
+        <a href="#"><img src="img/gallery/2.png" alt="Работа 2" class="gallery_item"></a>
+        <a href="#"><img src="img/gallery/3.png" alt="Работа 3" class="gallery_item"></a>
+        <a href="#"><img src="img/gallery/4.png" alt="Работа 4" class="gallery_item"></a>
+        <a href="#"><img src="img/gallery/5.png" alt="Работа 5" class="gallery_item"></a>
+        <a href="#"><img src="img/gallery/6.png" alt="Работа 6" class="gallery_item"></a>
+        <a href="#"><img src="img/gallery/7.png" alt="Работа 7" class="gallery_item"></a>
+        <a href="#"><img src="img/gallery/8.png" alt="Работа 8" class="gallery_item"></a>
       </div>
       <div class="our_works_button">
         <a href="#" class="our_works_btn">Все работы</a>
       </div>
+    </div>
+
+    <!-- ---MAP & CONTACTS--- -->
+
+    <div class="location">
+      <div class="container">
+        <div class="row">
+          <div class="location_title">
+            <h3>Как нас найти</h3>
+          </div>
+        </div>
+      </div>
+      <div class="yandex_map">
+
+        <div class="contact_form">
+          <div class="contact_form_left">
+            <h4 class="contact_form_title">Напишите нам</h4>
+            <div class="contact_form_main_block">
+              <div class="row align-items-center">
+                <div class="col-sm-2">
+                  <img src="img/icons/mail.svg" alt="Email">
+                </div>
+                <div class="col-sm-10">
+                  <a href="mailto:gstone.rzn@gmail.com" class="contact_form_link">gstone.rzn@gmail.com</a>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-sm-2">
+                  <img src="img/icons/phone.svg" alt="Email">
+                </div>
+                <div class="col-sm-10 ">
+                  <a href="tel:+79511019830" class="contact_form_link">+7-951-101-98-30</a>
+                  <a href="tel:+79156151223" class="contact_form_link">+7-915-615-12-23</a>
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-sm-2">
+                  <img src="img/icons/geo.svg" alt="Email">
+                </div>
+                <div class="col-sm-10">
+                  <a href="#" class="contact_form_link">Street: 46 Birchwood City: Arcata <br> State: OK Zip: 68307</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact_form_right">
+            <input class="homepage_input" type="text" placeholder="Ваше имя">
+            <input class="homepage_input" type="text" placeholder="Ваш email">
+            <textarea class="homepage_textarea" name="question" placeholder="Ваш вопрос"></textarea>
+            <button class="contact_form_btn">Отправить</button>
+          </div>
+        </div>
+        <iframe src="https://yandex.ru/map-widget/v1/-/CCbSBSJv" width="100%" frameborder="0"
+          allowfullscreen="true"></iframe>
+      </div>
+
     </div>
 
   </main>
