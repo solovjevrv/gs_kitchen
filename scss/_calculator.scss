@@ -9,21 +9,23 @@
   }
 
   .row {
-    margin: 10px -15px 20px -15px;
+    margin: 10px -15px 0px -15px;
   }
 
   .result {
     &_text {
-      font-family: "CirceRounded";
+      font-family: "Circle_Rounded";
       font-size: 24px;
       line-height: 31px;
       color: #536E0C;
       display: block;
       text-align: center;
+      margin-top: 80px;
     }
 
     &_calc {
       font-family: "Futura";
+      font-weight: bold;
       font-size: 50px;
       line-height: 65px;
       color: #536E0C;
@@ -112,13 +114,13 @@
   position: relative;
 
   &__fill {
-    background: #EB7F00;
+    background: $lite_green;
     border-radius: 2.5px;
     position: absolute;
   }
 
   &__handle {
-    background: #EB7F00;
+    background: $temperate_olive;
     cursor: pointer;
     display: inline-block;
     width: 15px;
@@ -197,7 +199,6 @@
 }
 
 .rangeslider--horizontal .rangeslider__handle {
-  /* background: #EB7F00; */
   top: -5px;
   touch-action: pan-y;
   -ms-touch-action: pan-y;
@@ -356,7 +357,7 @@ input[type=checkbox].checkboxer {
   position: absolute;
   height: 0;
   width: 4px;
-  background-color: #EB7F00;
+  background-color: $temperate_olive;
   display: inline-block;
   -moz-transform-origin: left top;
   -ms-transform-origin: left top;
@@ -393,7 +394,7 @@ input[type=checkbox].checkboxer {
 
 input[type=checkbox].checkboxer:checked+.check-box,
 .check-box.checked {
-  border-color: #EB7F00;
+  border-color: $lite_green;
 }
 
 input[type=checkbox].checkboxer:checked+.check-box::after,
