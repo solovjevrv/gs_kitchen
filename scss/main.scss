@@ -4,6 +4,7 @@ $lite_green: #ABCB56;
 $middle_green: #048E47;
 $dark_green: #04582D;
 $lite_grey: #F6F6F6;
+$dark_grey: #B1B1B1;
 $middle_grey: #E1E1E1;
 $white: #FFF;
 $temperate_olive: #536E0C;
@@ -121,6 +122,9 @@ h6 {
   }
 
   &-bottom {
+    &-no {
+      margin-bottom: 0px;
+    }
     &-auto {
       margin-bottom: auto;
     }
@@ -143,4 +147,4 @@ h6 {
   }
 }
 
-@import "fonts", "home_page", "responsive", "calculator", "swiper", "footer", "faq";
+@import "fonts", "home_page", "responsive", "calculator", "swiper", "footer", "faq", "news";

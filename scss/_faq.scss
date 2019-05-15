@@ -1,38 +1,47 @@
-.header_wrapper{
+.header_wrapper {
   padding: 14px 0px;
   background: $lite_green;
+
   .flex {
     display: flex;
     justify-content: space-around;
     align-items: center;
   }
+
   .nav_item {
     margin: 0px 10px;
+
     &:hover {
       color: $dark_green;
       transform: none;
     }
   }
+
   .first-btn {
     @include secondary_btn();
     margin: 0px 15px;
   }
+
   .second-btn {
     @include secondary_btn();
     background: $middle_green;
     margin: 0px 15px;
+
     &:hover {
       color: $middle_green;
     }
   }
 }
+
 .main_top_block {
   padding: 70px 0px;
   background: linear-gradient(180deg, #000000 -5.93%, rgba(24, 24, 24, 0.0001) 100%), url(../img/faq_hero_screen_bg.png);
+
   &_title {
     text-align: center;
   }
 }
+
 .faq-accordion {
   background: #FFFFFF;
   /* Shadow-white */
@@ -40,10 +49,12 @@
   padding: 50px;
   margin: 80px 0px;
 }
+
 .card {
   border: none;
   background: #ffffff;
 }
+
 .faq-btn {
   text-decoration: none;
   font-style: bold;
@@ -56,23 +67,28 @@
   line-height: 64px;
   color: $black;
   background: #ffffff;
+
   &:hover {
     color: $black;
     text-decoration: none;
     outline: none;
   }
+
   &:focus {
     outline: none;
   }
+
   &:active {
     outline: none;
     color: $dark_green;
   }
 }
+
 .btn-plus {
   display: inline-block;
   position: relative;
   margin: 0px 20px;
+
   &:after {
     content: " ";
     position: absolute;
@@ -82,6 +98,7 @@
     top: 50%;
     margin-top: -8px;
   }
+
   &:before {
     content: " ";
     position: absolute;
