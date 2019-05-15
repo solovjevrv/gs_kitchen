@@ -313,6 +313,7 @@
     font-size: 18px;
     line-height: 25px;
     color: #201600;
+    width: 50%;
   }
   &_button {
     display: flex;
@@ -337,8 +338,8 @@
   width: 100%;
 }
 .our_works_gallery a:hover {
-  transform: scale(1.1);
-  transition: all 0.5s
+  transform: scale(1.05);
+  transition: 0.5s
 }
 
 //---MAP & CONTACTS---/
@@ -354,7 +355,7 @@
 .contact_form {
   position: absolute;
   top: 50%;
-  left: 30%;
+  right: 130px;
   transform: translateY(-50%);
   display: flex;
   flex-direction: row;
@@ -447,7 +448,7 @@
   }
 }
 .contact_form_btn {
-  background: $black url(../img/icons/send.svg) no-repeat 90% center;
+  background: $black url(../img/icons/send.svg) no-repeat 80% 35%;
   border: none;
   font-family: "Futura";
   font-weight: bold;
@@ -458,8 +459,10 @@
   width: 320px;
   height: 70px;
   transition: 0.5s;
+  text-align: left;
+  padding-left: 20%;
   &:hover {
-    background: #FFFFFF url(../img/icons/send.svg) no-repeat 90% center;
+    background: #FFFFFF url(../img/icons/send.svg) no-repeat 110% center;
     color: $black;
   }
 }
