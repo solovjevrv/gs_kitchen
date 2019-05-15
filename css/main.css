@@ -59,12 +59,29 @@ h6 {
   padding-top: 60px;
 }
 
+.padding-left-5 {
+  padding-left: 5px;
+}
+
+.padding-left-no {
+  padding-left: 0px;
+}
+
 .margin-no {
   margin: 0;
 }
 
+.margin-vertical-no {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
 .margin-top-15 {
   margin-top: 15px;
+}
+
+.margin-top-40 {
+  margin-top: 40px;
 }
 
 .margin-top-60 {
@@ -81,6 +98,10 @@ h6 {
 
 .margin-bottom-auto {
   margin-bottom: auto;
+}
+
+.margin-bottom-10 {
+  margin-bottom: 10px;
 }
 
 .margin-bottom-20 {
@@ -1685,12 +1706,67 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 3;
-  margin: 32px 0px;
 }
 
 .news_one_button:hover {
   background: #FFFFFF;
   color: #04582D;
   text-decoration: none;
+}
+
+.news_one_button-wrapper {
+  margin-top: 32px;
+}
+
+.news-mini_all {
+  background: #FFFFFF;
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.news-mini_all_header {
+  font-family: "Futura";
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 25px;
+  margin-top: 24px;
+  margin-left: 15px;
+  color: #201600;
+}
+
+.news-mini_one {
+  margin: 30px 0px;
+}
+
+.news-mini_one_header {
+  font-family: "Circle_Rounded";
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 25px;
+  color: #201600;
+  margin-left: 15px;
+}
+
+.news-mini_one_desc {
+  font-family: "Circle_Rounded";
+  font-size: 14px;
+  line-height: 20px;
+  color: #201600;
+  margin-left: 15px;
+}
+
+.news-mini_header {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.news-mini_header_one {
+  font-family: "Circle_Rounded";
+  font-size: 18px;
+  line-height: 25px;
+  color: #201600;
 }
 /*# sourceMappingURL=main.css.map */
