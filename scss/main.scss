@@ -6,6 +6,7 @@ $dark_green: #04582D;
 $lite_grey: #F6F6F6;
 $middle_grey: #E1E1E1;
 $white: #FFF;
+$temperate_olive: #536E0C;
 
 // заголовки //
 h1 {
@@ -62,6 +63,19 @@ h6 {
   }
 }
 
+.padding {
+  &-vertical {
+    &-60 {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+  }
+  &-top {
+    &-60 {
+      padding-top: 60px;
+    }
+  }
+}
 .margin {
   &-no {
     margin: 0;
@@ -70,6 +84,10 @@ h6 {
   &-top {
     &-15 {
       margin-top: 15px;
+    }
+
+    &-60 {
+      margin-top: 60px;
     }
   }
 

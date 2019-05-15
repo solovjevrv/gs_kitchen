@@ -50,12 +50,25 @@ h6 {
   padding-right: 0 !important;
 }
 
+.padding-vertical-60 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.padding-top-60 {
+  padding-top: 60px;
+}
+
 .margin-no {
   margin: 0;
 }
 
 .margin-top-15 {
   margin-top: 15px;
+}
+
+.margin-top-60 {
+  margin-top: 60px;
 }
 
 .margin-right-15 {
@@ -108,13 +121,6 @@ h6 {
 @font-face {
   font-family: "Circle_Rounded";
   src: url(../fonts/сirce_rounded_bold.otf) format("truetype");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Lucida_Grande";
-  src: url(../fonts/lucida_grande_bold.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
 }
@@ -922,20 +928,22 @@ h6 {
 }
 
 .calculator .row {
-  margin: 10px -15px 20px -15px;
+  margin: 10px -15px 0px -15px;
 }
 
 .calculator .result_text {
-  font-family: "CirceRounded";
+  font-family: "Circle_Rounded";
   font-size: 24px;
   line-height: 31px;
   color: #536E0C;
   display: block;
   text-align: center;
+  margin-top: 80px;
 }
 
 .calculator .result_calc {
   font-family: "Futura";
+  font-weight: bold;
   font-size: 50px;
   line-height: 65px;
   color: #536E0C;
@@ -1023,13 +1031,13 @@ h6 {
 }
 
 .rangeslider__fill {
-  background: #EB7F00;
+  background: #ABCB56;
   border-radius: 2.5px;
   position: absolute;
 }
 
 .rangeslider__handle {
-  background: #EB7F00;
+  background: #536E0C;
   cursor: pointer;
   display: inline-block;
   width: 15px;
@@ -1099,7 +1107,6 @@ h6 {
 }
 
 .rangeslider--horizontal .rangeslider__handle {
-  /* background: #EB7F00; */
   top: -5px;
   touch-action: pan-y;
   -ms-touch-action: pan-y;
@@ -1226,7 +1233,7 @@ input[type=checkbox].checkboxer {
   position: absolute;
   height: 0;
   width: 4px;
-  background-color: #EB7F00;
+  background-color: #536E0C;
   display: inline-block;
   -webkit-transform-origin: left top;
   transform-origin: left top;
@@ -1254,7 +1261,7 @@ input[type=checkbox].checkboxer {
 
 input[type=checkbox].checkboxer:checked + .check-box,
 .check-box.checked {
-  border-color: #EB7F00;
+  border-color: #ABCB56;
 }
 
 input[type=checkbox].checkboxer:checked + .check-box::after,
