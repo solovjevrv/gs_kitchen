@@ -93,6 +93,9 @@
     left: 50%;
     transform: translateX(-50%);
   }
+  .our_works_description p {
+    width: 100%;
+  }
   .our_works_gallery {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
