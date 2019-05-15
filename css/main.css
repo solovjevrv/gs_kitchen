@@ -480,6 +480,7 @@ h6 {
   font-size: 18px;
   line-height: 25px;
   color: #201600;
+  width: 50%;
 }
 
 .our_works_button {
@@ -535,10 +536,10 @@ h6 {
 }
 
 .our_works_gallery a:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .location_title {
@@ -556,7 +557,7 @@ h6 {
 .contact_form {
   position: absolute;
   top: 50%;
-  left: 30%;
+  right: 130px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   display: -webkit-box;
@@ -760,7 +761,7 @@ h6 {
 }
 
 .contact_form_btn {
-  background: #201600 url(../img/icons/send.svg) no-repeat 90% center;
+  background: #201600 url(../img/icons/send.svg) no-repeat 80% 35%;
   border: none;
   font-family: "Futura";
   font-weight: bold;
@@ -772,10 +773,12 @@ h6 {
   height: 70px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  text-align: left;
+  padding-left: 20%;
 }
 
 .contact_form_btn:hover {
-  background: #FFFFFF url(../img/icons/send.svg) no-repeat 90% center;
+  background: #FFFFFF url(../img/icons/send.svg) no-repeat 110% center;
   color: #201600;
 }
 
@@ -873,6 +876,9 @@ h6 {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
+  }
+  .our_works_description p {
+    width: 100%;
   }
   .our_works_gallery {
     -ms-grid-columns: 1fr 1fr;
@@ -1436,5 +1442,167 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 
 .footer a {
   text-decoration: none;
+}
+
+.header_wrapper {
+  padding: 14px 0px;
+  background: #ABCB56;
+}
+
+.header_wrapper .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_wrapper .nav_item {
+  margin: 0px 10px;
+}
+
+.header_wrapper .nav_item:hover {
+  color: #04582D;
+  -webkit-transform: none;
+          transform: none;
+}
+
+.header_wrapper .first-btn {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #04582D;
+  -webkit-box-shadow: 0px 5px 20px rgba(75, 75, 75, 0.5);
+          box-shadow: 0px 5px 20px rgba(75, 75, 75, 0.5);
+  border-radius: 34.5px;
+  padding: 16px 21px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 3;
+  margin: 0px 15px;
+}
+
+.header_wrapper .first-btn:hover {
+  background: #FFFFFF;
+  color: #04582D;
+  text-decoration: none;
+}
+
+.header_wrapper .second-btn {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 29px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: #04582D;
+  -webkit-box-shadow: 0px 5px 20px rgba(75, 75, 75, 0.5);
+          box-shadow: 0px 5px 20px rgba(75, 75, 75, 0.5);
+  border-radius: 34.5px;
+  padding: 16px 21px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 3;
+  background: #048E47;
+  margin: 0px 15px;
+}
+
+.header_wrapper .second-btn:hover {
+  background: #FFFFFF;
+  color: #04582D;
+  text-decoration: none;
+}
+
+.header_wrapper .second-btn:hover {
+  color: #048E47;
+}
+
+.main_top_block {
+  padding: 70px 0px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-5.93%, #000000), to(rgba(24, 24, 24, 0.0001))), url(../img/faq_hero_screen_bg.png);
+  background: linear-gradient(180deg, #000000 -5.93%, rgba(24, 24, 24, 0.0001) 100%), url(../img/faq_hero_screen_bg.png);
+}
+
+.main_top_block_title {
+  text-align: center;
+}
+
+.faq-accordion {
+  background: #FFFFFF;
+  /* Shadow-white */
+  -webkit-box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  padding: 50px;
+  margin: 80px 0px;
+}
+
+.card {
+  border: none;
+  background: #ffffff;
+}
+
+.faq-btn {
+  text-decoration: none;
+  font-style: bold;
+  border: none;
+  display: inline-block;
+  outline: none;
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 64px;
+  color: #201600;
+  background: #ffffff;
+}
+
+.faq-btn:hover {
+  color: #201600;
+  text-decoration: none;
+  outline: none;
+}
+
+.faq-btn:focus {
+  outline: none;
+}
+
+.faq-btn:active {
+  outline: none;
+  color: #04582D;
+}
+
+.btn-plus {
+  display: inline-block;
+  position: relative;
+  margin: 0px 20px;
+}
+
+.btn-plus:after {
+  content: " ";
+  position: absolute;
+  height: 2px;
+  width: 16px;
+  background: #201600;
+  top: 50%;
+  margin-top: -8px;
+}
+
+.btn-plus:before {
+  content: " ";
+  position: absolute;
+  height: 2px;
+  width: 16px;
+  background: #201600;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  top: 50%;
+  margin-top: -8px;
 }
 /*# sourceMappingURL=main.css.map */
