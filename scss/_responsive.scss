@@ -23,7 +23,16 @@
   }
 }
 
+@media screen and (max-width: 991px) and (min-width: 767px) {
+
+  .footer_linkicon {
+    width: 35px;
+  }
+
+}
+
 @media screen and (max-width: 991px) {
+
   .desktop_nav {
     display: none;
     position: absolute;
@@ -82,16 +91,15 @@
   }
 
   .hero_screen_main_section {
-    // width: 50%;
     justify-content: space-around;
   }
 
-  .hero_screen_logo {
-    // width: 50%;
-  }
   .features .features_signature {
     left: 50%;
     transform: translateX(-50%);
+  }
+  .our_works_description p {
+    width: 100%;
   }
   .our_works_gallery {
     grid-template-columns: 1fr 1fr;
