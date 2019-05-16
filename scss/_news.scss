@@ -1,13 +1,46 @@
-.main_top_block_2 {
-  padding: 70px 0px;
-  background: linear-gradient(180deg, #000000 -5.93%, rgba(24, 24, 24, 0.0001) 100%), url(../img/news_hero_screen_bg.png);
-
-  &_title {
-    text-align: center;
-  }
-}
-
 .news {
+
+  /* ---------- pagination-block ---------- */
+  &_pagination {
+    list-style: none;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+
+    &_block {}
+
+    &_link {
+      padding: 10px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+      color: $black;
+      transition: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+        color: $black;
+      }
+    }
+
+    &_active {
+      color: $lite_green;
+    }
+
+    li {
+      display: inline-block;
+      margin: 15px;
+
+      &:hover {
+        transition: 0.25s;
+        transform: scale(1.3);
+      }
+    }
+  }
+
+  /******************************************/
   &_one {
     background: #FFFFFF;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
@@ -63,6 +96,7 @@
     overflow: hidden;
     margin-top: 30px;
     padding-bottom: 30px;
+    margin-bottom: 50px;
 
     &_header {
       font-family: "Futura";
@@ -95,7 +129,9 @@
       margin-left: 15px;
     }
 
-    &_image {}
+    &_image {
+      width: 90%;
+    }
   }
 
   &_header {

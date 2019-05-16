@@ -175,4 +175,5 @@ h6 {
   }
 }
 
-@import "fonts", "home_page", "responsive", "calculator", "swiper", "footer", "faq", "news";
+// Responsive - ДОЛЖЕН БЫТЬ ВСЕГДА ПОСЛЕДНИМ!!!
+@import "fonts", "home_page", "calculator", "swiper", "footer", "faq", "news", "responsive";
