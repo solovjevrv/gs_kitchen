@@ -1,4 +1,65 @@
 $(document).ready(function () {
+
+  // var b1 = document.getElementById("b1");
+  // var b2 = document.getElementById("b2");
+  // b1.parentNode.insertBefore(b2, b1);
+
+  // Вспомогательная функция для смены позиций элементов в DOM
+  jQuery.fn.swap = function (b) {
+    b = jQuery(b)[0];
+    var a = this[0],
+      a2 = a.cloneNode(true),
+      b2 = b.cloneNode(true),
+      stack = this;
+
+    a.parentNode.replaceChild(b2, a);
+    b.parentNode.replaceChild(a2, b);
+
+    stack[0] = a2;
+    return this.pushStack(stack);
+  };
+
+
+  // Мобильная адаптация
+  let smallDisplay = false;
+  let changeDisplay = false;
+
+  if ($(window).width() <= 768) {
+    $('.news_one_block_picture').each((index, element) => {
+      $(element).swap($('.news_one_block_text')[index]);
+    });
+    smallDisplay = true;
+  }
+
+  $(window).resize(function () {
+
+    let oldSmallDisplay = smallDisplay;
+    if ($(window).width() <= 768) {
+      smallDisplay = true;
+    } else {
+      smallDisplay = false;
+    }
+
+    if (oldSmallDisplay !== smallDisplay) {
+      changeDisplay = true;
+    }
+
+    if (changeDisplay) {
+      if (smallDisplay) {
+        $('.news_one_block_picture').each((index, element) => {
+          $(element).swap($('.news_one_block_text')[index]);
+        });
+      } else {
+        $('.news_one_block_text').each((index, element) => {
+          $(element).swap($('.news_one_block_picture')[index]);
+        });
+      }
+      changeDisplay = false;
+    };
+  });
+
+
+
   $(".mobile_nav").click(function () {
     $(this).toggleClass("mobile_nav_active");
     $(".desktop_nav").fadeToggle(500);
@@ -79,45 +140,51 @@ $(document).ready(function () {
     },
   });
 
-  slideText.on('slideChange', function() {
+  slideText.on('slideChange', function () {
     $('.slider_number').text('0' + (this.realIndex + 1));
 
   });
 
 
-});
+  // включаем счётчик цифр по прокрутке.
+  jQuery.fn.featuresNumber = function () {
+    let show = true;
+    let countbox = ".features";
+    $(window).on("scroll load resize", function () {
+      if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+      let w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+      let e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+      let w_height = $(window).height(); // Высота окна браузера
+      let d_height = $(document).height(); // Высота всего документа
+      let e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+      if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+        $('#number-project').animateNumber({
+          number: 100,
+        }, {
+          easing: 'swing',
+          duration: 1800
+        });
 
-// включаем счётчик цифр по прокрутке.
-let show = true;
-let countbox = ".features";
-$(window).on("scroll load resize", function () {
-  if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-  let w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-  let e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-  let w_height = $(window).height(); // Высота окна браузера
-  let d_height = $(document).height(); // Высота всего документа
-  let e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-  if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-    $('#number-project').animateNumber({
-      number: 100,
-    }, {
-      easing: 'swing',
-      duration: 1800
-    });
+        $('#number-year').animateNumber({
+          number: 5,
+        }, {
+          easing: 'swing',
+          duration: 1800
+        });
 
-    $('#number-year').animateNumber({
-      number: 5,
-    }, {
-      easing: 'swing',
-      duration: 1800
+        $('#number-ton').animateNumber({
+          number: 2,
+        }, {
+          easing: 'swing',
+          duration: 1800
+        });
+        show = false;
+      }
     });
-
-    $('#number-ton').animateNumber({
-      number: 2,
-    }, {
-      easing: 'swing',
-      duration: 1800
-    });
-    show = false;
   }
+
+  if ($(".features").length > 0) {
+    $(".features").featuresNumber();
+  }
+
 });

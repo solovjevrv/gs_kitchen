@@ -86,6 +86,33 @@
 }
 
 @media screen and (max-width: 767px) {
+
+  .news_pagination {
+    justify-content: space-between;
+  }
+
+  .news_pagination li {
+    display: unset;
+    margin: 0px;
+  }
+
+  .news_one_block_text {
+    height: 250px;
+    overflow: hidden;
+  }
+
+  .news_one_image {
+    width: 100%;
+    height: unset;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+  }
+
+
+  .location_title {
+    display: none;
+  }
   .hero_screen .hero_screen_wrapper {
     justify-content: space-between;
   }
