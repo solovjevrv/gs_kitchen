@@ -147,39 +147,44 @@ $(document).ready(function () {
 
 
   // включаем счётчик цифр по прокрутке.
-  let show = true;
-  let countbox = ".features";
-  $(window).on("scroll load resize", function () {
-    if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-    let w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-    let e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-    let w_height = $(window).height(); // Высота окна браузера
-    let d_height = $(document).height(); // Высота всего документа
-    let e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-    if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-      $('#number-project').animateNumber({
-        number: 100,
-      }, {
-        easing: 'swing',
-        duration: 1800
-      });
+  jQuery.fn.featuresNumber = function () {
+    let show = true;
+    let countbox = ".features";
+    $(window).on("scroll load resize", function () {
+      if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
+      let w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
+      let e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
+      let w_height = $(window).height(); // Высота окна браузера
+      let d_height = $(document).height(); // Высота всего документа
+      let e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
+      if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+        $('#number-project').animateNumber({
+          number: 100,
+        }, {
+          easing: 'swing',
+          duration: 1800
+        });
 
-      $('#number-year').animateNumber({
-        number: 5,
-      }, {
-        easing: 'swing',
-        duration: 1800
-      });
+        $('#number-year').animateNumber({
+          number: 5,
+        }, {
+          easing: 'swing',
+          duration: 1800
+        });
 
-      $('#number-ton').animateNumber({
-        number: 2,
-      }, {
-        easing: 'swing',
-        duration: 1800
-      });
-      show = false;
-    }
-  });
+        $('#number-ton').animateNumber({
+          number: 2,
+        }, {
+          easing: 'swing',
+          duration: 1800
+        });
+        show = false;
+      }
+    });
+  }
 
+  if ($(".features").length > 0) {
+    $(".features").featuresNumber();
+  }
 
 });
