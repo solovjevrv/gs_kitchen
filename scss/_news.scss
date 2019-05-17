@@ -1,5 +1,9 @@
-.news {
+.main_top_block_2 {
+  padding: 70px 0px;
+  background: linear-gradient(180deg, #000 -5.93%, rgba(24,24,24, 0.0001) 100%), url(../img/news_hero_screen_bg.png);
+}
 
+.news {
   /* ---------- pagination-block ---------- */
   &_pagination {
     list-style: none;

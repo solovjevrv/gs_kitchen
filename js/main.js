@@ -1,9 +1,4 @@
 $(document).ready(function () {
-
-  // var b1 = document.getElementById("b1");
-  // var b2 = document.getElementById("b2");
-  // b1.parentNode.insertBefore(b2, b1);
-
   // Вспомогательная функция для смены позиций элементов в DOM
   jQuery.fn.swap = function (b) {
     b = jQuery(b)[0];
@@ -139,6 +134,46 @@ $(document).ready(function () {
       prevEl: '.arrow_up',
     },
   });
+
+
+
+
+
+
+
+
+  // инициализация swiper на новости
+  new Swiper('.swiper-news', {
+    // effect: 'coverflow',
+    direction: 'horizontal',
+    // loop: true,
+    spaceBetween: 60,
+
+    // slidesPerColumnFill: 'row',
+    // centeredSlides: true,
+     slidesPerView: 1,
+    // autoplay: {
+    //   delay: 50000
+    // },
+    // coverflowEffect: {
+    //   rotate: 0,
+    //   stretch: 120,
+    //   depth: 60,
+    //   modifier: 1,
+    //   slideShadows: true,
+    // },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+
+
+
+
+
+
 
   slideText.on('slideChange', function () {
     $('.slider_number').text('0' + (this.realIndex + 1));
