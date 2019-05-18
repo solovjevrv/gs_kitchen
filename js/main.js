@@ -53,11 +53,17 @@ $(document).ready(function () {
     };
   });
 
-
+// вызов мобильного меню на главной странице
 
   $(".mobile_nav").click(function () {
     $(this).toggleClass("mobile_nav_active");
     $(".desktop_nav").fadeToggle(500);
+  });
+  // вызов мобильного меню на остальных страницах
+
+  $(".mobile_nav_2").click(function () {
+    $(this).toggleClass("mobile_nav_2_active");
+    $(".desktop_nav_secondary").fadeToggle(500);
   });
 
   // инициализация rangeslider
@@ -222,10 +228,13 @@ $(document).ready(function () {
     $(".features").featuresNumber();
   }
 // аккордеон на странице FAQ
-  $(".faq-btn").click(function(){
-    $(this).toggleClass("btn-active");
-    $(".btn-plus").toggleClass(".btn-active");
-  });
+$(".faq-btn").click(function () {
+  $(".faq-btn").removeClass("btn-active");
+  if (!$(this).hasClass("open")) {
+    $(".faq-btn").removeClass("open");
+    $(this).addClass("btn-active open")
+  }
+});
   
   // if ($(".collapse").hasClass("show")) {
   //   $(this).toggleClass("btn-active");
