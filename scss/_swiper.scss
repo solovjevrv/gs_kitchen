@@ -21,6 +21,16 @@
   }
 }
 
+.swiper-button-next {
+  right: -60px;
+  background-image: url("../img/icons/right-allow.png");
+}
+
+.swiper-button-prev {
+  left: -60px;
+  background-image: url("../img/icons/left-allow.png");
+}
+
 .arrow {
   &_down {
     cursor: pointer;

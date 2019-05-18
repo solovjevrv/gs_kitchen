@@ -4,6 +4,7 @@ $lite_green: #ABCB56;
 $middle_green: #048E47;
 $dark_green: #04582D;
 $lite_grey: #F6F6F6;
+$dark_grey: #B1B1B1;
 $middle_grey: #E1E1E1;
 $white: #FFF;
 $temperate_olive: #536E0C;
@@ -93,20 +94,43 @@ h6 {
       padding-bottom: 60px;
     }
   }
+
   &-top {
     &-60 {
       padding-top: 60px;
     }
   }
+
+  &-left {
+    &-5 {
+      padding-left: 5px;
+    }
+
+    &-no {
+      padding-left: 0px;
+    }
+  }
 }
+
 .margin {
   &-no {
     margin: 0;
   }
 
+  &-vertical {
+    &-no {
+      margin-top: 0px!important;
+      margin-bottom: 0px!important;
+    }
+  }
+
   &-top {
     &-15 {
       margin-top: 15px;
+    }
+
+    &-40 {
+      margin-top: 40px;
     }
 
     &-60 {
@@ -121,8 +145,16 @@ h6 {
   }
 
   &-bottom {
+    &-no {
+      margin-bottom: 0px;
+    }
+
     &-auto {
       margin-bottom: auto;
+    }
+
+    &-10 {
+      margin-bottom: 10px;
     }
 
     &-20 {
@@ -143,4 +175,5 @@ h6 {
   }
 }
 
-@import "fonts", "home_page", "responsive", "calculator", "swiper", "footer", "faq";
+// Responsive - ДОЛЖЕН БЫТЬ ВСЕГДА ПОСЛЕДНИМ!!!
+@import "fonts", "home_page", "calculator", "swiper", "footer", "faq", "news", "news_one", "responsive";
