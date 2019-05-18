@@ -32,6 +32,54 @@
 }
 
 @media screen and (max-width: 991px) {
+  .works-gallery .grid_container {
+    // grid-template-columns: 1fr 1fr;
+    &_item {
+      &:nth-child(1) {
+        grid-column: 1/4;
+        grid-row: 1/2;
+      }
+      &:nth-child(2) {
+        grid-column: 4/7;
+        grid-row: 1/2;
+      }
+      &:nth-child(3) {
+        grid-column: 1/4;
+        grid-row: 2/3;
+      }
+      &:nth-child(4) {
+        grid-column: 4/7;
+        grid-row: 2/3;
+      }
+      &:nth-child(5) {
+        grid-column: 1/4;
+        grid-row: 3/4;
+      }
+      &:nth-child(6) {
+        grid-column: 4/7;
+        grid-row: 3/4;
+      }
+      &:nth-child(7) {
+        grid-column: 1/4;
+        grid-row: 4/5;
+      }
+      &:nth-child(8) {
+        grid-column: 4/7;
+        grid-row: 4/5;
+      }
+      &:nth-child(9) {
+        grid-column: 1/4;
+        grid-row: 5/6;
+      }
+      &:nth-child(10) {
+        grid-column: 4/7;
+        grid-row: 5/6;
+      }
+    }
+  }
+  .works-gallery .nav-item {
+    margin: 0;
+  }
   .other_page_input, .other_page_textarea {
     width: 70%;
   }
@@ -124,6 +172,13 @@
 }
 
 @media screen and (max-width: 767px) {
+  .works-gallery .grid_container {
+    grid-template-columns: 1fr;
+    &_item {
+      grid-column: unset !important;
+      grid-row: unset !important;
+    }
+  }
   .faq-btn {
     font-size: 18px;
     line-height: 44px;

@@ -24,7 +24,7 @@
 }
 
 // выравнивание по горизонтали и ветрикали
-@mixin aligh-center {
+@mixin align-center {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%) !important
@@ -138,7 +138,7 @@
     background: $lite_green;
     border-radius: 2px;
     position: absolute;
-    @include aligh-center();
+    @include align-center();
 
     &::after {
       content: "";

@@ -45,7 +45,7 @@
     background: #ffffff;
     border-radius: 2px;
     position: absolute;
-    @include aligh-center();
+    @include align-center();
 
     &::after {
       content: "";
