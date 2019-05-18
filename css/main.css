@@ -1449,7 +1449,6 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 
 .faq-btn {
   text-decoration: none;
-  font-style: bold;
   border: none;
   display: inline-block;
   outline: none;
@@ -1459,21 +1458,50 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   line-height: 64px;
   color: #201600;
   background: #ffffff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .faq-btn:hover {
-  color: #201600;
+  color: #04582D;
   text-decoration: none;
   outline: none;
 }
 
 .faq-btn:focus {
   outline: none;
+  text-decoration: none;
 }
 
 .faq-btn:active {
   outline: none;
   color: #04582D;
+  text-decoration: none;
+}
+
+.faq-btn:visited {
+  outline: none;
+  text-decoration: none;
+}
+
+.btn-active {
+  color: #04582D;
+}
+
+.btn-active .btn-plus:after {
+  background: #04582D;
+  -webkit-transform: rotate(-315deg);
+          transform: rotate(-315deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.btn-active .btn-plus:before {
+  background: #04582D;
+  -webkit-transform: rotate(315deg);
+          transform: rotate(315deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .btn-plus {
@@ -1502,6 +1530,14 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
           transform: rotate(90deg);
   top: 50%;
   margin-top: -8px;
+}
+
+.btn-plus:hover {
+  background: #04582D;
+}
+
+.faq-card-body {
+  margin-left: 50px;
 }
 
 .main_top_block_2 {

@@ -221,5 +221,15 @@ $(document).ready(function () {
   if ($(".features").length > 0) {
     $(".features").featuresNumber();
   }
+// аккордеон на странице FAQ
+  $(".faq-btn").click(function(){
+    $(this).toggleClass("btn-active");
+    $(".btn-plus").toggleClass(".btn-active");
+  });
+  
+  // if ($(".collapse").hasClass("show")) {
+  //   $(this).toggleClass("btn-active");
 
+  // }
+  
 });

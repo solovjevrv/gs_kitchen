@@ -57,7 +57,6 @@
 
 .faq-btn {
   text-decoration: none;
-  font-style: bold;
   border: none;
   display: inline-block;
   outline: none;
@@ -67,28 +66,47 @@
   line-height: 64px;
   color: $black;
   background: #ffffff;
-
+  transition: 0.4s;
   &:hover {
-    color: $black;
+    color: $dark_green;
     text-decoration: none;
     outline: none;
   }
 
   &:focus {
     outline: none;
+    text-decoration: none;
   }
 
   &:active {
     outline: none;
     color: $dark_green;
+    text-decoration: none;
+  }
+  &:visited {
+    outline: none;
+    text-decoration: none;
   }
 }
-
+.btn-active {
+  color:$dark_green;
+  .btn-plus {
+    &:after {
+      background: $dark_green;
+      transform: rotate(-315deg);
+      transition: all 0.5s;
+    }
+    &:before {
+      background: $dark_green;
+      transform: rotate(315deg);
+      transition: all 0.5s;
+    }
+  }
+}
 .btn-plus {
   display: inline-block;
   position: relative;
   margin: 0px 20px;
-
   &:after {
     content: " ";
     position: absolute;
@@ -98,7 +116,6 @@
     top: 50%;
     margin-top: -8px;
   }
-
   &:before {
     content: " ";
     position: absolute;
@@ -109,4 +126,10 @@
     top: 50%;
     margin-top: -8px;
   }
+  &:hover {
+    background: $dark_green;
+  }
+}
+.faq-card-body {
+  margin-left: 50px;
 }
