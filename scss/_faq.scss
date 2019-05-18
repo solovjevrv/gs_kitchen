@@ -222,6 +222,12 @@
   outline: none;
   width: 100%;
   padding: 10px 10px 10px 45px;
+  caret-color: $dark_green;
+  color: $dark_green;
+  font-family: "Circle_Rounded";
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: bold;
   &::placeholder {
     font-family: "Circle_Rounded";
     font-weight: normal;

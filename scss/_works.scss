@@ -195,3 +195,43 @@
     }
   }
 }
+
+//модальное окно
+
+.modal-header, .modal-body, .modal-content, .modal-footer {
+  border: none;
+}
+.modal-header {
+  padding: 5px 10px;
+}
+.modal-content {
+  padding-bottom: 20px;
+}
+.modal_title {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 64px;
+  text-align: center;
+}
+.modal-body .other_page_input[type=email] {
+  margin-top: 30px;
+}
+.modal-body {
+  .other_page_input, .other_page_textarea {
+    border: 2px solid $dark_green;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  .other_page_textarea {
+    margin-top: 30px;
+    padding-bottom: 80px;
+  }
+}
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  .contact_form_btn_2 {
+    margin-top: 0;
+  }
+}

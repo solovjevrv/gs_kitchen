@@ -1642,6 +1642,12 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   outline: none;
   width: 100%;
   padding: 10px 10px 10px 45px;
+  caret-color: #04582D;
+  color: #04582D;
+  font-family: "Circle_Rounded";
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: bold;
 }
 
 .other_page_input::-webkit-input-placeholder, .other_page_textarea::-webkit-input-placeholder {
@@ -2221,6 +2227,54 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   background: #ABCB56;
   text-decoration: none;
   color: #ffffff;
+}
+
+.modal-header, .modal-body, .modal-content, .modal-footer {
+  border: none;
+}
+
+.modal-header {
+  padding: 5px 10px;
+}
+
+.modal-content {
+  padding-bottom: 20px;
+}
+
+.modal_title {
+  font-family: "Futura";
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 64px;
+  text-align: center;
+}
+
+.modal-body .other_page_input[type=email] {
+  margin-top: 30px;
+}
+
+.modal-body .other_page_input, .modal-body .other_page_textarea {
+  border: 2px solid #04582D;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.modal-body .other_page_textarea {
+  margin-top: 30px;
+  padding-bottom: 80px;
+}
+
+.modal-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal-footer .contact_form_btn_2 {
+  margin-top: 0;
 }
 
 @media screen and (max-width: 1200px) {
