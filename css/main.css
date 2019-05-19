@@ -254,7 +254,7 @@ h6 {
           transform: scale(1.2);
 }
 
-.hero_screen_button a {
+.hero_screen_button button {
   font-family: "Circle_Rounded";
   font-weight: bold;
   font-size: 16px;
@@ -274,12 +274,17 @@ h6 {
   margin-left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  border: none;
 }
 
-.hero_screen_button a:hover {
+.hero_screen_button button:hover {
   background: #FFFFFF;
   color: #ABCB56;
   text-decoration: none;
+}
+
+.hero_screen_button button:focus {
+  outline: none;
 }
 
 .mobile_nav {

@@ -118,11 +118,15 @@
   }
 }
 
-.hero_screen_button a {
+.hero_screen_button button {
   @include main_btn();
   display: inline-block;
   margin-left: 50%;
   transform: translateX(-50%);
+  border: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .mobile_nav {
