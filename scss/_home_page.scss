@@ -410,6 +410,9 @@
   padding: 10px;
   outline: none;
   width: 90%;
+  color: #FFFFFF;
+  font-family: "Circle_Rounded";
+  font-weight: bold;
   caret-color: #FFFFFF;
   &::placeholder {
     font-family: "Circle_Rounded";
@@ -429,6 +432,9 @@
   padding: 10px;
   outline: none;
   width: 90%;
+  color: #FFFFFF;
+  font-family: "Circle_Rounded";
+  font-weight: bold;
   resize: none;
   caret-color: #FFFFFF;
   cursor: progress;
@@ -460,5 +466,8 @@
   &:hover {
     background: #FFFFFF url(../img/icons/send.svg) no-repeat 110% center;
     color: $black;
+  }
+  &:focus {
+    outline: none;
   }
 }

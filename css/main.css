@@ -674,6 +674,9 @@ h6 {
   padding: 10px;
   outline: none;
   width: 90%;
+  color: #FFFFFF;
+  font-family: "Circle_Rounded";
+  font-weight: bold;
   caret-color: #FFFFFF;
 }
 
@@ -732,6 +735,9 @@ h6 {
   padding: 10px;
   outline: none;
   width: 90%;
+  color: #FFFFFF;
+  font-family: "Circle_Rounded";
+  font-weight: bold;
   resize: none;
   caret-color: #FFFFFF;
   cursor: progress;
@@ -805,6 +811,10 @@ h6 {
 .contact_form_btn:hover {
   background: #FFFFFF url(../img/icons/send.svg) no-repeat 110% center;
   color: #201600;
+}
+
+.contact_form_btn:focus {
+  outline: none;
 }
 
 .calculator {
@@ -2277,6 +2287,48 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   margin-top: 0;
 }
 
+.contacts_title {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+.contacts_map_item {
+  height: 50vh;
+}
+
+.contacts_page_form {
+  background: #ABCB56;
+  padding: 60px 0px;
+}
+
+.contacts_page_form .contacts_page_form_title {
+  text-align: center;
+}
+
+.contacts_page_form .homepage_input, .contacts_page_form .homepage_textarea {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contacts_page_form .homepage_textarea {
+  padding-bottom: 70px;
+}
+
+.contacts_page_form .safety_policy {
+  color: #ffffff;
+  font-size: 10px;
+}
+
+.contacts_page_form .contact_form_btn {
+  display: block;
+  margin: 30px auto 50px auto;
+  padding-left: 60px;
+}
+
+.white_text {
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1200px) {
   .contact_form {
     position: relative;
@@ -2306,6 +2358,19 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 }
 
 @media screen and (max-width: 991px) {
+  .contacts_page_form .homepage_input, .contacts_page_form .homepage_textarea {
+    width: 70%;
+    margin: 30px auto 0px auto;
+    display: block;
+  }
+  .contacts_page_form .homepage_textarea {
+    margin-bottom: 30px;
+  }
+  .contacts_page_form .safety_policy {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+  }
   .works-gallery .grid_container_item:nth-child(1) {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;

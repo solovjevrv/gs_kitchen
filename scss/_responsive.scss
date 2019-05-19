@@ -32,6 +32,21 @@
 }
 
 @media screen and (max-width: 991px) {
+  .contacts_page_form {
+    .homepage_input, .homepage_textarea {
+      width: 70%;
+      margin: 30px auto 0px auto;
+      display: block;
+    }
+    .homepage_textarea {
+      margin-bottom: 30px;
+    }
+    .safety_policy {
+      width: 70%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
   .works-gallery .grid_container {
     // grid-template-columns: 1fr 1fr;
     &_item {
