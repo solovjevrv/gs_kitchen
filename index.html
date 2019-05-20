@@ -66,9 +66,9 @@
               <ul class="nav">
                 <li><a href="#" class="nav_item">Главная</a></li>
                 <li><a href="faq.html" class="nav_item">Вопрос-ответ</a></li>
-                <li><a href="#" class="nav_item">Наши работы</a></li>
+                <li><a href="works.html" class="nav_item">Наши работы</a></li>
                 <li><a href="news.html" class="nav_item">Новости</a></li>
-                <li><a href="#" class="nav_item">Контакты</a></li>
+                <li><a href="contacts.html" class="nav_item">Контакты</a></li>
               </ul>
             </div>
 
@@ -82,7 +82,7 @@
         <h1>Изделия из камня любой <br> формы и размеров</h1>
       </div>
       <div class="hero_screen_button">
-        <a href="#">Оставить заявку</a>
+        <button data-toggle="modal" data-target="#Modal" href="#Modal">Оставить заявку</button>
       </div>
     </div>
   </header>
@@ -424,7 +424,7 @@
           </div>
           <div class="contact_form_right">
             <input class="homepage_input" type="text" placeholder="Ваше имя">
-            <input class="homepage_input" type="text" placeholder="Ваш email">
+            <input class="homepage_input" type="email" placeholder="Ваш email">
             <textarea class="homepage_textarea" name="question" placeholder="Ваш вопрос"></textarea>
             <button class="contact_form_btn">Отправить</button>
           </div>
@@ -452,10 +452,10 @@
           <a href="faq.html">
             <h6>Вопрос-ответ</h6>
           </a>
-          <a href="#">
+          <a href="contacts.html">
             <h6>Контакты</h6>
           </a>
-          <a href="#">
+          <a href="works.html">
             <h6>Наши работы</h6>
           </a>
           <a href="#">
@@ -495,10 +495,43 @@
     </div>
   </section>
 
+  <!-- модальное окно для заявки -->
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLabel">Оставьте заказ прямо сейчас</h5> -->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <p class="modal_title">Оставьте заказ прямо сейчас</p>
+              <div class="row justify-content-center">
+                <div class="col-lg-10">
+                  <input type="text" class="other_page_input" placeholder="Как к Вам можно обращаться?">
+                  <input type="email" class="other_page_input" placeholder="Ваш e-mail">
+                  <textarea name="message" class="other_page_textarea" placeholder="Ваше сообщение..."></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="contact_form_btn_2" data-dismiss="modal">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script src="js/rangeslider.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
   <script src="js/calculator.js"></script>
   <script src="js/main.js"></script>
 
