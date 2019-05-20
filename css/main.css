@@ -1872,6 +1872,8 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   -webkit-transition: 0.3s;
   transition: 0.3s;
   z-index: 3;
+  padding: 10px 16px;
+  text-transform: none;
 }
 
 .news_one_button:hover {
