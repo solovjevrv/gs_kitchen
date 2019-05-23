@@ -632,7 +632,14 @@ h6 {
   min-width: 385px;
 }
 
-.contact_form_main_block .row {
+.contact_form_main_block {
+  font-family: "Circle_Rounded";
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.contact_form .row {
   margin: 30px 0px;
 }
 
@@ -810,7 +817,7 @@ h6 {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   text-align: left;
-  padding-left: 20%;
+  padding-left: 60px;
 }
 
 .contact_form_btn:hover {
@@ -1636,9 +1643,10 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   font-family: "Futura";
   font-weight: bold;
   font-size: 22px;
-  line-height: 64px;
+  line-height: 24px;
   text-align: center;
   color: #048E47;
+  margin-bottom: 10px;
 }
 
 .contact_form_2 .other_page_input[type=text] {
@@ -2035,6 +2043,9 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 .works-gallery .nav-item .nav-link {
   background: transparent;
   color: #B1B1B1;
+  font-family: "Futura";
+  font-size: 18px;
+  line-height: 25px;
   font-weight: bold;
 }
 
@@ -2354,6 +2365,9 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   .mobile_nav, .mobile_nav_2 {
     display: none;
   }
+  .mobile_buttons {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 991px) and (min-width: 767px) {
@@ -2363,6 +2377,21 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 }
 
 @media screen and (max-width: 991px) {
+  .mobile_buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mobile_buttons .first-btn {
+    margin-top: 20px;
+  }
+  .mobile_buttons .second-btn {
+    margin-top: 40px;
+  }
   .contacts_page_form .homepage_input, .contacts_page_form .homepage_textarea {
     width: 70%;
     margin: 30px auto 0px auto;

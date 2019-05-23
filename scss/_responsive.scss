@@ -21,6 +21,9 @@
   .mobile_nav, .mobile_nav_2 {
     display: none;
   }
+  .mobile_buttons {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 991px) and (min-width: 767px) {
@@ -32,6 +35,16 @@
 }
 
 @media screen and (max-width: 991px) {
+  .mobile_buttons {
+    display: flex;
+    flex-direction: column;
+    .first-btn {
+      margin-top: 20px;
+    }
+    .second-btn {
+      margin-top: 40px;
+    }
+  }
   .contacts_page_form {
     .homepage_input, .homepage_textarea {
       width: 70%;
@@ -185,7 +198,6 @@
     display: none;
   }
 }
-
 @media screen and (max-width: 767px) {
   .works-gallery .grid_container {
     grid-template-columns: 1fr;
