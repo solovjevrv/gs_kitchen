@@ -394,6 +394,10 @@
     display: block;
     color: $black;
     width: 100%;
+    font-family: "Circle_Rounded";
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
     &:hover {
       text-decoration: none;
       color: $black;

@@ -35,6 +35,16 @@
 }
 
 @media screen and (max-width: 991px) {
+  .contacts_page_down_block {
+    justify-content: center;
+    .contacts_page_left, .contacts_page_center, .contacts_page_right {
+      // width: 50%;
+      margin: 20px 20px;
+    }
+  }
+  .news-mini_all {
+    display: none;
+  }
   .mobile_buttons {
     display: flex;
     flex-direction: column;
@@ -158,7 +168,7 @@
       align-items: flex-end;
       position: absolute;
       width: 100%;
-      top: 20%;
+      top: 12%;
       right: 15%;
   
       &_item {
@@ -199,6 +209,10 @@
   }
 }
 @media screen and (max-width: 767px) {
+  h1 {
+    font-size: 44px;
+    line-height: 36px;
+  }
   .works-gallery .grid_container {
     grid-template-columns: 1fr;
     &_item {
@@ -319,6 +333,12 @@
 @media screen and (max-width: 576px) {
   .footer_linkicon {
     width: 38px;
+  }
+  .contacts_page_down_block {
+    justify-content: space-between;
+    .contacts_page_left, .contacts_page_center, .contacts_page_right {
+      width: 100%;
+    }
   }
 }
 @media screen and (max-width: 550px) {

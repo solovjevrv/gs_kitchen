@@ -196,6 +196,9 @@
       text-decoration: none;
       color: #ffffff;
     }
+    &:focus {
+      outline: none;
+    }
   }
 }
 
