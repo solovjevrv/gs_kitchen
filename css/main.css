@@ -349,7 +349,7 @@ h6 {
 }
 
 .content_block .row:nth-child(2) {
-  margin-top: 150px;
+  margin-top: 30vh;
 }
 
 .content_block {
@@ -372,12 +372,12 @@ h6 {
 }
 
 .content_block_bg_1 {
-  width: 100vw;
-  height: 100vw;
+  width: 110%;
+  height: 110%;
   background: #048E47;
   position: absolute;
-  top: -80%;
-  right: -35%;
+  top: -66%;
+  right: -45%;
   border-radius: 17%;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
@@ -386,12 +386,12 @@ h6 {
 }
 
 .content_block_bg_2 {
-  width: 100vw;
-  height: 100vw;
+  width: 110%;
+  height: 110%;
   background: #58AB4C;
   position: absolute;
-  bottom: -80%;
-  left: -40%;
+  bottom: -66%;
+  left: -45%;
   border-radius: 17%;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
@@ -446,6 +446,10 @@ h6 {
 
 .slider-progress img {
   width: 100%;
+}
+
+.arrow_down:focus, .arrow_up:focus {
+  outline: none;
 }
 
 .features {
@@ -2394,6 +2398,17 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   margin-left: 20px;
 }
 
+@media screen and (max-width: 1440px) {
+  .content_block_bg_1 {
+    top: -66%;
+    right: -38%;
+  }
+  .content_block_bg_2 {
+    bottom: -66%;
+    left: -38%;
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .contact_form {
     position: relative;
@@ -2426,6 +2441,9 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 }
 
 @media screen and (max-width: 991px) {
+  .content_block .row:nth-child(2) {
+    margin-top: 5vh;
+  }
   .contacts_page_down_block {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -2653,6 +2671,15 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
     font-size: 44px;
     line-height: 36px;
   }
+  .slider_buttons {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    margin: 0 auto;
+  }
+  .slider_buttons .slider_number {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
   .works-gallery .grid_container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -2777,17 +2804,36 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   .contacts_page_down_block .contacts_page_left, .contacts_page_down_block .contacts_page_center, .contacts_page_down_block .contacts_page_right {
     width: 100%;
   }
+  .contact_form_title {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 550px) {
   .header_wrapper_buttons {
     display: none;
   }
+  .other_page_input, .other_page_textarea {
+    width: 90%;
+  }
+  .contact_form_right input,
+  .contact_form_right textarea {
+    width: 100%;
+  }
+  .contacts_page_form .homepage_input, .contacts_page_form .homepage_textarea {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .hero_screen_main_section .top_block {
     display: none;
+  }
+  .contact_form_btn {
+    width: 100%;
+  }
+  .hero_screen_title {
+    padding: 70px 10px 20px 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */
