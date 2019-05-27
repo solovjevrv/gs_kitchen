@@ -122,16 +122,14 @@ h6 {
 
 @font-face {
   font-family: "Futura";
-  src: url(../fonts/FuturaMediumC.woff) format("truetype");
-  src: url(../fonts/FuturaMediumC.ttf) format("truetype");
+  src: url(../fonts/futura-n.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Futura";
-  src: url(../fonts/FuturaDemiC.wolf) format("truetype");
-  src: url(../fonts/FuturaDemiC.ttf) format("truetype");
+  src: url(../fonts/Futura-Bold.ttf) format("truetype");
   font-style: normal;
   font-weight: bold;
 }
@@ -863,7 +861,7 @@ h6 {
 }
 
 .calculator .result_calc {
-  font-family: "Futura";
+  font-family: "Futura" !important;
   font-weight: bold;
   font-size: 50px;
   line-height: 65px;
