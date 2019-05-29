@@ -1,3 +1,13 @@
+@media screen and (max-width: 1440px) {
+  .content_block_bg_1 {
+    top: -66%;
+    right: -38%;
+  }
+  .content_block_bg_2 {
+    bottom: -66%;
+    left: -38%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .contact_form {
     position: relative;
@@ -21,6 +31,9 @@
   .mobile_nav, .mobile_nav_2 {
     display: none;
   }
+  .mobile_buttons {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 991px) and (min-width: 767px) {
@@ -32,6 +45,29 @@
 }
 
 @media screen and (max-width: 991px) {
+  .content_block .row:nth-child(2) {
+    margin-top: 5vh;
+  }
+  .contacts_page_down_block {
+    justify-content: center;
+    .contacts_page_left, .contacts_page_center, .contacts_page_right {
+      // width: 50%;
+      margin: 20px 20px;
+    }
+  }
+  .news-mini_all {
+    display: none;
+  }
+  .mobile_buttons {
+    display: flex;
+    flex-direction: column;
+    .first-btn {
+      margin-top: 20px;
+    }
+    .second-btn {
+      margin-top: 40px;
+    }
+  }
   .contacts_page_form {
     .homepage_input, .homepage_textarea {
       width: 70%;
@@ -145,7 +181,7 @@
       align-items: flex-end;
       position: absolute;
       width: 100%;
-      top: 20%;
+      top: 12%;
       right: 15%;
   
       &_item {
@@ -185,8 +221,18 @@
     display: none;
   }
 }
-
 @media screen and (max-width: 767px) {
+  h1 {
+    font-size: 44px;
+    line-height: 36px;
+  }
+  .slider_buttons {
+    transform: rotate(90deg);
+    margin: 0 auto;
+    .slider_number {
+      transform: rotate(-90deg);
+    }
+  }
   .works-gallery .grid_container {
     grid-template-columns: 1fr;
     &_item {
@@ -308,15 +354,40 @@
   .footer_linkicon {
     width: 38px;
   }
+  .contacts_page_down_block {
+    justify-content: space-between;
+    .contacts_page_left, .contacts_page_center, .contacts_page_right {
+      width: 100%;
+    }
+  }
+  .contact_form_title {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 550px) {
   .header_wrapper_buttons {
     display: none;
+  }
+  .other_page_input, .other_page_textarea {
+    width: 90%;
+  }
+  .contact_form_right input,
+  .contact_form_right textarea {
+    width: 100%;
+  }
+  .contacts_page_form .homepage_input, .contacts_page_form .homepage_textarea {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 420px) {
   .hero_screen_main_section .top_block {
     display: none;
+  }
+  .contact_form_btn {
+    width: 100%;
+  }
+  .hero_screen_title {
+    padding: 70px 10px 20px 10px ;
   }
 }

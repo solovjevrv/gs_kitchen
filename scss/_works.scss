@@ -38,6 +38,9 @@
       .nav-link {
         background: transparent;
         color: $dark_grey;
+        font-family: "Futura";
+        font-size: 18px;
+        line-height: 25px;
         font-weight: bold;
 
         &:hover {
@@ -192,6 +195,9 @@
       background: $lite_green;
       text-decoration: none;
       color: #ffffff;
+    }
+    &:focus {
+      outline: none;
     }
   }
 }

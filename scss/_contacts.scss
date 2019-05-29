@@ -8,7 +8,9 @@
 .contacts_page_form {
   background: $lite_green;
   padding: 60px 0px ;
+  margin-top: -6px;
   .contacts_page_form_title {
+    line-height: 44px;
     text-align: center;
   }
   .homepage_input, .homepage_textarea {
@@ -31,4 +33,16 @@
 
 .white_text {
   color: #ffffff;
+}
+.contacts_page_down_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.contacts_page_left, .contacts_page_center, .contacts_page_right {
+  display: flex;
+  .contacts_page_link {
+    margin-left: 20px;
+  }
 }
