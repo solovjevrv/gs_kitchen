@@ -283,11 +283,11 @@
           <div class="col-md-6">
             <h5>Тип столешницы</h5>
             <div class="dropdown">
-              <select id="typeSadok" class="custom-select">
+              <select id="typeStol" class="custom-select">
                 <option value="type-1">Прямоугольная</option>
-                <option value="type-2">Тип 2</option>
-                <option value="type-3">Тип 3</option>
-                <option value="type-4">Тип 4</option>
+                <option value="type-2">Г-Образная</option>
+                <option value="type-3">П-образная</option>
+                <option value="type-4">Г-образная с трапецией</option>
               </select>
             </div>
             <div class=row>
@@ -295,13 +295,45 @@
                 <h5>Размеры (см)</h5>
                 <div class="row">
                   <div class="col-md-12 col-lg-4 margin-bottom-25">
-                    <input type="number" class="form-control calc-raz" id="calc-long" placeholder="Длина">
+                    <input type="number" class="form-control calc-raz" id="calc-long" placeholder="Длина" value="100">
                   </div>
                   <div class="col-md-12 col-lg-4 margin-bottom-25">
-                    <input type="number" class="form-control calc-raz" id="calc-width" placeholder="Ширина">
+                    <input type="number" class="form-control calc-raz" id="calc-width" placeholder="Ширина" value="60">
                   </div>
                   <div class="col-md-12 col-lg-4 margin-bottom-25">
-                    <input type="number" class="form-control calc-raz" id="calc-height" placeholder="Высота">
+                    <input type="number" class="form-control calc-raz" id="calc-height" placeholder="Высота" value="4">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id='calc-2' class="row no-display">
+              <div class="col-md-12">
+                <h5>Размеры 2 (см)</h5>
+                <div class="row">
+                  <div class="col-md-12 col-lg-4 margin-bottom-25">
+                    <input type="number" class="form-control calc-raz" id="calc-long-2" placeholder="Длина" value="100">
+                  </div>
+                  <div class="col-md-12 col-lg-4 margin-bottom-25">
+                    <input type="number" class="form-control calc-raz" id="calc-width-2" placeholder="Ширина" value="60">
+                  </div>
+                  <div class="col-md-12 col-lg-4 margin-bottom-25">
+                    <input type="number" class="form-control calc-raz" id="calc-height-2" placeholder="Высота" value="4">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id='calc-3' class="row no-display">
+              <div class="col-md-12">
+                <h5>Размеры 3 (см)</h5>
+                <div class="row">
+                  <div class="col-md-12 col-lg-4 margin-bottom-25">
+                    <input type="number" class="form-control calc-raz" id="calc-long-3" placeholder="Длина" value="100">
+                  </div>
+                  <div class="col-md-12 col-lg-4 margin-bottom-25">
+                    <input type="number" class="form-control calc-raz" id="calc-width-3" placeholder="Ширина" value="60">
+                  </div>
+                  <div class="col-md-12 col-lg-4 margin-bottom-25">
+                    <input type="number" class="form-control calc-raz" id="calc-height-3" placeholder="Высота" value="4">
                   </div>
                 </div>
               </div>
@@ -318,14 +350,14 @@
 
             <div class="row">
               <div class="col-3 col-sm-3 col-md-6 col-lg-3 col-xl-2">
-                <h5>Накладная</h5>
+                <h5 class="moika-text">Накладная</h5>
               </div>
               <div class="col-2 col-sm-2 col-md-6 col-lg-2 col-xl-2">
                 <input class="checkboxer" type="checkbox" id="checkbox-naklad" />
                 <label for="checkbox-naklad" class="check-box"></label>
               </div>
-              <div class="col-3 col-sm-3 col-md-6 col-lg-3 col-xl-2">
-                <h5>Встроенная</h5>
+              <div class="col-4 col-sm-4 col-md-6 col-lg-4 col-xl-4">
+                <h5 class="moika-text">Интегрированная</h5>
               </div>
               <div class="col-2 col-sm-2 col-md-6 col-lg-2 col-xl-2">
                 <input class="checkboxer" type="checkbox" id="checkbox-vstr" />
@@ -345,14 +377,14 @@
 
             <div class="row">
               <div class="col-3 col-sm-3 col-md-6 col-lg-3 col-xl-2">
-                <h5>Высокий</h5>
+                <h5 class="plintus-text">Высокий</h5>
               </div>
               <div class="col-2 col-sm-2 col-md-6 col-lg-2 col-xl-2">
                 <input class="checkboxer" type="checkbox" id="checkbox-high" />
                 <label for="checkbox-high" class="check-box"></label>
               </div>
-              <div class="col-3 col-sm-3 col-md-6 col-lg-3 col-xl-2">
-                <h5>Низкий</h5>
+              <div class="col-4 col-sm-4 col-md-6 col-lg-4 col-xl-4">
+                <h5 class="plintus-text">Низкий</h5>
               </div>
               <div class="col-2 col-sm-2 col-md-6 col-lg-2 col-xl-2">
                 <input class="checkboxer" type="checkbox" id="checkbox-low" />
@@ -364,16 +396,27 @@
                 <h5 class="margin-bottom-35">Длина плинтуса (погон.м)</h5>
               </div>
               <div class="col-md-12">
-                <input id="height" type="range" min="1" max="10" step="0.1" value="2.5" data-orientation="horizontal">
+                <input id="height" type="range" min="1" max="20" step="0.1" value="2.5" data-orientation="horizontal">
               </div>
             </div>
+
+            <div class="row margin-top-30">
+              <div class="col-3 col-sm-3 col-md-6 col-lg-3 col-xl-2">
+                <h5>Монтаж</h5>
+              </div>
+              <div class="col-3 col-sm-2 col-md-6 col-lg-3 col-xl-2">
+                <input class="switcher" type="checkbox" id="switch-montazg" />
+                <label for="switch-montazg" class="switcher-box">Toggle</label>
+              </div>
+            </div>
+
           </div>
           <div class="col-md-6 align-self-center margin-top-15 ">
             <img class="img-fluid" src="img/board.svg" alt="board">
           </div>
         </div>
         <span class="result_text">Примерная стоимость вашего заказа</span>
-        <span class="result_calc">25 900 руб.</span>
+        <span class="result_calc">10000 руб.</span>
       </div>
     </div>
 
