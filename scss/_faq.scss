@@ -192,7 +192,24 @@
   font-size: 18px;
   line-height: 25px;
 }
+.faq-table {
+  width: 100%;
+  // text-align: center;
+  margin: 10px 0px;
+  tr {
+    margin: 10px 0px;
+    border-top: 1px solid $dark_grey;
+    border-bottom: 1px solid $dark_grey;
 
+  }
+  th {
+    font-family: "Circle_Rounded";
+    font-weight: bold;
+    font-size: 22px;
+    color: $dark_green;
+    width: 50%;
+  }
+}
 // форма заявки
 .contact_form_2 {
   background: #FFFFFF;
