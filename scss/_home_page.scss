@@ -24,7 +24,7 @@
 }
 
 // выравнивание по горизонтали и ветрикали
-@mixin aligh-center {
+@mixin align-center {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%) !important
@@ -118,37 +118,37 @@
   }
 }
 
-.hero_screen_button a {
+.hero_screen_button button {
   @include main_btn();
   display: inline-block;
   margin-left: 50%;
   transform: translateX(-50%);
+  border: none;
+  &:focus {
+    outline: none;
+  }
 }
 
 .mobile_nav {
   width: 40px;
   height: 40px;
-  // background: #FFFFFF;
   position: relative;
   border-radius: 5px;
   cursor: pointer;
   z-index: 3;
-  // top: 50%;
-  // transform: translateY(-50%);
-
   &_item {
     width: 30px;
     height: 4px;
-    background: #ABCB56;
+    background: $lite_green;
     border-radius: 2px;
     position: absolute;
-    @include aligh-center();
+    @include align-center();
 
     &::after {
       content: "";
       width: 30px;
       height: 4px;
-      background: #ABCB56;
+      background: $lite_green;
       border-radius: 2px;
       position: absolute;
       top: 50%;
@@ -162,7 +162,7 @@
       content: "";
       width: 30px;
       height: 4px;
-      background: #ABCB56;
+      background: $lite_green;
       border-radius: 2px;
       position: absolute;
       top: 50%;
@@ -185,7 +185,7 @@
 //---CONTENT BLOCK---/
 
 .content_block .row:nth-child(2) {
-  margin-top: 150px;
+  margin-top: 30vh;
 }
 .content_block {
   background: $dark_green;
@@ -204,24 +204,24 @@
     padding: 30px 0px;
   }
   &_bg_1 {
-    width: 100vw;
-    height: 100vw;
+    width: 110%;
+    height: 110%;
     background: $middle_green;
     position: absolute;
-    top: -80%;
-    right: -35%;
+    top: -66%;
+    right: -45%;
     border-radius: 17%;
     transform: rotate(-15deg);
     overflow: hidden;
     z-index: 0;
   }
   &_bg_2 {
-    width: 100vw;
-    height: 100vw;
+    width: 110%;
+    height: 110%;
     background: #58AB4C;
     position: absolute;
-    bottom: -80%;
-    left: -40%;
+    bottom: -66%;
+    left: -45%;
     border-radius: 17%;
     transform: rotate(-15deg);
     overflow: hidden;
@@ -255,7 +255,9 @@
 .slider-progress img {
   width: 100%;
 }
-
+.arrow_down:focus, .arrow_up:focus {
+  outline: none;
+}
 //---FEATURES---/
 
 .features {
@@ -381,13 +383,23 @@
     background: #FFFFFF;
     min-width: 385px;
 }
-  &_main_block .row {
+  &_main_block {
+    font-family: "Circle_Rounded";
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+  }
+    .row {
     margin: 30px 0px;
   }
   &_link {
     display: block;
     color: $black;
     width: 100%;
+    font-family: "Circle_Rounded";
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
     &:hover {
       text-decoration: none;
       color: $black;
@@ -414,6 +426,9 @@
   padding: 10px;
   outline: none;
   width: 90%;
+  color: #FFFFFF;
+  font-family: "Circle_Rounded";
+  font-weight: bold;
   caret-color: #FFFFFF;
   &::placeholder {
     font-family: "Circle_Rounded";
@@ -433,6 +448,9 @@
   padding: 10px;
   outline: none;
   width: 90%;
+  color: #FFFFFF;
+  font-family: "Circle_Rounded";
+  font-weight: bold;
   resize: none;
   caret-color: #FFFFFF;
   cursor: progress;
@@ -460,9 +478,12 @@
   height: 70px;
   transition: 0.5s;
   text-align: left;
-  padding-left: 20%;
+  padding-left: 60px;
   &:hover {
     background: #FFFFFF url(../img/icons/send.svg) no-repeat 110% center;
     color: $black;
+  }
+  &:focus {
+    outline: none;
   }
 }

@@ -53,11 +53,17 @@ $(document).ready(function () {
     };
   });
 
-
+// вызов мобильного меню на главной странице
 
   $(".mobile_nav").click(function () {
     $(this).toggleClass("mobile_nav_active");
     $(".desktop_nav").fadeToggle(500);
+  });
+  // вызов мобильного меню на остальных страницах
+
+  $(".mobile_nav_2").click(function () {
+    $(this).toggleClass("mobile_nav_2_active");
+    $(".desktop_nav_secondary").fadeToggle(500);
   });
 
   // инициализация rangeslider
@@ -221,5 +227,25 @@ $(document).ready(function () {
   if ($(".features").length > 0) {
     $(".features").featuresNumber();
   }
-
+// аккордеон на странице FAQ
+    $(".faq-btn").click(function () {
+      $(".faq-btn").removeClass("btn-active");
+      if (!$(this).hasClass("open")) {
+        $(".faq-btn").removeClass("open");
+        $(this).addClass("btn-active open")
+      }
+    });
+  
+// смена текста на кнопке страница Наши Работы
+    $('.work_description_btn').click(function(){
+      if (!$(this).data('status')) {
+        $(this).html('25000 руб');
+        $(this).data('status', true);
+      }
+      else {
+        $(this).html('Цена');
+        $(this).data('status', false);
+      }
+    });
+// работает? нет плавного переключения(((
 });

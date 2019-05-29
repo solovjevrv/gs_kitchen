@@ -1,0 +1,48 @@
+.contacts_title {
+  text-align: center;
+  padding: 30px 0px;
+}
+.contacts_map_item {
+  height: 50vh;
+}
+.contacts_page_form {
+  background: $lite_green;
+  padding: 60px 0px ;
+  margin-top: -6px;
+  .contacts_page_form_title {
+    line-height: 44px;
+    text-align: center;
+  }
+  .homepage_input, .homepage_textarea {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .homepage_textarea {
+    padding-bottom: 70px;
+  }
+  .safety_policy {
+    color: #ffffff;
+    font-size: 10px;
+  }
+  .contact_form_btn {
+    display: block;
+    margin: 30px auto 50px auto;
+    padding-left: 60px;
+  }
+}
+
+.white_text {
+  color: #ffffff;
+}
+.contacts_page_down_block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.contacts_page_left, .contacts_page_center, .contacts_page_right {
+  display: flex;
+  .contacts_page_link {
+    margin-left: 20px;
+  }
+}
