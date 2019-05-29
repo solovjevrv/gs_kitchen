@@ -1668,6 +1668,25 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   line-height: 25px;
 }
 
+.faq-table {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.faq-table tr {
+  margin: 10px 0px;
+  border-top: 1px solid #B1B1B1;
+  border-bottom: 1px solid #B1B1B1;
+}
+
+.faq-table th {
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 22px;
+  color: #04582D;
+  width: 50%;
+}
+
 .contact_form_2 {
   background: #FFFFFF;
   padding: 80px 0px;
@@ -2127,6 +2146,8 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   position: absolute;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .works-gallery .grid_container_item {
@@ -2260,7 +2281,7 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   font-size: 20px;
   line-height: 25px;
   color: #ffffff;
-  width: 50%;
+  width: 90%;
 }
 
 .work_description_list {
