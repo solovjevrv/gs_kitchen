@@ -77,7 +77,11 @@ h6 {
 }
 
 .margin-top-15 {
-  margin-top: 15px;
+  margin-top: 15px !important;
+}
+
+.margin-top-30 {
+  margin-top: 30px !important;
 }
 
 .margin-top-40 {
@@ -848,6 +852,19 @@ h6 {
 
 .calculator .row {
   margin: 10px -15px 0px -15px;
+}
+
+.calculator .moika-text,
+.calculator .plintus-text {
+  opacity: 0.25;
+}
+
+.calculator .active-text {
+  opacity: 1;
+}
+
+.calculator .no-display {
+  display: none;
 }
 
 .calculator .result_text {
