@@ -30,9 +30,9 @@ function updateSum() {
     let width = $('#calc-width').val() / 100;
     let long2 = $('#calc-long-2').val() / 100;
     let width2 = $('#calc-width-2').val() / 100;
-    let long3 = $('#calc-long-3').val() / 100;
-    let width3 = $('#calc-width-3').val() / 100;
-    let squarePrice = 
+    let longT = $('#calc-long-3').val() / 100;
+    let longT2 = $('#calc-width-3').val() / 100;
+    let squarePrice = ((long - longT) * width * priceM2) + ((long2 - longT2) * width2 * priceM2) + (longT * longT2 * priceM2) + (((long - longT) + (long2 - longT2) + 0.3 ) * 0.04 * priceM2);
     sum = sum + squarePrice;
   }
 
@@ -110,22 +110,32 @@ $(document).ready(function () {
     if ($('#typeStol').val() == 'type-1') {
       $('#calc-2').addClass('no-display');
       $('#calc-3').addClass('no-display');
-      updateSum()
+      updateSum();
     }
     if ($('#typeStol').val() == 'type-2') {
       $('#calc-2').removeClass('no-display');
       $('#calc-3').addClass('no-display');
-      updateSum()
+      updateSum();
     }
     if ($('#typeStol').val() == 'type-3') {
       $('#calc-2').removeClass('no-display');
       $('#calc-3').removeClass('no-display');
-      updateSum()
+      $('#calc-3-text-1').text('Длина-3');
+      $('#calc-3-text-2').text('Ширина-3');
+      $('#calc-3-text-3').text('Высота-3');
+      $('#calc-long-3').val(100);
+      $('#calc-width-3').val(60);
+      updateSum();
     }
     if ($('#typeStol').val() == 'type-4') {
       $('#calc-2').removeClass('no-display');
       $('#calc-3').removeClass('no-display');
-      updateSum()
+      $('#calc-3-text-1').text('Длина трапеции');
+      $('#calc-3-text-2').text('Длина трапеции-2');
+      $('#calc-3-text-3').text('Высота трапеции');
+      $('#calc-long-3').val(50);
+      $('#calc-width-3').val(50);
+      updateSum();
     }
   })
 
