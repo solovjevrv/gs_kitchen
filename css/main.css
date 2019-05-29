@@ -360,13 +360,42 @@ h6 {
   overflow: hidden;
 }
 
-.content_block_description p {
+.content_block_title {
+  text-align: right;
+}
+
+.content_block_description {
   font-family: "Circle_Rounded";
   font-weight: normal;
   font-size: 18px;
   line-height: 23px;
   color: #FFFFFF;
   padding: 30px 0px;
+}
+
+.content_block_description .text-right-list {
+  padding: 0;
+  list-style: none;
+  text-align: right;
+}
+
+.content_block_description .text-right-list .text-right-item {
+  position: relative;
+  padding-right: 20px;
+}
+
+.content_block_description .text-right-list .text-right-item:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 0%;
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: #FFFFFF;
 }
 
 .content_block_bg_1 {
