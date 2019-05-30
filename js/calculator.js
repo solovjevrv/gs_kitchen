@@ -14,7 +14,7 @@ function updateSum() {
     let width = $('#calc-width').val() / 100;
     let long2 = $('#calc-long-2').val() / 100;
     let width2 = $('#calc-width-2').val() / 100;
-    let squarePrice = (long * width * priceM2) + ((long2 - width) * width2 * priceM2) + (((long - width2) + (long2 - width) * 0.04) * priceM2);
+    let squarePrice = (long * width * priceM2) + ((long2 - width) * width2 * priceM2) + ((((long - width2) + (long2 - width)) * 0.04) * priceM2);
     sum = sum + squarePrice;
   } else if ($('#typeStol').val() == 'type-3') {
     let long = $('#calc-long').val() / 100;
@@ -32,7 +32,7 @@ function updateSum() {
     let width2 = $('#calc-width-2').val() / 100;
     let longT = $('#calc-long-3').val() / 100;
     let longT2 = $('#calc-width-3').val() / 100;
-    let squarePrice = ((long - longT) * width * priceM2) + ((long2 - longT2) * width2 * priceM2) + (longT * longT2 * priceM2) + (((long - longT) + (long2 - longT2) + 0.3 ) * 0.04 * priceM2);
+    let squarePrice = ((long - longT) * width * priceM2) + ((long2 - longT2) * width2 * priceM2) + (longT * longT2 * priceM2) + (((long - longT) + (long2 - longT2) + 0.3) * 0.04 * priceM2);
     sum = sum + squarePrice;
   }
 
@@ -104,6 +104,123 @@ $(document).ready(function () {
   })
   $('#calc-height-3').on('change', function () {
     updateSum();
+  })
+
+  $("#calc-long").focus(function () {
+    $("#isometric-cube-1 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(1)").addClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-4 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(1)").addClass("calc-border-active");
+  })
+  $("#calc-long-2").focus(function () {
+    $("#isometric-cube-1 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").addClass("calc-border-active");
+    $("#isometric-cube-4 > *:nth-child(1)").addClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(1)").addClass("calc-border-active");
+  })
+  $("#calc-long-3").focus(function () {
+    $("#isometric-cube-1 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(1)").addClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-4 > *:nth-child(1)").addClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(1)").removeClass("calc-border-active");
+  })
+
+  $("#calc-width").focus(function () {
+    $("#isometric-cube-1 > *:nth-child(3)").addClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-4 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(1)").removeClass("calc-border-active");
+  })
+  $("#calc-width-2").focus(function () {
+    $("#isometric-cube-1 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").addClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-4 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(1)").removeClass("calc-border-active");
+  })
+  $("#calc-width-3").focus(function () {
+    $("#isometric-cube-1 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(3)").addClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-4 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(1)").removeClass("calc-border-active");
+  })
+
+  $("#calc-height").focus(function () {
+    $("#isometric-cube-1 > *:nth-child(2)").addClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(2)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").addClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-4 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(1)").removeClass("calc-border-active");
+  })
+  $("#calc-height-2").focus(function () {
+    $("#isometric-cube-1 > *:nth-child(2)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(2)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(3)").addClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-4 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(1)").removeClass("calc-border-active");
+  })
+  $("#calc-height-3").focus(function () {
+    $("#isometric-cube-1 > *:nth-child(2)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(2)").addClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(3)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(2)").removeClass("calc-border-active");
+
+    $("#isometric-cube-1 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-2 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-4 > *:nth-child(1)").removeClass("calc-border-active");
+    $("#isometric-cube-5 > *:nth-child(1)").removeClass("calc-border-active");
   })
 
   $('#typeStol').on('change', function () {
