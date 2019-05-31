@@ -66,31 +66,6 @@ $(document).ready(function () {
     $(".desktop_nav_secondary").fadeToggle(500);
   });
 
-  // инициализация rangeslider
-  $('input[type="range"]').rangeslider({
-    polyfill: false,
-    rangeClass: 'rangeslider',
-    disabledClass: 'rangeslider--disabled',
-    horizontalClass: 'rangeslider--horizontal',
-    verticalClass: 'rangeslider--vertical',
-    fillClass: 'rangeslider__fill',
-    handleClass: 'rangeslider__handle',
-
-    onInit: function () {
-      $rangeEl = this.$range;
-      // add value label to handle
-      var $handle = $rangeEl.find('.rangeslider__handle');
-      var handleValue = '<div class="rangeslider__handle__value">' + this.value + '</div>';
-      $handle.append(handleValue);
-    },
-
-    // Callback function
-    onSlide: function (position, value) {
-      var $handle = this.$range.find('.rangeslider__handle__value');
-      $handle.text(this.value);
-    }
-  });
-
   // инициализация swiper на сертификаты
   new Swiper('.swiper-container', {
     effect: 'coverflow',

@@ -126,7 +126,11 @@ h6 {
 
   &-top {
     &-15 {
-      margin-top: 15px;
+      margin-top: 15px!important;
+    }
+
+    &-30 {
+      margin-top: 30px!important;
     }
 
     &-40 {
