@@ -200,14 +200,14 @@ $(document).ready(function () {
       let e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
       if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
         $('#number-project').animateNumber({
-          number: 100,
+          number: 180,
         }, {
           easing: 'swing',
           duration: 1800
         });
 
         $('#number-year').animateNumber({
-          number: 5,
+          number: 6,
         }, {
           easing: 'swing',
           duration: 1800
@@ -235,17 +235,20 @@ $(document).ready(function () {
         $(this).addClass("btn-active open")
       }
     });
-  
-// смена текста на кнопке страница Наши Работы
-    $('.work_description_btn').click(function(){
-      if (!$(this).data('status')) {
-        $(this).html('25000 руб');
-        $(this).data('status', true);
-      }
-      else {
-        $(this).html('Цена');
-        $(this).data('status', false);
+  // обработка ховера на мобильных устройствах на странице Наши Работы
+    $(".grid_container_item").each(function(){
+      if($(window).width() > 768) {
+        $(".work_description").hover(function(){
+          $(this).toggleClass("active_hover");
+        });
       }
     });
-// работает? нет плавного переключения(((
+  // обработка клика на мобильных устройствах на странице Наши Работы
+    $(".grid_container_item").each(function(){
+      if($(window).width() < 767){
+        $(".work_description").click(function(){
+          $(this).toggleClass("active_click");
+        });
+      }
+    });
 });

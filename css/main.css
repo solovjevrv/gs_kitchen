@@ -123,13 +123,19 @@ h6 {
 @font-face {
   font-family: "Futura";
   src: url(../fonts/futura-n.ttf) format("truetype");
+  src: url(../fonts/futura-n.woff) format("woff");
+  src: url(../fonts/futura-n.eot) format("eot");
+  src: url(../fonts/futura-n.otf) format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Futura";
-  src: url(../fonts/Futura-Bold.ttf) format("truetype");
+  src: url(../fonts/futura-b.ttf) format("truetype");
+  src: url(../fonts/futura-b.woff) format("woff");
+  src: url(../fonts/futura-b.eot) format("eot");
+  src: url(../fonts/futura-b.otf) format("opentype");
   font-style: normal;
   font-weight: bold;
 }
@@ -1847,6 +1853,7 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 
 .news_pagination_link {
   padding: 10px;
+  font-family: "Futura";
   text-align: center;
   font-weight: bold;
   font-size: 16px;
@@ -2153,9 +2160,14 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 .works-gallery .grid_container_item {
   position: relative;
   min-height: 270px;
+  cursor: pointer;
 }
 
-.works-gallery .grid_container_item:hover .work_description {
+.works-gallery .grid_container_item .active_hover {
+  opacity: 1;
+}
+
+.works-gallery .grid_container_item .active_click {
   opacity: 1;
 }
 
@@ -2337,6 +2349,10 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 
 .modal-header {
   padding: 5px 10px;
+}
+
+.modal-header .close:focus {
+  outline: none;
 }
 
 .modal-content {
@@ -2710,6 +2726,12 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   }
   .content_block_bg_1,
   .content_block_bg_2 {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #change-btn {
     display: none;
   }
 }
