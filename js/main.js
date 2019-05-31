@@ -226,19 +226,29 @@ $(document).ready(function () {
   //       });
   //     }
   //   });
-    $(window).resize(function(){
+    $(window).on("load", function fadeCard(){
       var widthView = $(window).width();
       if(widthView > 767) {
-        $(".work_description").hover(function(){
-          $(this).toggleClass("active_hover");
+        $(".grid_container_item").each(function(){
+          $(".work_description").mouseenter(function(){
+            $(this).addClass("active_hover");
+          $(".work_description").mouseleave(function(){
+            $(this).removeClass("active_hover");
+          });
+          });
         });
       }
       else{
-        $(".work_description").click(function(){
-          $(this).toggleClass("active_click");
+        $(".grid_container_item").each(function(){
+          $(".work_description").click(function(){
+            $(this).toggleClass("active_click");
+          });
         });
       }
     });
+
+    $(window).resize(function fadeCard(){});
+
 
 
 
