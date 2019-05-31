@@ -48,6 +48,10 @@
     border: unset;
   }
 
+  >*:nth-child(3) {
+    border-left: unset;
+  }
+
   >*:nth-child(5) {
     border: unset;
   }
@@ -65,9 +69,7 @@
   }
 
   >*:nth-child(3) {
-    border-left: unset;
-    border-top: unset;
-    border-bottom: unset;
+    border: unset;
   }
 
   >*:nth-child(5) {

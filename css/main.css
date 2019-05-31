@@ -1631,6 +1631,10 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   border: unset;
 }
 
+.cube-middle > *:nth-child(3) {
+  border-left: unset;
+}
+
 .cube-middle > *:nth-child(5) {
   border: unset;
 }
@@ -1646,9 +1650,7 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 }
 
 .cube-bottom > *:nth-child(3) {
-  border-left: unset;
-  border-top: unset;
-  border-bottom: unset;
+  border: unset;
 }
 
 .cube-bottom > *:nth-child(5) {
