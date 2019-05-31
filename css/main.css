@@ -1589,72 +1589,75 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 }
 
 .cube-right > *:nth-child(1) {
-  border-left: unset;
-  border-bottom: unset;
+  border-left: none;
+  border-bottom: none;
 }
 
 .cube-right > *:nth-child(2) {
-  border-left: unset;
+  border-left: none;
 }
 
 .cube-right > *:nth-child(6) {
-  border: unset;
+  border: none;
 }
 
 .cube-left > *:nth-child(1) {
-  border-left: unset;
+  border-left: none;
 }
 
 .cube-left > *:nth-child(6) {
-  border: unset;
+  border: none;
 }
 
 .cube-top > *:nth-child(1) {
-  border-right: unset;
-  border-bottom: unset;
+  border-right: none;
+  border-bottom: none;
 }
 
 .cube-top > *:nth-child(2) {
-  border: unset;
+  border: none;
 }
 
 .cube-top > *:nth-child(3) {
-  border: unset;
+  border: none;
 }
 
 .cube-middle > *:nth-child(1) {
-  border-top: unset;
-  border-bottom: unset;
+  border-top: none;
+  border-bottom: none;
 }
 
 .cube-middle > *:nth-child(2) {
-  border: unset;
+  border: none;
+  background: none;
 }
 
 .cube-middle > *:nth-child(3) {
-  border-left: unset;
+  border-left: none;
 }
 
 .cube-middle > *:nth-child(5) {
-  border: unset;
+  border: none;
+  background: none;
 }
 
 .cube-bottom > *:nth-child(1) {
-  border-right: unset;
-  border-top: unset;
-  border-bottom: unset;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
 }
 
 .cube-bottom > *:nth-child(2) {
-  border-right: unset;
+  border-right: none;
 }
 
 .cube-bottom > *:nth-child(3) {
-  border: unset;
+  border: none;
 }
 
 .cube-bottom > *:nth-child(5) {
-  border: unset;
+  border: none;
+  background: none;
 }
 
 .calc-border-active {

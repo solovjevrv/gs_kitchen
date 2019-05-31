@@ -217,6 +217,13 @@ $(document).ready(function () {
       $('#isometric-cube-5').removeClass('no-display');
       $('#calc-2').removeClass('no-display');
       $('#calc-3').addClass('no-display');
+
+      $('#isometric-cube-5 > *:nth-child(1)').css('border', '1px solid #002525');
+      $('#isometric-cube-5 > *:nth-child(2)').css('border', '1px solid #002525');
+      $('#isometric-cube-5 > *:nth-child(3)').css('border', '1px solid #002525');
+      $('#isometric-cube-5 > *:nth-child(1)').css('border-top', 'none');
+      $('#isometric-cube-5 > *:nth-child(3)').css('border-right', 'none');
+      
       updateSum();
     }
     if ($('#typeStol').val() == 'type-3') {
@@ -232,6 +239,13 @@ $(document).ready(function () {
       $('#calc-3-text-3').text('Высота-3');
       $('#calc-long-3').val(100);
       $('#calc-width-3').val(60);
+
+      $('#isometric-cube-5 > *:nth-child(1)').css('border-top', 'none');
+      $('#isometric-cube-5 > *:nth-child(1)').css('border-right', 'none');
+      $('#isometric-cube-5 > *:nth-child(1)').css('border-bottom', 'none');
+      $('#isometric-cube-5 > *:nth-child(2)').css('border-right', 'none');
+      $('#isometric-cube-5 > *:nth-child(3)').css('border', 'none');
+
       updateSum();
     }
     if ($('#typeStol').val() == 'type-4') {
