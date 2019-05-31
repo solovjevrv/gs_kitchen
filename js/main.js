@@ -235,20 +235,37 @@ $(document).ready(function () {
         $(this).addClass("btn-active open")
       }
     });
-  // обработка ховера на мобильных устройствах на странице Наши Работы
-    $(".grid_container_item").each(function(){
-      if($(window).width() > 768) {
+  // // обработка ховера на мобильных устройствах на странице Наши Работы
+  //   $(".grid_container_item").each(function(){
+  //     if($(window).width() > 768) {
+  //       $(".work_description").hover(function(){
+  //         $(this).toggleClass("active_hover");
+  //       });
+  //     }
+  //   });
+  // // обработка клика на мобильных устройствах на странице Наши Работы
+  //   $(".grid_container_item").each(function(){
+  //     if($(window).width() < 767){
+  //       $(".work_description").click(function(){
+  //         $(this).toggleClass("active_click");
+  //       });
+  //     }
+  //   });
+    $(window).resize(function(){
+      var widthView = $(window).width();
+      if(widthView > 767) {
         $(".work_description").hover(function(){
           $(this).toggleClass("active_hover");
         });
       }
-    });
-  // обработка клика на мобильных устройствах на странице Наши Работы
-    $(".grid_container_item").each(function(){
-      if($(window).width() < 767){
+      else{
         $(".work_description").click(function(){
           $(this).toggleClass("active_click");
         });
       }
     });
+
+
+
+
 });
