@@ -13,16 +13,6 @@
   }
 }
 
-.cube-left {
-  >*:nth-child(1) {
-    border-left: none;
-  }
-
-  >*:nth-child(6) {
-    border: none;
-  }
-}
-
 .cube-top {
   >*:nth-child(1) {
     border-right: none;
@@ -81,5 +71,18 @@
 }
 
 .calc-border-active {
-  background: #F00;
+  background: $lite_green;
+}
+
+.isometric-container *:nth-child(1).calc-border-active {
+  font-size: 3rem;
+  text-align: center;
+  line-height: 2.5;
+}
+
+.isometric-container *:nth-child(2).calc-border-active,
+.isometric-container *:nth-child(3).calc-border-active {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1;
 }

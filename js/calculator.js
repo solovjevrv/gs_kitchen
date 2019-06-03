@@ -58,6 +58,11 @@ function resetAllChange() {
   $("#isometric-cube-3 > *:nth-child(1n)").removeClass("calc-border-active");
   $("#isometric-cube-4 > *:nth-child(1n)").removeClass("calc-border-active");
   $("#isometric-cube-5 > *:nth-child(1n)").removeClass("calc-border-active");
+  $("#isometric-cube-1 > *:nth-child(1n)").text('');
+  $("#isometric-cube-2 > *:nth-child(1n)").text('');
+  $("#isometric-cube-3 > *:nth-child(1n)").text('');
+  $("#isometric-cube-4 > *:nth-child(1n)").text('');
+  $("#isometric-cube-5 > *:nth-child(1n)").text('');
 }
 
 $(document).ready(function () {
@@ -94,12 +99,15 @@ $(document).ready(function () {
 
   $('#calc-long').on('change', function () {
     updateSum();
+    $("#isometric-cube-2 > *:nth-child(1)").text($('#calc-long').val());
   })
   $('#calc-width').on('change', function () {
     updateSum();
+    $("#isometric-cube-2 > *:nth-child(3)").text($('#calc-long').val());
   })
   $('#calc-height').on('change', function () {
     updateSum();
+    $("#isometric-cube-2 > *:nth-child(2)").text($('#calc-long').val());
   })
   $('#calc-long-2').on('change', function () {
     updateSum();
@@ -125,10 +133,12 @@ $(document).ready(function () {
 
     if ($('#typeStol').val() == 'type-1') {
       $("#isometric-cube-2 > *:nth-child(1)").addClass("calc-border-active");
+      $("#isometric-cube-2 > *:nth-child(1)").text($('#calc-long').val());
     }
     if ($('#typeStol').val() == 'type-2') {
       $("#isometric-cube-2 > *:nth-child(1)").addClass("calc-border-active");
       $("#isometric-cube-4 > *:nth-child(1)").addClass("calc-border-active");
+      $("#isometric-cube-2 > *:nth-child(1)").text($('#calc-long').val()).css("text-align","left");
     } else {
       $("#isometric-cube-1 > *:nth-child(1)").addClass("calc-border-active");
       $("#isometric-cube-5 > *:nth-child(1)").addClass("calc-border-active");
@@ -139,6 +149,7 @@ $(document).ready(function () {
     $("#isometric-cube-3 > *:nth-child(1)").addClass("calc-border-active");
     $("#isometric-cube-4 > *:nth-child(1)").addClass("calc-border-active");
     $("#isometric-cube-5 > *:nth-child(1)").addClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(1)").text($('#calc-long-2').val());
   })
   $("#calc-long-3").focus(function () {
     resetAllChange();
@@ -151,8 +162,10 @@ $(document).ready(function () {
 
     if ($('#typeStol').val() == 'type-1') {
       $("#isometric-cube-2 > *:nth-child(3)").addClass("calc-border-active");
+      $("#isometric-cube-2 > *:nth-child(3)").text($('#calc-width').val());
     } else if ($('#typeStol').val() == 'type-2') {
       $("#isometric-cube-2 > *:nth-child(3)").addClass("calc-border-active");
+      $("#isometric-cube-2 > *:nth-child(3)").text($('#calc-width').val());
     } else {
       $("#isometric-cube-1 > *:nth-child(3)").addClass("calc-border-active");
     }
@@ -162,6 +175,7 @@ $(document).ready(function () {
 
     if ($('#typeStol').val() == 'type-2') {
       $("#isometric-cube-5 > *:nth-child(2)").addClass("calc-border-active");
+      $("#isometric-cube-5 > *:nth-child(2)").text($('#calc-width-2').val());
     } else {
       $("#isometric-cube-5 > *:nth-child(2)").addClass("calc-border-active");
     }
@@ -177,8 +191,10 @@ $(document).ready(function () {
 
     if ($('#typeStol').val() == 'type-1') {
       $("#isometric-cube-2 > *:nth-child(2)").addClass("calc-border-active");
+      $("#isometric-cube-2 > *:nth-child(2)").text($('#calc-height').val());
     } else if ($('#typeStol').val() == 'type-2') {
       $("#isometric-cube-2 > *:nth-child(2)").addClass("calc-border-active");
+      $("#isometric-cube-2 > *:nth-child(2)").text($('#calc-height').val());
     } else {
       $("#isometric-cube-1 > *:nth-child(2)").addClass("calc-border-active");
       $("#isometric-cube-5 > *:nth-child(2)").addClass("calc-border-active");
@@ -187,6 +203,7 @@ $(document).ready(function () {
   $("#calc-height-2").focus(function () {
     resetAllChange();
     $("#isometric-cube-3 > *:nth-child(3)").addClass("calc-border-active");
+    $("#isometric-cube-3 > *:nth-child(3)").text($('#calc-height-2').val()).css("text-align","left");
     if ($('#typeStol').val() == 'type-2') {
       $("#isometric-cube-5 > *:nth-child(3)").addClass("calc-border-active");
     }
@@ -207,6 +224,10 @@ $(document).ready(function () {
       $('#isometric-cube-5').addClass('no-display');
       $('#calc-2').addClass('no-display');
       $('#calc-3').addClass('no-display');
+
+      $('#isometric-cube-2 > *:nth-child(1)').css('border-left', '1px solid #002525');
+      $('#isometric-cube-2 > *:nth-child(6)').css('border', '1px solid #002525');
+
       updateSum();
     }
     if ($('#typeStol').val() == 'type-2') {
@@ -218,6 +239,8 @@ $(document).ready(function () {
       $('#calc-2').removeClass('no-display');
       $('#calc-3').addClass('no-display');
 
+      $('#isometric-cube-2 > *:nth-child(1)').css('border-left', 'none');
+      $('#isometric-cube-2 > *:nth-child(6)').css('border', 'none');
       $('#isometric-cube-5 > *:nth-child(1)').css('border', '1px solid #002525');
       $('#isometric-cube-5 > *:nth-child(2)').css('border', '1px solid #002525');
       $('#isometric-cube-5 > *:nth-child(3)').css('border', '1px solid #002525');
@@ -240,6 +263,8 @@ $(document).ready(function () {
       $('#calc-long-3').val(100);
       $('#calc-width-3').val(60);
 
+      $('#isometric-cube-2 > *:nth-child(1)').css('border-left', 'none');
+      $('#isometric-cube-2 > *:nth-child(6)').css('border', 'none');
       $('#isometric-cube-5 > *:nth-child(1)').css('border-top', 'none');
       $('#isometric-cube-5 > *:nth-child(1)').css('border-right', 'none');
       $('#isometric-cube-5 > *:nth-child(1)').css('border-bottom', 'none');
