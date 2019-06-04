@@ -1,0 +1,88 @@
+.cube-right {
+  >*:nth-child(1) {
+    border-left: none;
+    border-bottom: none;
+  }
+
+  >*:nth-child(2) {
+    border-left: none;
+  }
+
+  >*:nth-child(6) {
+    border: none;
+  }
+}
+
+.cube-top {
+  >*:nth-child(1) {
+    border-right: none;
+    border-bottom: none;
+  }
+
+  >*:nth-child(2) {
+    border: none;
+  }
+
+  >*:nth-child(3) {
+    border: none;
+  }
+}
+
+.cube-middle {
+  >*:nth-child(1) {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  >*:nth-child(2) {
+    border: none;
+    background: none;
+  }
+
+  >*:nth-child(3) {
+    border-left: none;
+  }
+
+  >*:nth-child(5) {
+    border: none;
+    background: none;
+  }
+}
+
+.cube-bottom {
+  >*:nth-child(1) {
+    border-right: none;
+    border-top: none;
+    border-bottom: none
+  }
+
+  >*:nth-child(2) {
+    border-right: none;
+  }
+
+  >*:nth-child(3) {
+    border: none;
+  }
+
+  >*:nth-child(5) {
+    border: none;
+    background: none;
+  }
+}
+
+.calc-border-active {
+  background: $lite_green;
+}
+
+.isometric-container *:nth-child(1).calc-border-active {
+  font-size: 3rem;
+  text-align: center;
+  line-height: 2.5;
+}
+
+.isometric-container *:nth-child(2).calc-border-active,
+.isometric-container *:nth-child(3).calc-border-active {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1;
+}
