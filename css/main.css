@@ -2968,7 +2968,7 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
     top: 0%;
     right: 0%;
     background: #abcb56;
-    z-index: 3;
+    z-index: -3;
   }
   .desktop_nav_secondary .nav {
     -webkit-box-orient: vertical;
@@ -2994,6 +2994,7 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
     opacity: 1;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    z-index: 3;
   }
 }
 
@@ -3155,7 +3156,7 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
     top: 0%;
     right: 0%;
     background: rgba(0, 0, 0, 0.9);
-    z-index: 3;
+    z-index: -3;
   }
   .desktop_nav .nav {
     -webkit-box-orient: vertical;
@@ -3178,6 +3179,7 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
     opacity: 1;
     -webkit-transition: 0.5s;
     transition: 0.5s;
+    z-index: 3;
   }
   .mobile_nav {
     display: block;
