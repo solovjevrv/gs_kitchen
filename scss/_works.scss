@@ -209,6 +209,29 @@
   }
 }
 
+.work_description_btn_mobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  width: 123px;
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 7px 23px;
+  border: 2px solid #ffffff;
+  border-radius: 23px;
+  background: $middle_green;
+  &:hover {
+    background: $lite_green;
+  }
+}
+
 //модальное окно
 
 .modal-header, .modal-body, .modal-content, .modal-footer {

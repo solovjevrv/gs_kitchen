@@ -23,14 +23,43 @@
       min-width: 50%;
     }
   }
-
+  .desktop_nav_secondary {
+    // transform: translateX(-100%);
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    right: 0%;
+    background: rgba($color: #ABCB56, $alpha: 1);
+    z-index: 3;
+    .nav {
+      flex-direction: column;
+      align-items: flex-end;
+      position: absolute;
+      width: 100%;
+      top: 12%;
+      right: 15%;
+       &_item {
+        margin: 20px;
+        padding: 5px 0px;
+      }
+    }
+  }
+  .mobile_nav_2 {
+    display: block;
+  }
+  .nav_active {
+    opacity: 1;
+    transition: 0.5s;
+  }
 }
 
 
 @media screen and (min-width: 991px) {
-  .mobile_nav, .mobile_nav_2 {
-    display: none;
-  }
+  // .mobile_nav, .mobile_nav_2 {
+  //   display: none;
+  // }
   .mobile_buttons {
     display: none;
   }
@@ -144,7 +173,7 @@
   }
 
   .desktop_nav {
-    display: none;
+    opacity: 0;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -166,29 +195,12 @@
       }
     }
   }
-  .desktop_nav_secondary {
-    display: none;
-    display: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0%;
-    right: 0%;
-    background: rgba($color: #ABCB56, $alpha: 1);
-    z-index: 3;
-    .nav {
-      flex-direction: column;
-      align-items: flex-end;
-      position: absolute;
-      width: 100%;
-      top: 12%;
-      right: 15%;
-  
-      &_item {
-        margin: 20px;
-        padding: 5px 0px;
-      }
-    }
+  .desktop_nav_active {
+    opacity: 1;
+    transition: 0.5s;
+  }
+  .mobile_nav {
+    display: block;
   }
   .faq-accordion {
     padding: 40px 20px;
@@ -221,11 +233,11 @@
     display: none;
   }
 }
-@media screen and (min-width: 767px) {
-  #change-btn {
-    display: none;
-  }
-}
+// @media screen and (min-width: 767px) {
+//   #change-btn {
+//     display: none;
+//   }
+// }
 @media screen and (max-width: 767px) {
   h1 {
     font-size: 44px;
@@ -353,6 +365,9 @@
   .contact_form_right textarea {
     width: 70%;
   }
+  .work_description_btn_mobile {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -394,5 +409,15 @@
   }
   .hero_screen_title {
     padding: 70px 10px 20px 10px ;
+  }
+  .desktop_nav_secondary {
+    .nav_item {
+      margin: 15px;
+    }
+    .mobile_buttons {
+      .first-btn, .second-btn {
+        margin-top: 15px;
+      }
+    }
   }
 }

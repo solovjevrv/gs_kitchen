@@ -57,14 +57,26 @@ $(document).ready(function () {
 
   $(".mobile_nav").click(function () {
     $(this).toggleClass("mobile_nav_active");
-    $(".desktop_nav").fadeToggle(500);
+    $(".desktop_nav").toggleClass("desktop_nav_active");
   });
   // вызов мобильного меню на остальных страницах
 
   $(".mobile_nav_2").click(function () {
     $(this).toggleClass("mobile_nav_2_active");
-    $(".desktop_nav_secondary").fadeToggle(500);
-  });
+    $(".desktop_nav_secondary").toggleClass("nav_active");
+    });
+
+    // подсветка автивного пункта меню
+    // $(function () {
+    //   $('.nav_item').each(function () {
+    //     var location = window.location.href;
+    //     var link = this.href;
+    //     if (location == link) {
+    //       $(this).addClass('menu_active');
+    //     }
+    //   });
+    // });
+    // данный код не корректен на 2 меню
 
   // инициализация swiper на сертификаты
   new Swiper('.swiper-container', {
@@ -210,23 +222,49 @@ $(document).ready(function () {
         $(this).addClass("btn-active open")
       }
     });
-  // // обработка ховера на мобильных устройствах на странице Наши Работы
-  //   $(".grid_container_item").each(function(){
-  //     if($(window).width() > 768) {
-  //       $(".work_description").hover(function(){
-  //         $(this).toggleClass("active_hover");
-  //       });
-  //     }
-  //   });
-  // // обработка клика на мобильных устройствах на странице Наши Работы
-  //   $(".grid_container_item").each(function(){
-  //     if($(window).width() < 767){
-  //       $(".work_description").click(function(){
-  //         $(this).toggleClass("active_click");
-  //       });
-  //     }
-  //   });
-    $(window).on("load", function fadeCard(){
+  // обработка ховера на мобильных устройствах на странице Наши Работы
+    // $(".grid_container_item").each(function(){
+    //   if($(window).width() > 768) {
+    //     $(".work_description").hover(function(){
+    //       $(this).toggleClass("active_hover");
+    //     });
+    //   }
+    //   else {
+    //     $(".work_description").hasClass("active_hover").each(function(){
+    //       $(this).removeClass("active_hover");
+    //     });
+    //   }
+    // });
+  // обработка клика на мобильных устройствах на странице Наши Работы
+    // $(".grid_container_item").each(function(){
+    //   if($(window).width() < 767){
+    //     $(".work_description").click(function(){
+    //       $(this).toggleClass("active_click");
+    //     });
+    //   }
+    // });
+
+
+    // $(window).on("load", function (){
+    //   var widthView = $(window).width();
+    //   if(widthView > 767) {
+    //     $(".grid_container_item").each(function(){
+    //       $(".work_description").mouseenter(function(){
+    //         $(this).addClass("active_hover");
+    //       $(".work_description").mouseleave(function(){
+    //         $(this).removeClass("active_hover");
+    //       });
+    //       });
+    //     });
+    //   }
+    //   else{
+    //     $(".grid_container_item").each(function(){
+    //       $(".work_description").removeClass("active_hover");
+    //     });
+    //   }
+    // });
+
+    $(window).resize(function(){
       var widthView = $(window).width();
       if(widthView > 767) {
         $(".grid_container_item").each(function(){
@@ -240,14 +278,18 @@ $(document).ready(function () {
       }
       else{
         $(".grid_container_item").each(function(){
-          $(".work_description").click(function(){
-            $(this).toggleClass("active_click");
-          });
+          $(".work_description").removeClass("active_hover");
         });
       }
     });
 
-    $(window).resize(function fadeCard(){});
+    $(".work_description_btn_mobile").each(function(){
+      $(".work_description_btn_mobile").click(function(){
+        $(".work_description").toggleClass("active_click");
+        $(this).css("display", "none");
+      });
+    });
+
 
 
 
