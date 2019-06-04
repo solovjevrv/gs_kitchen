@@ -14,7 +14,7 @@ function updateSum() {
     let width = $('#calc-width').val() / 100;
     let long2 = $('#calc-long-2').val() / 100;
     let width2 = $('#calc-width-2').val() / 100;
-    let squarePrice = (long * width * priceM2) + ((long2 - width) * width2 * priceM2) + ((((long - width2) + (long2 - width)) * 0.04) * priceM2);
+    let squarePrice = (long * width * priceM2) + ((long2 - width) * width2 * priceM2) + (((long - width2) + (long2 - width) * 0.04) * priceM2);
     sum = sum + squarePrice;
   } else if ($('#typeStol').val() == 'type-3') {
     let long = $('#calc-long').val() / 100;
@@ -30,9 +30,9 @@ function updateSum() {
     let width = $('#calc-width').val() / 100;
     let long2 = $('#calc-long-2').val() / 100;
     let width2 = $('#calc-width-2').val() / 100;
-    let longT = $('#calc-long-3').val() / 100;
-    let longT2 = $('#calc-width-3').val() / 100;
-    let squarePrice = ((long - longT) * width * priceM2) + ((long2 - longT2) * width2 * priceM2) + (longT * longT2 * priceM2) + (((long - longT) + (long2 - longT2) + 0.3) * 0.04 * priceM2);
+    let long3 = $('#calc-long-3').val() / 100;
+    let width3 = $('#calc-width-3').val() / 100;
+    let squarePrice = 
     sum = sum + squarePrice;
   }
 
@@ -66,12 +66,6 @@ function resetAllChange() {
 }
 
 $(document).ready(function () {
-  $('#isometric-cube-1').addClass('no-display');
-  $('#isometric-cube-2').removeClass('no-display');
-  $('#isometric-cube-3').addClass('no-display');
-  $('#isometric-cube-4').addClass('no-display');
-  $('#isometric-cube-5').addClass('no-display');
-
   // инициализация rangeslider
   $('input[type="range"]').rangeslider({
     polyfill: false,
@@ -214,14 +208,7 @@ $(document).ready(function () {
   })
 
   $('#typeStol').on('change', function () {
-    resetAllChange();
-
     if ($('#typeStol').val() == 'type-1') {
-      $('#isometric-cube-1').addClass('no-display');
-      $('#isometric-cube-2').removeClass('no-display');
-      $('#isometric-cube-3').addClass('no-display');
-      $('#isometric-cube-4').addClass('no-display');
-      $('#isometric-cube-5').addClass('no-display');
       $('#calc-2').addClass('no-display');
       $('#calc-3').addClass('no-display');
 
@@ -231,11 +218,6 @@ $(document).ready(function () {
       updateSum();
     }
     if ($('#typeStol').val() == 'type-2') {
-      $('#isometric-cube-1').addClass('no-display');
-      $('#isometric-cube-2').removeClass('no-display');
-      $('#isometric-cube-3').removeClass('no-display');
-      $('#isometric-cube-4').removeClass('no-display');
-      $('#isometric-cube-5').removeClass('no-display');
       $('#calc-2').removeClass('no-display');
       $('#calc-3').addClass('no-display');
 
@@ -250,11 +232,6 @@ $(document).ready(function () {
       updateSum();
     }
     if ($('#typeStol').val() == 'type-3') {
-      $('#isometric-cube-1').removeClass('no-display');
-      $('#isometric-cube-2').removeClass('no-display');
-      $('#isometric-cube-3').removeClass('no-display');
-      $('#isometric-cube-4').removeClass('no-display');
-      $('#isometric-cube-5').removeClass('no-display');
       $('#calc-2').removeClass('no-display');
       $('#calc-3').removeClass('no-display');
       $('#calc-3-text-1').text('Длина-3');
@@ -276,12 +253,7 @@ $(document).ready(function () {
     if ($('#typeStol').val() == 'type-4') {
       $('#calc-2').removeClass('no-display');
       $('#calc-3').removeClass('no-display');
-      $('#calc-3-text-1').text('Длина трапеции');
-      $('#calc-3-text-2').text('Длина трапеции-2');
-      $('#calc-3-text-3').text('Высота трапеции');
-      $('#calc-long-3').val(50);
-      $('#calc-width-3').val(50);
-      updateSum();
+      updateSum()
     }
   })
 

@@ -885,14 +885,6 @@ h6 {
   text-align: center;
 }
 
-.calculator p {
-  font-family: "Circle_Rounded";
-  font-size: 12px;
-  line-height: 14px;
-  color: #979797;
-  margin-bottom: 6px;
-}
-
 .calculator .row {
   margin: 10px -15px 0px -15px;
 }
