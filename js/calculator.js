@@ -40,8 +40,8 @@ function updateSum() {
   if ($('#checkbox-naklad').prop("checked")) sum = sum + 700;
   if ($('#checkbox-vstr').prop("checked")) sum = sum + 12000;
   // Плинтус
-  if ($('#checkbox-low').prop("checked")) sum = Math.round(sum + 1300 * $('#height').val());
-  if ($('#checkbox-high').prop("checked")) sum = Math.round(sum + 1500 * $('#height').val());
+  if ($('#checkbox-low').prop("checked")) sum = Math.round(sum + 1300 * $('#height-slider').val());
+  if ($('#checkbox-high').prop("checked")) sum = Math.round(sum + 1500 * $('#height-slider').val());
   // Монтаж
   if ($('#switch-montazg').prop("checked")) sum = Math.round(sum * 1.07);
   // Убираем копейки
@@ -138,7 +138,7 @@ $(document).ready(function () {
     if ($('#typeStol').val() == 'type-2') {
       $("#isometric-cube-2 > *:nth-child(1)").addClass("calc-border-active");
       $("#isometric-cube-4 > *:nth-child(1)").addClass("calc-border-active");
-      $("#isometric-cube-2 > *:nth-child(1)").text($('#calc-long').val()).css("text-align","left");
+      $("#isometric-cube-2 > *:nth-child(1)").text($('#calc-long').val()).css("text-align", "left");
     } else {
       $("#isometric-cube-1 > *:nth-child(1)").addClass("calc-border-active");
       $("#isometric-cube-5 > *:nth-child(1)").addClass("calc-border-active");
@@ -203,7 +203,7 @@ $(document).ready(function () {
   $("#calc-height-2").focus(function () {
     resetAllChange();
     $("#isometric-cube-3 > *:nth-child(3)").addClass("calc-border-active");
-    $("#isometric-cube-3 > *:nth-child(3)").text($('#calc-height-2').val()).css("text-align","left");
+    $("#isometric-cube-3 > *:nth-child(3)").text($('#calc-height-2').val()).css("text-align", "left");
     if ($('#typeStol').val() == 'type-2') {
       $("#isometric-cube-5 > *:nth-child(3)").addClass("calc-border-active");
     }
@@ -246,7 +246,7 @@ $(document).ready(function () {
       $('#isometric-cube-5 > *:nth-child(3)').css('border', '1px solid #002525');
       $('#isometric-cube-5 > *:nth-child(1)').css('border-top', 'none');
       $('#isometric-cube-5 > *:nth-child(3)').css('border-right', 'none');
-      
+
       updateSum();
     }
     if ($('#typeStol').val() == 'type-3') {
@@ -289,6 +289,8 @@ $(document).ready(function () {
   $('#checkbox-vstr').prop("disabled", true);
   $('#checkbox-low').prop("disabled", true);
   $('#checkbox-high').prop("disabled", true);
+  $('#height-slider').prop("disabled", true);
+  $('#height-slider').rangeslider("update");
 
   $('#switch-moika').on('change', function () {
     if ($('#switch-moika').prop("checked")) {
@@ -320,10 +322,16 @@ $(document).ready(function () {
       $('#checkbox-low').prop("disabled", false);
       $('#checkbox-high').prop("disabled", false);
       $('.plintus-text').addClass("active-text");
+      //Выключить слайдер
+      $('#height-slider').prop("disabled", false);
+      $('#height-slider').rangeslider("update");
     } else {
       $('#checkbox-low').prop("disabled", true).prop("checked", false);
       $('#checkbox-high').prop("disabled", true).prop("checked", false);
       $('.plintus-text').removeClass("active-text");
+      //Включить слайдер
+      $('#height-slider').prop("disabled", true);
+      $('#height-slider').rangeslider("update");
     }
     updateSum();
   })
@@ -334,6 +342,7 @@ $(document).ready(function () {
     }
     updateSum();
   });
+
   $('#checkbox-low').click(() => {
     if ($('#checkbox-high').prop("checked")) {
       $('#checkbox-high').prop("checked", false);
@@ -341,14 +350,24 @@ $(document).ready(function () {
     updateSum();
   });
 
-
-
-
-
   $('#switch-montazg').on('change', function () {
     updateSum();
   })
 
-
   updateSum();
+
+  // Замена слайдера на ввод на мобильных экранах.
+  if ($(window).width() < 768) {
+    $('#height-slider').rangeslider("destroy");
+    //$('#height-slider').remove();
+    // $('#height-slider').removeClass("no-display");
+
+    $("#height-slider").replaceWith(function () {
+      return '<input type="number" class="form-control calc-raz" id="height-slider" placeholder="Длинна плинтуса" value="2">';
+    });
+  }
+
+  $(window).resize(function () {
+    if ($(window).width() < 768) {}
+  })
 })

@@ -1,26 +1,79 @@
 @import isometric
 
 $size: 1rem
-
-// .cube
-//     +cube($size-w, $size-h, $size-d, darkcyan)
+$width: $size*17
+$height: $size*8
 
 .cube-right
-  +cube($size*17, $size*8, $size*1, $dark_green)
-  top: 17rem
-  left: 8rem
+  +cube($width, $height, $size, $dark_green)
+  top: $width
+  left: $height
 
 .cube-middle
-  +cube($size*8, $size*9, $size*1, $dark_green)
-  top: 8rem
+  +cube($height, $size+$height, $size, $dark_green)
+  top: $height
 
 .cube-top
-  +cube($size*8, $size*8, $size*1, $dark_green)
+  +cube($height, $height, $size, $dark_green)
 
 .cube-bottom
-  +cube($size*8, $size*8, $size*1, $dark_green)
-  top: 17rem
+  +cube($height, $height, $size, $dark_green)
+  top: $width
 
 .cube-left
-  +cube($size*17, $size*8, $size*1, $dark_green)
-  left: 8rem
+  +cube($width, $height, $size, $dark_green)
+  left: $height
+
+@media screen and (max-width: 1200px)
+  $size: 0.8rem
+  $width: $size*17
+  $height: $size*8
+
+  .cube-right
+    +cube($width, $height, $size, $dark_green)
+    top: $width
+    left: $height
+
+  .cube-middle
+    +cube($height, $size+$height, $size, $dark_green)
+    top: $height
+
+  .cube-top
+    +cube($height, $height, $size, $dark_green)
+
+  .cube-bottom
+    +cube($height, $height, $size, $dark_green)
+    top: $width
+
+  .cube-left
+    +cube($width, $height, $size, $dark_green)
+    left: $height
+
+@media screen and (max-width: 991px)
+  $size: 0.65rem
+  $width: $size*17
+  $height: $size*8
+
+  .cube-right
+    +cube($width, $height, $size, $dark_green)
+    top: $width
+    left: $height
+
+  .cube-middle
+    +cube($height, $size+$height, $size, $dark_green)
+    top: $height
+
+  .cube-top
+    +cube($height, $height, $size, $dark_green)
+
+  .cube-bottom
+    +cube($height, $height, $size, $dark_green)
+    top: $width
+
+  .cube-left
+    +cube($width, $height, $size, $dark_green)
+    left: $height
+
+@media screen and (max-width: 767px)
+  .isometric-container
+    display: none
