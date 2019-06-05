@@ -130,6 +130,7 @@
 }
 
 .mobile_nav {
+  display: none;
   width: 40px;
   height: 40px;
   position: relative;
@@ -173,7 +174,12 @@
     }
   }
 }
-
+.nav_active_dark_green {
+  color: $dark_green;
+}
+.nav_active_lite_green {
+  color: $lite_green;
+}
 .mobile_nav_active .mobile_nav_item::after {
   margin-left: 10px;
 }
@@ -297,6 +303,7 @@
     color: $lite_green;
     display: block;
     position: absolute;
+    top: -20px;
     z-index: 2;
     margin-left: 10px;
   }

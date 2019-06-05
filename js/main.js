@@ -55,15 +55,36 @@ $(document).ready(function () {
 
 // вызов мобильного меню на главной странице
 
-  $(".mobile_nav").click(function () {
-    $(this).toggleClass("mobile_nav_active");
-    $(".desktop_nav").fadeToggle(500);
-  });
-  // вызов мобильного меню на остальных страницах
+$(".mobile_nav").click(function () {
+  $(this).toggleClass("mobile_nav_active");
+  $(".desktop_nav").toggleClass("desktop_active");
+});
+// вызов мобильного меню на остальных страницах
 
-  $(".mobile_nav_2").click(function () {
-    $(this).toggleClass("mobile_nav_2_active");
-    $(".desktop_nav_secondary").fadeToggle(500);
+$(".mobile_nav_2").click(function () {
+  $(this).toggleClass("mobile_nav_2_active");
+  $(".desktop_nav_secondary").toggleClass("mobile_active");
+});
+
+  // подсветка активного пункта меню secondary 
+  $(function () {
+    $('.desktop_nav_secondary .nav_item').each(function () {
+      var location = window.location.href;
+      var link = this.href;
+      if (location == link) {
+        $(this).addClass('nav_active_dark_green');
+      }
+    });
+  });
+    // подсветка активного пункта меню main 
+  $(function () {
+    $('.desktop_nav .nav_item').each(function () {
+      var location = window.location.href;
+      var link = this.href;
+      if (location == link) {
+        $(this).addClass('nav_active_lite_green');
+      }
+    });
   });
 
   // инициализация swiper на сертификаты
