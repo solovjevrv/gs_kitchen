@@ -1,6 +1,6 @@
 // цвета //
 $black: #201600;
-$lite_green: #ABCB56;
+$lite_green: #abcb56;
 $middle_green: #048E47;
 $dark_green: #04582D;
 $lite_grey: #F6F6F6;
@@ -180,4 +180,4 @@ h6 {
 }
 
 // Responsive - ДОЛЖЕН БЫТЬ ВСЕГДА ПОСЛЕДНИМ!!!
-@import "fonts", "home_page", "calculator", "calc-iso", "calc-border", "swiper", "footer", "faq", "news", "news_one", "works", "contacts", "responsive";
+@import "fonts", "home_page", "calculator", "swiper", "footer", "faq", "news", "news_one", "works", "contacts", "responsive";
