@@ -247,7 +247,7 @@ $(".mobile_nav_2").click(function () {
   //       });
   //     }
   //   });
-    $(window).on("load", function fadeCard(){
+    $(window).resize(function(){
       var widthView = $(window).width();
       if(widthView > 767) {
         $(".grid_container_item").each(function(){
@@ -261,15 +261,28 @@ $(".mobile_nav_2").click(function () {
       }
       else{
         $(".grid_container_item").each(function(){
-          $(".work_description").click(function(){
-            $(this).toggleClass("active_click");
+          $(".work_description").hover(function(){
+            $(this).removeClass("active_hover");
           });
         });
       }
     });
 
-    $(window).resize(function fadeCard(){});
-
+    $(window).resize(function(){
+      var widthView = $(window).width();
+      if(widthView > 767) {
+        $(".work_description_btn_mobile").each(function(){
+          $(this).click(function(){
+            $(".work_description").toggleClass("active_hover");
+            $(".work_description_btn_mobile").css("display", "none");
+          });
+        });
+      }
+      else{
+        return false
+      }
+    });
+    
 
 
 

@@ -2624,10 +2624,6 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
   opacity: 1;
 }
 
-.works-gallery .grid_container_item .active_click {
-  opacity: 1;
-}
-
 .works-gallery .grid_container_item:nth-child(1) {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -2797,6 +2793,35 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 }
 
 .work_description_btn:focus {
+  outline: none;
+}
+
+.work_description_btn_mobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) !important;
+          transform: translateX(-50%) translateY(-50%) !important;
+  font-family: "Circle_Rounded";
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 7px 23px;
+  border: 2px solid #ffffff;
+  border-radius: 23px;
+  background: #048E47;
+}
+
+.work_description_btn_mobile:hover {
+  background: #abcb56;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.work_description_btn_mobile:focus {
   outline: none;
 }
 
@@ -3201,7 +3226,7 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 }
 
 @media screen and (min-width: 767px) {
-  #change-btn {
+  .work_description_btn_mobile {
     display: none;
   }
 }
