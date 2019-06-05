@@ -192,7 +192,7 @@ $(document).ready(function () {
       $(this).addClass("btn-active open")
     }
   });
-  
+
   // обработка ховера на мобильных устройствах на странице Наши Работы
   if ($(window).width() > 767) {
     $(".grid_container_item").each(function () {
@@ -225,8 +225,8 @@ $(document).ready(function () {
   });
 
   $(".work_description_btn_mobile").click(function () {
-    $(this).addClass("active_hover");
+    $(this).siblings(".work_description").addClass("active_hover");
   }).on("tap", function () {
-    $(this).addClass("active_hover");
+    $(this).siblings(".work_description").addClass("active_hover");
   });
 });
