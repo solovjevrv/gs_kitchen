@@ -55,15 +55,36 @@ $(document).ready(function () {
 
 // вызов мобильного меню на главной странице
 
-  $(".mobile_nav").click(function () {
-    $(this).toggleClass("mobile_nav_active");
-    $(".desktop_nav").fadeToggle(500);
-  });
-  // вызов мобильного меню на остальных страницах
+$(".mobile_nav").click(function () {
+  $(this).toggleClass("mobile_nav_active");
+  $(".desktop_nav").toggleClass("desktop_active");
+});
+// вызов мобильного меню на остальных страницах
 
-  $(".mobile_nav_2").click(function () {
-    $(this).toggleClass("mobile_nav_2_active");
-    $(".desktop_nav_secondary").fadeToggle(500);
+$(".mobile_nav_2").click(function () {
+  $(this).toggleClass("mobile_nav_2_active");
+  $(".desktop_nav_secondary").toggleClass("mobile_active");
+});
+
+  // подсветка активного пункта меню secondary 
+  $(function () {
+    $('.desktop_nav_secondary .nav_item').each(function () {
+      var location = window.location.href;
+      var link = this.href;
+      if (location == link) {
+        $(this).addClass('nav_active_dark_green');
+      }
+    });
+  });
+    // подсветка активного пункта меню main 
+  $(function () {
+    $('.desktop_nav .nav_item').each(function () {
+      var location = window.location.href;
+      var link = this.href;
+      if (location == link) {
+        $(this).addClass('nav_active_lite_green');
+      }
+    });
   });
 
   // инициализация swiper на сертификаты
@@ -226,7 +247,7 @@ $(document).ready(function () {
   //       });
   //     }
   //   });
-    $(window).on("load", function fadeCard(){
+    $(window).resize(function(){
       var widthView = $(window).width();
       if(widthView > 767) {
         $(".grid_container_item").each(function(){
@@ -240,15 +261,28 @@ $(document).ready(function () {
       }
       else{
         $(".grid_container_item").each(function(){
-          $(".work_description").click(function(){
-            $(this).toggleClass("active_click");
+          $(".work_description").hover(function(){
+            $(this).removeClass("active_hover");
           });
         });
       }
     });
 
-    $(window).resize(function fadeCard(){});
-
+    // $(window).resize(function(){
+    //   var widthView = $(window).width();
+    //   if(widthView > 767) {
+    //     $(".work_description_btn_mobile").each(function(){
+    //       $(this).click(function(){
+    //         $(".work_description").toggleClass("active_hover");
+    //         $(".work_description_btn_mobile").css("display", "none");
+    //       });
+    //     });
+    //   }
+    //   else{
+    //     return false
+    //   }
+    // });
+    
 
 
 
