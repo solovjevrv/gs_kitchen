@@ -33,6 +33,7 @@
   }
 }
 .mobile_nav_2 {
+  display: none;
   width: 40px;
   height: 40px;
   position: relative;
@@ -85,7 +86,10 @@
 }
 .main_top_block {
   padding: 70px 0px;
-  background: linear-gradient(180deg, #000000 -5.93%, rgba(24, 24, 24, 0.0001) 100%), url(../img/faq_hero_screen_bg.png);
+  background: linear-gradient(180deg, #000000 -5.93%, rgba(24, 24, 24, 0.0001) 100%), url(../img/faq_hero_screen_bg.png) no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 60%;
 
   &_title {
     text-align: center;

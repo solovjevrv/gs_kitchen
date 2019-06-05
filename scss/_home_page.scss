@@ -117,7 +117,9 @@
     transform: scale(1.2);
   }
 }
-
+.menu_active {
+  color: $lite_green;
+}
 .hero_screen_button button {
   @include main_btn();
   display: inline-block;
@@ -130,6 +132,7 @@
 }
 
 .mobile_nav {
+  display: none;
   width: 40px;
   height: 40px;
   position: relative;
@@ -297,6 +300,7 @@
     color: $lite_green;
     display: block;
     position: absolute;
+    top: -20px;
     z-index: 2;
     margin-left: 10px;
   }
