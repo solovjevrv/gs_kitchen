@@ -14,7 +14,6 @@ $(document).ready(function () {
     return this.pushStack(stack);
   };
 
-
   // Мобильная адаптация
   let smallDisplay = false;
   let changeDisplay = false;
@@ -53,18 +52,17 @@ $(document).ready(function () {
     };
   });
 
-// вызов мобильного меню на главной странице
+  // вызов мобильного меню на главной странице
+  $(".mobile_nav").click(function () {
+    $(this).toggleClass("mobile_nav_active");
+    $(".desktop_nav").toggleClass("desktop_active");
+  });
 
-$(".mobile_nav").click(function () {
-  $(this).toggleClass("mobile_nav_active");
-  $(".desktop_nav").toggleClass("desktop_active");
-});
-// вызов мобильного меню на остальных страницах
-
-$(".mobile_nav_2").click(function () {
-  $(this).toggleClass("mobile_nav_2_active");
-  $(".desktop_nav_secondary").toggleClass("mobile_active");
-});
+  // вызов мобильного меню на остальных страницах
+  $(".mobile_nav_2").click(function () {
+    $(this).toggleClass("mobile_nav_2_active");
+    $(".desktop_nav_secondary").toggleClass("mobile_active");
+  });
 
   // подсветка активного пункта меню secondary 
   $(function () {
@@ -76,7 +74,8 @@ $(".mobile_nav_2").click(function () {
       }
     });
   });
-    // подсветка активного пункта меню main 
+
+  // подсветка активного пункта меню main 
   $(function () {
     $('.desktop_nav .nav_item').each(function () {
       var location = window.location.href;
@@ -122,27 +121,11 @@ $(".mobile_nav_2").click(function () {
     mousewheel: {
       invert: false,
     },
-    // pagination: {
-    //   el: '.text-slider__pagination',
-    //   clickable: true,
-    // }
-    // pagination: {
-    //   el: '.swiper-pagination',
-    //   type: 'bullets',
-    //   clickable: true,
-    // },
     navigation: {
       nextEl: '.arrow_down',
       prevEl: '.arrow_up',
     },
   });
-
-
-
-
-
-
-
 
   // инициализация swiper на новости
   new Swiper('.swiper-news', {
@@ -150,38 +133,16 @@ $(".mobile_nav_2").click(function () {
     direction: 'horizontal',
     // loop: true,
     spaceBetween: 60,
-
-    // slidesPerColumnFill: 'row',
-    // centeredSlides: true,
-     slidesPerView: 1,
-    // autoplay: {
-    //   delay: 50000
-    // },
-    // coverflowEffect: {
-    //   rotate: 0,
-    //   stretch: 120,
-    //   depth: 60,
-    //   modifier: 1,
-    //   slideShadows: true,
-    // },
+    slidesPerView: 1,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
   });
 
-
-
-
-
-
-
-
   slideText.on('slideChange', function () {
     $('.slider_number').text('0' + (this.realIndex + 1));
-
   });
-
 
   // включаем счётчик цифр по прокрутке.
   jQuery.fn.featuresNumber = function () {
@@ -223,68 +184,49 @@ $(".mobile_nav_2").click(function () {
   if ($(".features").length > 0) {
     $(".features").featuresNumber();
   }
-// аккордеон на странице FAQ
-    $(".faq-btn").click(function () {
-      $(".faq-btn").removeClass("btn-active");
-      if (!$(this).hasClass("open")) {
-        $(".faq-btn").removeClass("open");
-        $(this).addClass("btn-active open")
-      }
+  // аккордеон на странице FAQ
+  $(".faq-btn").click(function () {
+    $(".faq-btn").removeClass("btn-active");
+    if (!$(this).hasClass("open")) {
+      $(".faq-btn").removeClass("open");
+      $(this).addClass("btn-active open")
+    }
+  });
+  
+  // обработка ховера на мобильных устройствах на странице Наши Работы
+  if ($(window).width() > 767) {
+    $(".grid_container_item").each(function () {
+      $(".work_description").mouseenter(function () {
+        $(this).addClass("active_hover");
+      });
+      $(".work_description").mouseleave(function () {
+        $(this).removeClass("active_hover");
+      });
     });
-  // // обработка ховера на мобильных устройствах на странице Наши Работы
-  //   $(".grid_container_item").each(function(){
-  //     if($(window).width() > 768) {
-  //       $(".work_description").hover(function(){
-  //         $(this).toggleClass("active_hover");
-  //       });
-  //     }
-  //   });
-  // // обработка клика на мобильных устройствах на странице Наши Работы
-  //   $(".grid_container_item").each(function(){
-  //     if($(window).width() < 767){
-  //       $(".work_description").click(function(){
-  //         $(this).toggleClass("active_click");
-  //       });
-  //     }
-  //   });
-    $(window).resize(function(){
-      var widthView = $(window).width();
-      if(widthView > 767) {
-        $(".grid_container_item").each(function(){
-          $(".work_description").mouseenter(function(){
-            $(this).addClass("active_hover");
-          $(".work_description").mouseleave(function(){
-            $(this).removeClass("active_hover");
-          });
-          });
+  };
+
+  $(window).resize(function () {
+    if ($(window).width() > 767) {
+      $(".grid_container_item").each(function () {
+        $(".work_description").mouseenter(function () {
+          $(this).addClass("active_hover");
         });
-      }
-      else{
-        $(".grid_container_item").each(function(){
-          $(".work_description").hover(function(){
-            $(this).removeClass("active_hover");
-          });
+        $(".work_description").mouseleave(function () {
+          $(this).removeClass("active_hover");
         });
-      }
-    });
+      });
+    } else {
+      $(".grid_container_item").each(function () {
+        $(".work_description").hover(function () {
+          $(this).removeClass("active_hover");
+        });
+      });
+    }
+  });
 
-    // $(window).resize(function(){
-    //   var widthView = $(window).width();
-    //   if(widthView > 767) {
-    //     $(".work_description_btn_mobile").each(function(){
-    //       $(this).click(function(){
-    //         $(".work_description").toggleClass("active_hover");
-    //         $(".work_description_btn_mobile").css("display", "none");
-    //       });
-    //     });
-    //   }
-    //   else{
-    //     return false
-    //   }
-    // });
-    
-
-
-
-
+  $(".work_description_btn_mobile").click(function () {
+    $(this).addClass("active_hover");
+  }).on("tap", function () {
+    $(this).addClass("active_hover");
+  });
 });
