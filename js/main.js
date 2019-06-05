@@ -268,20 +268,20 @@ $(".mobile_nav_2").click(function () {
       }
     });
 
-    $(window).resize(function(){
-      var widthView = $(window).width();
-      if(widthView > 767) {
-        $(".work_description_btn_mobile").each(function(){
-          $(this).click(function(){
-            $(".work_description").toggleClass("active_hover");
-            $(".work_description_btn_mobile").css("display", "none");
-          });
-        });
-      }
-      else{
-        return false
-      }
-    });
+    // $(window).resize(function(){
+    //   var widthView = $(window).width();
+    //   if(widthView > 767) {
+    //     $(".work_description_btn_mobile").each(function(){
+    //       $(this).click(function(){
+    //         $(".work_description").toggleClass("active_hover");
+    //         $(".work_description_btn_mobile").css("display", "none");
+    //       });
+    //     });
+    //   }
+    //   else{
+    //     return false
+    //   }
+    // });
     
 
 
