@@ -3153,6 +3153,11 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 
 .works-gallery .grid_container_item .active_hover {
   opacity: 1;
+  z-index: 2;
+}
+
+.works-gallery .grid_container_item .hidden {
+  visibility: hidden;
 }
 
 .works-gallery .grid_container_item:nth-child(1) {
