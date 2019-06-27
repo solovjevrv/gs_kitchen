@@ -2213,7 +2213,7 @@ input[type=checkbox].checkboxer:checked + .check-box::before,
 }
 
 .rangeslider__handle__value {
-  font-family: "Cicle_Rounded";
+  font-family: "Circle_Rounded";
 }
 
 .swiper-container {
