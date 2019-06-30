@@ -24,6 +24,12 @@ $height: $size*8
   +cube($width, $height, $size, $dark_green)
   left: $height
 
+.cube-trap
+  +cube($height, $height, $size, $dark_green)
+  top: $height
+  left: $height
+
+
 @media screen and (max-width: 1200px)
   $size: 0.8rem
   $width: $size*17
@@ -49,6 +55,11 @@ $height: $size*8
     +cube($width, $height, $size, $dark_green)
     left: $height
 
+  .cube-trap
+    +cube($height, $height, $size, $dark_green)
+    width: $height
+    height: $height
+
 @media screen and (max-width: 991px)
   $size: 0.65rem
   $width: $size*17
@@ -73,6 +84,11 @@ $height: $size*8
   .cube-left
     +cube($width, $height, $size, $dark_green)
     left: $height
+
+  .cube-trap
+    +cube($height, $height, $size, $dark_green)
+    width: $height
+    height: $height
 
 @media screen and (max-width: 767px)
   .isometric-container
