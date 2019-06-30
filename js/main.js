@@ -225,6 +225,7 @@ $(document).ready(function () {
   });
 
   $(".work_description_btn_mobile").click(function () {
+    $(this).addClass("hidden");
     $(this).siblings(".work_description").addClass("active_hover");
   }).on("tap", function () {
     $(this).siblings(".work_description").addClass("active_hover");

@@ -1,3 +1,22 @@
+.cube-trap {
+  >*:nth-child(3n+1) {
+    border: 4rem solid transparent;
+    border-left: 4rem solid #04582D;
+    border-top: 4rem solid #04582D;
+    display: block;
+    background: transparent
+  }
+
+  >*:nth-child(2) {
+    width: 12rem;
+    transform: translateX(-2rem) translateY(3.5rem) translateZ(0.5rem) rotateX(-90deg) rotateY(45deg);
+  }
+
+  >*:nth-child(3) {
+    display: none;
+  }
+}
+
 .cube-right {
   >*:nth-child(1) {
     border-left: none;
@@ -72,6 +91,14 @@
 
 .calc-border-active {
   background: $lite_green;
+}
+
+.calc-border-left {
+  border-left: 8rem solid $dark_green!important;
+}
+
+.calc-border-right {
+  border-right: 8rem solid $dark_green!important;
 }
 
 .isometric-container *:nth-child(1).calc-border-active {
