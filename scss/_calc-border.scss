@@ -113,3 +113,33 @@
   text-align: center;
   line-height: 1;
 }
+
+@media screen and (max-width: 1200px) {
+  .cube-trap {
+    >*:nth-child(2) {
+      width: 11rem;
+      transform: translateX(-1.6rem) translateY(3.5rem) translateZ(0.5rem) rotateX(-90deg) rotateY(45deg);
+    }
+  }
+  
+  .calc-border-right {
+    border-right: 6rem solid #04582D !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cube-trap {
+    >*:nth-child(2) {
+      width: 11rem;
+      transform: translateX(-1.4rem) translateY(3.8rem) translateZ(0.5rem) rotateX(-90deg) rotateY(45deg);
+    }
+  }
+
+  .calc-border-right {
+    border-right: 3rem solid #04582D !important;
+  }
+
+  .isometric-container *:nth-child(1).calc-border-active {
+    font-size: 2rem;
+  }
+}

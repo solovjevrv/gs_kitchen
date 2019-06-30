@@ -1546,8 +1546,8 @@ h6 {
     height: 6.4rem;
     -webkit-transform-origin: center;
             transform-origin: center;
-    width: 6.4rem;
-    height: 6.4rem;
+    top: 6.4rem;
+    left: 6.4rem;
   }
   .cube-trap > * {
     position: absolute;
@@ -1856,8 +1856,8 @@ h6 {
     height: 5.2rem;
     -webkit-transform-origin: center;
             transform-origin: center;
-    width: 5.2rem;
-    height: 5.2rem;
+    top: 5.2rem;
+    left: 5.2rem;
   }
   .cube-trap > * {
     position: absolute;
@@ -2015,6 +2015,31 @@ h6 {
   font-size: 1rem;
   text-align: center;
   line-height: 1;
+}
+
+@media screen and (max-width: 1200px) {
+  .cube-trap > *:nth-child(2) {
+    width: 11rem;
+    -webkit-transform: translateX(-1.6rem) translateY(3.5rem) translateZ(0.5rem) rotateX(-90deg) rotateY(45deg);
+            transform: translateX(-1.6rem) translateY(3.5rem) translateZ(0.5rem) rotateX(-90deg) rotateY(45deg);
+  }
+  .calc-border-right {
+    border-right: 6rem solid #04582D !important;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .cube-trap > *:nth-child(2) {
+    width: 11rem;
+    -webkit-transform: translateX(-1.4rem) translateY(3.8rem) translateZ(0.5rem) rotateX(-90deg) rotateY(45deg);
+            transform: translateX(-1.4rem) translateY(3.8rem) translateZ(0.5rem) rotateX(-90deg) rotateY(45deg);
+  }
+  .calc-border-right {
+    border-right: 3rem solid #04582D !important;
+  }
+  .isometric-container *:nth-child(1).calc-border-active {
+    font-size: 2rem;
+  }
 }
 
 .calculator {
